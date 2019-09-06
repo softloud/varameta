@@ -1,0 +1,17 @@
+Package: varameta
+Title: Estimators for the Variance of the Sample Median
+Version: 0.0.0.9000
+Authors@R:
+    person(given = "Charles",
+           family = "Gray",
+           role = c("aut", "cre"),
+           email = "charlestigray@gmail.com")
+Description: Research compendium and R package providing and comparing estimators for the variance of the sample median.
+License: MIT + file LICENSE
+ByteCompile: true
+Encoding: UTF-8
+LazyData: true
+Imports: bookdown
+Suggests: 
+    testthat
+RoxygenNote: 6.1.1.9000
