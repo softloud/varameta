@@ -14,4 +14,4 @@
 #'   \item{sim_id}{Row identifier for this dataframe; so, this variable signifies from which distribution the sampled and for what sample size.}
 #'   \item{true_median}{True median of the distribution.}
 #'   }
-"sim_par"
+# "sim_par"

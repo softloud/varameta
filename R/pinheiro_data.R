@@ -20,4 +20,4 @@
 #'   \item{s_c_d}{See `s_c`.}
 #' }
 
-"pinheiro_data"
+# "pinheiro_data"
