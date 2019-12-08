@@ -1,0 +1,14 @@
+%%% macros
+
+% code macro
+\newcommand{\code}[1]{\texttt{#1}}
+\newcommand{\package}[1]{\texttt{#1::}}
+
+% more words macro
+\usepackage{todonotes}
+\newcommand{\morewords}[1]{
+    \todo[inline, color=lightgray]{\textbf{more words} #1}
+}
+\newcommand{\dothislater}[1]{
+    \todo[inline, color=gray]{\textbf{do this later} #1}
+}
