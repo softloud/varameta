@@ -1,6 +1,18 @@
-\input{pdf-meta-data}
+\documentclass{article}
+
+%%% title and whatnot %%%
+
+\title{Meta-analysis of Medians}
+
+\author{Charles T. Gray, Luke Prendergast, and Hien Nguyen\thanks{
+The authors are appreciative for the insights and comments from Emily Kothe, Kerrie Mengersen, and Kate Smith-Miles. 
+}}
+
+%%% packages and macros
 
 \input{preamble}
+
+%%% doc %%%
 
 \begin{document}
 
@@ -16,23 +28,57 @@
 
 \section{Medians pose a problem in meta-analyses}
 
+Software tools for meta-analysis, such as Cochrane's
+RevMan~\dothislater{RevMan citation}
+or the R package \package{metafor}~\dothislater{metafor citation},
+require an estimate of effect and variance
+of that effect. However, the sample variance for the effect is not always available.
+When the reported statistics are medians, measure of spreads commonly provided
+are the range or interquartile range. This leads to the omission of studies that report medians from the meta-anaysis. In this manuscript we present a method for estimating the variance of the sample median so that studies reporting medians may be included in meta-analyses.
+
 \morewords{people would like to meta-analyse medians, but they can't}
 
-\section{how have peeps been doing it?}
+\morewords{expand this section, demonstrate how to do a meta-analysis}
 
-\section{what we propose}
+\subsection{A motivation example}
 
-\section{simulations}
+\morewords{Find a meta-analysis of medians where this estimator elicits a difference in results.}
 
-\subsection{simulation description}
+\section{Existing methods for meta-analysing medians}
+% \section{how have peeps been doing it?}
+
+There are several existing methods for meta-analysing medians. Many of these are evolutions of Han et al.'s methods for approximating the sample mean and standard deviation from the median and the interquartile range~\dothislater{Range or interquartile range?}~\dothislater{Han citation}. Bland extended this method for the case where all quartiles, including minimum and maximum are available~\dothislater{bland citation}. Wan et al.\ compared and contrasted Han and Bland's methods under simulation, and also introduced some estimator's extending on Han et al.'s method~\dothislater{Wan}.
+
+\morewords{Go through each method: what set of summary statistics does each do? Look at table of equations in original overleaf, perhaps.}
+
+\section{An estimator for an approximation of the variance of the sample median}
+
+We provide a solution to meta-analysing medians by adapting this approximation for the variance of the sample median, \(M\),
+\[
+\mathrm{var}(M) \approx (4nf(\nu))^{-2},
+\]
+drawn from population with density function \(f\) and population median \(\nu\).
+
+\section{Performance of estimator in coverage probability simulations}
+
+Now that we have defined an estimator for meta-analysing medians, let us explore the efficacy of this estimator under simulation, for different numbers of studies, distributions, and different assumptions about variation between studies and efficacy of intervention.
+
+\subsection{Simulation methodology}
+
+One approach for exploring the efficacy of a statistical estimator is to simulate \emph{coverage probability}. In a coverage probability simulation, each trial requires randomly generated data.
+
+\morewords{See \package{simeta} and \pacakge{varameta::}}
 
 \subsection{simulation results}
 
-\subsection{simulation analysis}
+\section{Meta-analysis of medians}
 
-\section{\package{varameta} vignette}
+Our motivating problem was meta-analysis of medians. In so doing, this manuscript raises the question if examining research software engineering methodology, of exploring the efficacy of an estimator, in the context of rapidly evolving statistical tools for simulation and analysis, is of research merit in its own right.
 
-\section{conclusion}
+\morewords{Now we can walk through a meta-analysis}
 
+\morewords{It is not immediately apparent what the best way to confer analyses.}
+
+\morewords{metaresearch context}
 
 \end{document}

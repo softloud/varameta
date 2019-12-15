@@ -3,6 +3,9 @@
 #' See \code{\link{estimator_eqn_ref}} for details and references for equation
 #' (10).
 #'
+#'
+#' @family mean estimators
+#'
 #' @param a Minimum value of sample.
 #' @param q_1 First quartile of sample.
 #' @param m Median of sample.

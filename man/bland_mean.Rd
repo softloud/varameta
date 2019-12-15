@@ -21,3 +21,4 @@ bland_mean(a, q_1, m, q_3, b)
 See \code{\link{estimator_eqn_ref}} for details and references for equation
 (10).
 }
+\concept{mean estimators}
