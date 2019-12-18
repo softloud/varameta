@@ -80,9 +80,12 @@ $n$, the sample size.  $\iqr$ denotes the interquantile range and this may be re
 
 As an example of how studies collated in meta-analyses report these summary statistics differently, consider the dataset presented in Table \ref{tab: pinheiro}, taken from a systematic review of d-dimer in pre-eclampsia \cite{Pinheiro2012}. Ideally, one would want to perform a meta-analysis using the effects from all studies. However, estimator variance is only reported for three of the seven studies presented with the remaining studies reporting medians and ranges.
 
-\begin{table}[!htbp] \centering
-  \small
-\begin{tabular}{@{\extracolsep{5pt}} ccccccccc}
+
+\begin{table}[!htbp]
+\resizebox{0.8\textwidth}{!}{\begin{minipage}{\textwidth}
+    \centering
+    \small
+\begin{tabular}{ccccccccc}% {@{\extracolsep{5pt}} ccccccccc}
 \\[-1.8ex]\hline
 \hline \\[-1.8ex]
 & & \multicolumn{3}{c}{Control group} & \multicolumn{3}{c}{Treatment group} & \\ \cline{3-5} \cline{6-8}
@@ -100,7 +103,10 @@ He & 1997 & 183.0 & (110.0, 340.0) & 24 & 315.0 & (145.0, 1150.0) & 30 & $\bm{m,
 \end{tabular}
 \caption{Data from a meta-analysis of d-dimer levels in pre-eclampsia presented by \cite{Pinheiro2012}, measures of location and scale are varied: there are means and standard deviations; medians and interquartile ranges; quartiles; and medians and ranges. The types of estimates reported are listed in the final column denoted `reported'.}
   \label{tab: pinheiro}
+\end{minipage}}
 \end{table}
+
+
 
 Three studies (first authors Dusse, Schjtlein, and Terao) detailed in the table provide the sample mean, $\overline x$, and standard deviation, $s$. Two studies (Bellart and Heilmann) provide the sample median, $m$, and interquartile range, $\iqr$. One study (Catrino) provides the sample median, as well as the first and third quartiles, $q_1$ and $q_3$. Finally, one more study (He) provides the sample median and the minimum $a$ and maximum $b$ observed values. All studies provide the sample size $n$ and their respective estimates of location and scale for both the control and the pre-eclamptic groups.
 
@@ -110,7 +116,7 @@ In order to perform a meta-analysis via conventional methods, we require, at min
 
 % Possibly refer to other paper in this section.
 
-A potential solution is offered by Hozo et al. \cite{Hozo2005} who suggest estimating the mean and standard deviation from a reported median, minimum and maximum, as well as sample size, i.e from $S_1=\{a, m, b; n\}$. This provides a way to calculate the variance of the effect, as required by contemporary meta-analysis tools, although there are some limitations. Firstly, $S_1$ does not cover all cases of reported medians. In our example considered in Table \ref{tab: pinheiro} to see that there is only applicable study (He).
+A potential solution is offered by Hozo et al.~\cite \cite{Hozo2005} who suggest estimating the mean and standard deviation from a reported median, minimum and maximum, as well as sample size, i.e from $S_1=\{a, m, b; n\}$. This provides a way to calculate the variance of the effect, as required by contemporary meta-analysis tools, although there are some limitations. Firstly, $S_1$ does not cover all cases of reported medians. In our example considered in Table \ref{tab: pinheiro} to see that there is only applicable study (He).
 
 Bland extends on Hozo et al.'s solution, but for the set $\{a, q_1, m, q_2, b; n\}$ where the minimum, maximum, median, as well as first and third quartiles are reported\cite{Bland2015}. Wan et al. improve on Hozo and Bland's solutions, as well as providing a solution for the set $\{q_1, m, q_3; n\}$ where the interquartile range is provided as an interval along with the median\cite{Wan2014}.  A nice review of the methods, including an improvement, can be found in \cite{shi2018estimate}.  However, it is noted that underlying normality appears to be the motivation for all methods and below we details some limitations.
 
@@ -124,18 +130,18 @@ We first focus on providing expressions for the variance of a single median, a d
 
 Consider a population median denoted $\nu$ with corresponding estimator $M$, taken to be the middle order statistic from a sample with $n$ observations.  Let $f$ denote the probability density function for the underlying population.  Then the median estimator, $M$, is asymptotically normal with approximate variance (see, e.g. Ch.7 of \cite{dasgupta2008asymptotic})
 \begin{equation}\label{eqn: var est}
-\Var(M)\approx \frac{1}{n}\cdot\frac{1}{4\left[f(\nu)\right]^2}.
+\var(M)\approx \frac{1}{n}\cdot\frac{1}{4\left[f(\nu)\right]^2}.
 \end{equation}
 
 
 Using this approximated variance, we can then extend to the variance of the difference and the variance of the ratio of two sample medians. For the difference of two sample medians, we have, assuming that the estimators are independent,
 \begin{equation}\label{eqn: var diff}
-\Var(M_1-M_2) = \Var(M_1) + \Var(M_2).
+\var(M_1-M_2) = \var(M_1) + \var(M_2).
 \end{equation}
 
 Using the delta method, the variance of the log ratio of two sample medians is given by
 \begin{equation}\label{eqn: var lr}
-\Var\left[\log\left(\frac {M_1}{M_2 }\right)\right] \approx  \frac{\Var(M_1)}{\nu_1^2}+ \frac{\Var(M_2)} {\nu_2^2}.
+\var\left[\log\left(\frac {M_1}{M_2 }\right)\right] \approx  \frac{\var(M_1)}{\nu_1^2}+ \frac{\var(M_2)} {\nu_2^2}.
 \end{equation}
 
 In practice we do not know the true population median $\nu$, nor the true population density $f$, so estimates are required . It is common to only have access to the sample median and interquartile range (or range) from a single study. Or, in the case of the comparison of two samples, we may have two sample medians and associated interquartile ranges (or ranges).
@@ -162,7 +168,21 @@ Now that we have defined an estimator for meta-analysing medians, let us explore
 
 One approach for exploring the efficacy of a statistical estimator is to simulate \emph{coverage probability}. In a coverage probability simulation, each trial requires randomly generated data.
 
-\morewords{See \package{simeta} and \pacakge{varameta::}}
+\morewords{Mathematics need to be incorporated.}
+
+\begin{alignat*}
+& \log(m_k^I/m_k^C) & = \log(\nu^I/\nu^C) + \gamma_k\\
+\implies & \log(\lambda_k^C) - \log(\lambda_k^I) & = \log(\lambda^C) - \log(\lambda^I) + \gamma_k\\
+\implies & \log(\lambda_k^C) - \log(\lambda_k^I) & = (\log(\lambda^C) + \gamma_k/2) - (\log(\lambda_k^I) - \gamma_k/2)
+\end{alignat*}
+
+\begin{alignat*}
+ \lambda_k^C & = \lambda^C  \exp(\gamma_k/2)\\
+ \lambda_k^I & = \lambda^I  \exp(-\gamma_k/2)
+\end{alignat*}
+
+
+\morewords{See \package{simeta} and \package{varameta::}}
 
 \subsection{simulation results}
 

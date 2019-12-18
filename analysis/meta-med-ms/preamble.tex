@@ -1,3 +1,8 @@
+%%% always load packages
+
+\usepackage{amsmath}
+
+
 %%% macros
 
 % code macro
@@ -12,3 +17,17 @@
 \newcommand{\dothislater}[1]{
     \todo[color=gray]{\footnotesize{\textbf{do this later} #1}}
 }
+
+
+% stats macros
+\DeclareMathOperator{\var}{var}
+\DeclareMathOperator{\iqr}{iqr}
+\newcommand{\preimage}[1]{#1^{-1}}
+\DeclareMathOperator{\varmed}{varmed}
+
+% bold math
+\usepackage{bm}
+%\newcommand{\bm}[1]{\textbf{\textrm{#1}}}
+
+% theorerm macros
+\newtheorem{disadv}{Disadvantage}
