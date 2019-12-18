@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.12.8)  15 DEC 2019 13:00
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.12.8)  17 DEC 2019 17:16
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -351,24 +351,417 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <6> not available
 LaTeX Warning: Marginpar on page 1 moved.
 
 
-LaTeX Warning: Marginpar on page 1 moved.
+LaTeX Warning: Citation `Metafor2010' on page 1 undefined on input line 43.
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 45.
+
+LaTeX Warning: Citation `borenstein2008introduction' on page 1 undefined on input line 48.
 
 
-LaTeX Warning: Marginpar on page 1 moved.
-
-
-LaTeX Warning: Marginpar on page 1 moved.
+LaTeX Warning: Citation `kulinskaya2008meta' on page 1 undefined on input line 48.
 
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 56.
 
-/home/cantabile/Documents/repos/varameta/analysis/meta-med-ms/meta-med-ms.tex:70: Undefined control sequence.
+LaTeX Warning: Citation `Hozo2005' on page 2 undefined on input line 50.
+
+
+LaTeX Warning: Citation `Bland2015' on page 2 undefined on input line 50.
+
+
+LaTeX Warning: Citation `Wan2014' on page 2 undefined on input line 50.
+
+
+/home/cantabile/Documents/repos/varameta/analysis/meta-med-ms/meta-med-ms.tex:52: LaTeX Error: Environment disadv undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.52 \begin{disadv}
+                   \label{disadv:1}
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+LaTeX Warning: Citation `shi2018estimate' on page 2 undefined on input line 53.
+
+
+/home/cantabile/Documents/repos/varameta/analysis/meta-med-ms/meta-med-ms.tex:54: LaTeX Error: \begin{document} ended by \end{disadv}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.54 \end{disadv}
+                 
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+/home/cantabile/Documents/repos/varameta/analysis/meta-med-ms/meta-med-ms.tex:56: LaTeX Error: Environment disadv undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.56 \begin{disadv}
+                   \label{disadv:2}
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+/home/cantabile/Documents/repos/varameta/analysis/meta-med-ms/meta-med-ms.tex:58: LaTeX Error: \begin{document} ended by \end{disadv}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.58 \end{disadv}
+                 
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+LaTeX Warning: Reference `sec: sims' on page 2 undefined on input line 62.
+
+
+LaTeX Warning: Reference `sec: pin again' on page 2 undefined on input line 62.
+
+
+LaTeX Warning: Reference `sec: conclusion' on page 2 undefined on input line 62.
+
+
+LaTeX Warning: Reference `sec: pin again' on page 2 undefined on input line 67.
+
+
+LaTeX Warning: Citation `Wan2014' on page 2 undefined on input line 69.
+
+/home/cantabile/Documents/repos/varameta/analysis/meta-med-ms/meta-med-ms.tex:75: Undefined control sequence.
+<recently read> \iqr 
+                     
+l.75 $n$, the sample size.  $\iqr
+                                 $ denotes the interquantile range and this ...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[2]
+
+LaTeX Warning: Citation `Pinheiro2012' on page 3 undefined on input line 77.
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <9> on input line 81.
+/home/cantabile/Documents/repos/varameta/analysis/meta-med-ms/meta-med-ms.tex:88: Undefined control sequence.
+<recently read> \bm 
+                    
+l.88 ... & 311.2 & 28 & 1263.8 & 411.9 & 43 & $\bm
+                                                  {\overline x, s}$  \\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/home/cantabile/Documents/repos/varameta/analysis/meta-med-ms/meta-med-ms.tex:89: Undefined control sequence.
+<recently read> \bm 
+                    
+l.89 ...& 559.0 & 97 & 1545.0 & 849.5 & 200 & $\bm
+                                                  {\overline x, s}$  \\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/home/cantabile/Documents/repos/varameta/analysis/meta-med-ms/meta-med-ms.tex:90: Undefined control sequence.
+<recently read> \bm 
+                    
+l.90 ... & 179.9 & 80 & 347.87 & 460.5 & 13 & $\bm
+                                                  {\overline x, s}$  \\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/home/cantabile/Documents/repos/varameta/analysis/meta-med-ms/meta-med-ms.tex:91: Undefined control sequence.
+<recently read> \bm 
+                    
+l.91 ... 42 & 448.5  & (313.0, 1091.3) & 44 & $\bm
+                                                  {m, (q_1, q_3)}$ \\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/home/cantabile/Documents/repos/varameta/analysis/meta-med-ms/meta-med-ms.tex:92: Undefined control sequence.
+<recently read> \bm 
+                    
+l.92 ...& 225.0 & 65 & 2090.0 & 1800.0 & 12 & $\bm
+                                                  {m, \iqr}$ \\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/home/cantabile/Documents/repos/varameta/analysis/meta-med-ms/meta-med-ms.tex:92: Undefined control sequence.
+l.92 ...& 65 & 2090.0 & 1800.0 & 12 & $\bm{m, \iqr
+                                                  }$ \\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/home/cantabile/Documents/repos/varameta/analysis/meta-med-ms/meta-med-ms.tex:93: Undefined control sequence.
+<recently read> \bm 
+                    
+l.93 ...& 456.0 & 33 & 1623.6 & 932.9 & 111 & $\bm
+                                                  {m, \iqr}$ \\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/home/cantabile/Documents/repos/varameta/analysis/meta-med-ms/meta-med-ms.tex:93: Undefined control sequence.
+l.93 ...& 33 & 1623.6 & 932.9 & 111 & $\bm{m, \iqr
+                                                  }$ \\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/home/cantabile/Documents/repos/varameta/analysis/meta-med-ms/meta-med-ms.tex:94: Undefined control sequence.
+<recently read> \bm 
+                    
+l.94 ...& 24 & 315.0 & (145.0, 1150.0) & 30 & $\bm
+                                                  {m, (a, b)}$\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (96.607pt too wide) in paragraph at lines 81--97
+ [][] 
+ []
+
+
+LaTeX Warning: Citation `Pinheiro2012' on page 3 undefined on input line 97.
+
+
+LaTeX Warning: Citation `Pinheiro2012' on page 3 undefined on input line 97.
+
+/home/cantabile/Documents/repos/varameta/analysis/meta-med-ms/meta-med-ms.tex:101: Undefined control sequence.
+<recently read> \iqr 
+                     
+l.101 ...dian, $m$, and interquartile range, $\iqr
+                                                  $. One study (Catrino) pro...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Citation `Bland2015' on page 3 undefined on input line 103.
+
+
+LaTeX Warning: Citation `Pinheiro2012' on page 3 undefined on input line 103.
+
+[3]
+
+LaTeX Warning: Citation `Hozo2005' on page 4 undefined on input line 109.
+
+
+LaTeX Warning: Citation `Bland2015' on page 4 undefined on input line 111.
+
+
+LaTeX Warning: Citation `Wan2014' on page 4 undefined on input line 111.
+
+
+LaTeX Warning: Citation `shi2018estimate' on page 4 undefined on input line 111.
+
+
+LaTeX Warning: Citation `dasgupta2008asymptotic' on page 4 undefined on input line 124.
+
+[4]
+/home/cantabile/Documents/repos/varameta/analysis/meta-med-ms/meta-med-ms.tex:126: Undefined control sequence.
+l.126 \Var
+          (M)\approx \frac{1}{n}\cdot\frac{1}{4\left[f(\nu)\right]^2}.
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/home/cantabile/Documents/repos/varameta/analysis/meta-med-ms/meta-med-ms.tex:132: Undefined control sequence.
+l.132 \Var
+          (M_1-M_2) = \Var(M_1) + \Var(M_2).
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/home/cantabile/Documents/repos/varameta/analysis/meta-med-ms/meta-med-ms.tex:132: Undefined control sequence.
+l.132 \Var(M_1-M_2) = \Var
+                          (M_1) + \Var(M_2).
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/home/cantabile/Documents/repos/varameta/analysis/meta-med-ms/meta-med-ms.tex:132: Undefined control sequence.
+l.132 \Var(M_1-M_2) = \Var(M_1) + \Var
+                                      (M_2).
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/home/cantabile/Documents/repos/varameta/analysis/meta-med-ms/meta-med-ms.tex:137: Undefined control sequence.
+l.137 \Var
+          \left[\log\left(\frac {M_1}{M_2 }\right)\right] \approx  \frac{\Va...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/home/cantabile/Documents/repos/varameta/analysis/meta-med-ms/meta-med-ms.tex:137: Undefined control sequence.
+<argument> \Var 
+                (M_1)
+l.137 ...right] \approx  \frac{\Var(M_1)}{\nu_1^2}
+                                                  + \frac{\Var(M_2)} {\nu_2^2}.
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/home/cantabile/Documents/repos/varameta/analysis/meta-med-ms/meta-med-ms.tex:137: Undefined control sequence.
+<argument> \Var 
+                (M_2)
+l.137 ..._1)}{\nu_1^2}+ \frac{\Var(M_2)} {\nu_2^2}
+                                                  .
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Reference `sec: comparison' on page 5 undefined on input line 142.
+
+/home/cantabile/Documents/repos/varameta/analysis/meta-med-ms/meta-med-ms.tex:144: Undefined control sequence.
+l.144 \varmed
+             (M) := \frac 1 {4n\left[ g\left(M; \hat{\bm \theta}\right)\righ...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/home/cantabile/Documents/repos/varameta/analysis/meta-med-ms/meta-med-ms.tex:144: Undefined control sequence.
+<argument> 4n\left [ g\left (M; \hat {\bm 
+                                          \theta }\right )\right ]^2
+l.144 ...left(M; \hat{\bm \theta}\right)\right]^2}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/home/cantabile/Documents/repos/varameta/analysis/meta-med-ms/meta-med-ms.tex:146: Undefined control sequence.
+l.146 ... is a pre-specified density and $\hat{\bm
+                                                   \theta}$ is a vector of p...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+/home/cantabile/Documents/repos/varameta/analysis/meta-med-ms/meta-med-ms.tex:148: LaTeX Error: Environment remark undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.148 \begin{remark}
+                    
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+/home/cantabile/Documents/repos/varameta/analysis/meta-med-ms/meta-med-ms.tex:149: Undefined control sequence.
+<recently read> \bm 
+                    
+l.149 ...or $g$ that for appropriately chosen $\bm
+                                                  {\theta}$, $g(\nu;\bm \the...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/home/cantabile/Documents/repos/varameta/analysis/meta-med-ms/meta-med-ms.tex:149: Undefined control sequence.
+l.149 ...priately chosen $\bm{\theta}$, $g(\nu;\bm
+                                                   \theta)\approx f(\nu)$ fo...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+/home/cantabile/Documents/repos/varameta/analysis/meta-med-ms/meta-med-ms.tex:150: LaTeX Error: \begin{document} ended by \end{remark}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.150 \end{remark}
+                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+LaTeX Warning: Marginpar on page 5 moved.
+
+
+LaTeX Warning: Marginpar on page 5 moved.
+
+
+LaTeX Warning: Marginpar on page 5 moved.
+
+
+LaTeX Warning: Marginpar on page 5 moved.
+
+[5]
+/home/cantabile/Documents/repos/varameta/analysis/meta-med-ms/meta-med-ms.tex:177: Undefined control sequence.
 \@todonotes@caption ...kage {simeta} and \pacakge 
                                                   {varameta::}}
-l.70 ...\package{simeta} and \pacakge{varameta::}}
+l.177 ...package{simeta} and \pacakge{varameta::}}
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -376,10 +769,10 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-/home/cantabile/Documents/repos/varameta/analysis/meta-med-ms/meta-med-ms.tex:70: Undefined control sequence.
+/home/cantabile/Documents/repos/varameta/analysis/meta-med-ms/meta-med-ms.tex:177: Undefined control sequence.
 \@todonotes@text ...package {simeta} and \pacakge 
                                                   {varameta::}}
-l.70 ...\package{simeta} and \pacakge{varameta::}}
+l.177 ...package{simeta} and \pacakge{varameta::}}
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -388,25 +781,29 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Overfull \hbox (12.54703pt too wide) in paragraph at lines 76--77
+Overfull \hbox (12.54703pt too wide) in paragraph at lines 183--184
 \OT1/cmr/m/n/10 Our mo-ti-vat-ing prob-lem was meta-analysis of me-di-ans. In so do-ing, this manuscript
  []
 
-[2] (/home/cantabile/Documents/repos/varameta/analysis/meta-med-ms/meta-med-ms.aux) ) 
+[6] (/home/cantabile/Documents/repos/varameta/analysis/meta-med-ms/meta-med-ms.aux)
+
+LaTeX Warning: There were undefined references.
+
+ ) 
 Here is how much of TeX's memory you used:
- 12019 strings out of 492982
- 246041 string characters out of 6134896
- 309531 words of memory out of 5000000
- 15350 multiletter control sequences out of 15000+600000
- 9185 words of font info for 33 fonts, out of 8000000 for 9000
+ 12064 strings out of 492982
+ 246652 string characters out of 6134896
+ 310098 words of memory out of 5000000
+ 15392 multiletter control sequences out of 15000+600000
+ 10106 words of font info for 36 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 64i,11n,81p,660b,725s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb>
-Output written on /home/cantabile/Documents/repos/varameta/analysis/meta-med-ms/meta-med-ms.pdf (2 pages, 162048 bytes).
+ 64i,11n,81p,1117b,725s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb>
+Output written on /home/cantabile/Documents/repos/varameta/analysis/meta-med-ms/meta-med-ms.pdf (6 pages, 248951 bytes).
 PDF statistics:
- 78 PDF objects out of 1000 (max. 8388607)
- 57 compressed objects within 1 object stream
+ 118 PDF objects out of 1000 (max. 8388607)
+ 86 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
