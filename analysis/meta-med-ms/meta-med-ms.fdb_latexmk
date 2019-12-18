@@ -1,7 +1,7 @@
 # Fdb version 3
-["pdflatex"] 1576563392 "meta-med-ms.tex" "/home/cantabile/Documents/repos/varameta/analysis/meta-med-ms/meta-med-ms.pdf" "meta-med-ms" 1576563392
+["pdflatex"] 1576636628 "meta-med-ms.tex" "/home/cantabile/Documents/repos/varameta/analysis/meta-med-ms/meta-med-ms.pdf" "meta-med-ms" 1576636646
   "/etc/texmf/web2c/texmf.cnf" 1575776909 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/cantabile/Documents/repos/varameta/analysis/meta-med-ms/meta-med-ms.aux" 1576563392 11137 69580371526987973621f6da78a1461d ""
+  "/home/cantabile/Documents/repos/varameta/analysis/meta-med-ms/meta-med-ms.aux" 1576636628 9006 762ed9781ed4c803938da334c424bf0d ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1511824771 3332 103109f5612ad95229751940c61aada0 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm" 1480098701 1328 c834bbb027764024c09d3d2bf908b5f0 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm" 1480098701 1324 c910af8c371558dc20f2d7822f66fe64 ""
@@ -41,7 +41,6 @@
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb" 1480098733 33993 9b89b85fd2d9df0482bd47194d1d3bf3 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1480098733 32569 5e5ddc8df908dea60932f3c484a54c0d ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb" 1480098733 32587 1788b0c1c5b39540c96f5e42ccd6dae8 ""
-  "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb" 1480098733 32716 08e384dc442464e7285e891af9f45947 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb" 1480098733 32626 4f5c1b83753b1dd3a97d1b399a005b4b ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb" 1480098733 37944 359e864bd06cde3b1cf57bb20757fb06 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb" 1480098733 31099 c85edf1dd5b9e826d67c9c7293b6786c ""
@@ -142,12 +141,12 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1520210507 32485 c64754543d8ac501bea6e75e209ea521 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1575776961 2700761 ac0584cc9514ab21918550a6948c4ee2 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1575776987 4131809 0447c86d96ac0ccb3601b0179a479cf3 ""
-  "meta-med-ms.aux" 1576563392 11137 69580371526987973621f6da78a1461d ""
-  "meta-med-ms.tex" 1576563391 17181 12cc29e56dedc577c745ac5a63723ac8 ""
+  "meta-med-ms.aux" 1576636628 9006 762ed9781ed4c803938da334c424bf0d ""
+  "meta-med-ms.tex" 1576636626 16217 26bf3c56c314a9774f35fe24822ce417 ""
   "preamble.tex" 1575796756 343 337cd7c967a7a78f62f6e65596e10967 ""
   (generated)
-  "meta-med-ms.pdf"
-  "/home/cantabile/Documents/repos/varameta/analysis/meta-med-ms/meta-med-ms.log"
   "meta-med-ms.log"
+  "/home/cantabile/Documents/repos/varameta/analysis/meta-med-ms/meta-med-ms.log"
   "meta-med-ms.aux"
+  "meta-med-ms.pdf"
   "/home/cantabile/Documents/repos/varameta/analysis/meta-med-ms/meta-med-ms.pdf"

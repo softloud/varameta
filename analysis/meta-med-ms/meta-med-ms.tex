@@ -31,8 +31,8 @@ The authors are appreciative for the insights and comments from Emily Kothe, Ker
 Software tools for meta-analysis, such as Cochrane's
 RevMan~\dothislater{RevMan citation}
 or the R package \package{metafor}~\dothislater{metafor citation},
-require an estimate of effect and variance
-of that effect. However, the sample variance for the effect is not always available.
+require estimates of both effect and variance
+of that effect. However, the sample variance for the reported effect of interest is not always available.
 When the reported statistics are medians, measure of spreads commonly provided
 are the range or interquartile range. This leads to the omission of studies that report medians from the meta-anaysis. In this manuscript we present a method for estimating the variance of the sample median so that studies reporting medians may be included in meta-analyses.
 
@@ -40,12 +40,16 @@ are the range or interquartile range. This leads to the omission of studies that
 
 \morewords{expand this section, demonstrate how to do a meta-analysis}
 
+\subsection{What's the problem?}
+
 In published research, skewed data is often summarised by reporting the median and interquartile range. While this may be useful in a descriptive single-study sense, the lack of reported estimator variability poses a challenge in the context of meta-analysis.  Software for performing meta-analyses, such as the widely-used \texttt{R} package \texttt{metafor} \cite{Metafor2010}, require an estimate of the variance of the reported effects to conduct the meta-analysis under the assumed model
 
 \begin{equation}
-\widehat{\delta}_k=\delta + \gamma_k + \epsilon_k
+\widehat{\delta}_k=\delta + \gamma_k + \varepsilon_k
 \end{equation}
-where $\widehat{\delta}_k$ is the estimated effect from the $k$th study, $\delta$ is the population mean effect, $\epsilon_k$ is the error allowing for sampling variability and $\gamma_k\sim N(0,\tau^2)$ is the random effect to allow for differences in the true effects between studies.  Given the estimated effects for $K$ studies, all assumed to be normally distributed with a known (or estimated) variance, a meta-analysis can be carried out to estimate $\delta$ and the random effect variance $\tau^2$.  Our focus is on meta-analysis of three different effects involving the median.  The first is simply the median itself when there is only one group of interest in each study.  The second is the difference of two medians when there is two groups to be compared within each study (such as a case and control group).  The third, which may be more suitable than the difference in medians when measurements of scale differ between studies, is the ratio of medians.   For more on meta-analysis see, e.g., \cite{borenstein2008introduction} and \cite{kulinskaya2008meta}.
+where $\widehat{\delta}_k$ is the estimated effect from the $k$th study, $\delta$ is the population effect of interest, $\varepsilon_k$ is the error allowing for sampling variability and $\gamma_k\sim N(0,\tau^2)$ is the random effect to allow for differences in the true effects between studies.  Given the estimated effects for $K$ studies, all assumed to be normally distributed with a known (or estimated) variance, a meta-analysis can be carried out to estimate $\delta$ and the random effect variance $\tau^2$.  Our focus is on meta-analysis of three different effects involving the median.  The first is simply the median itself when there is only one group of interest in each study.  The second is the difference of two medians when there is two groups to be compared within each study (such as a case and control group).  The third, which may be more suitable than the difference in medians when measurements of scale differ between studies, is the ratio of medians.   For more on meta-analysis see, e.g., \cite{borenstein2008introduction} and \cite{kulinskaya2008meta}.
+
+\subsection{A solution.}
 
 In this paper we propose a method for meta-analyses of studies whose effects are reported in the form of median and interquartile range (or range). The previously proposed method of \cite{Hozo2005}, and extensions by \cite{Bland2015, Wan2014}, solve this problem by estimating the mean and standard deviation from the provided summary statistics. For some applications there may be two noticeable drawbacks to this approach.
 
@@ -57,7 +61,7 @@ The methods to convert to a mean and standard deviation perform well when the un
 Those initially who published the summary measures, may have chosen to report medians and ranges because they had decided that moment-based measures such as the mean were not suitable descriptors.
 \end{disadv}
 
-In the presence of underlying skewed distributions, both Disadvantages 1 and 2 may cause a real threat to the validity of any inference following conversion from quantiles measures to moment-based measures.  The method that we propose can be easily adapted to both single-study and meta-analysis contexts.  In the case of meta-analyses, meta-regression may also be conducted when some of the studies report means and standard deviations and others report medians and interquartile ranges.  This can be done by introducing a moderator factor variable to explain the differences between an effect based on means and an effect based on medians.
+In the presence of underlying skewed distributions, both Disadvantages 1 and 2\dothislater{find Disadvantages and work into text} may cause a real threat to the validity of any inference following conversion from quantiles measures to moment-based measures.  The method that we propose can be easily adapted to both single-study and meta-analysis contexts.  In the case of meta-analyses, meta-regression may also be conducted when some of the studies report means and standard deviations and others report medians and interquartile ranges.  This can be done by introducing a moderator factor variable to explain the differences between an effect based on means and an effect based on medians.
 
 To illustrate this problem, we begin with an example meta-analysis from medical research. We then briefly touch on how our method contributes to the existing solutions for this problem. In Section \ref{sec: var est}, we define our estimator for the variance of the sample median and consider alternatives. We show how this estimator can be used in meta-analysis, and extend to meta-regression if the difference between the means and medians are of interest. Simulation results are provided in Section \ref{sec: sims} that assess the performance of our estimator in both the single-study and meta-analysis setting.   Finally, in Section \ref{sec: pin again}, we return to the motivating example, discussed in Section \ref{sec: motiv}, to demonstrate how our method can be applied. Concluding remarks are provided in Section \ref{sec: conclusion}.
 
@@ -118,9 +122,6 @@ Secondly, and more importantly, to convert medians and interquartile ranges (or 
 
 We first focus on providing expressions for the variance of a single median, a difference in two independent median estimators and the log ratio of two medians.
 
-\subsection{Our estimator for the variance of the sample median}
-\label{sec: var est}
-
 Consider a population median denoted $\nu$ with corresponding estimator $M$, taken to be the middle order statistic from a sample with $n$ observations.  Let $f$ denote the probability density function for the underlying population.  Then the median estimator, $M$, is asymptotically normal with approximate variance (see, e.g. Ch.7 of \cite{dasgupta2008asymptotic})
 \begin{equation}\label{eqn: var est}
 \Var(M)\approx \frac{1}{n}\cdot\frac{1}{4\left[f(\nu)\right]^2}.
@@ -151,20 +152,7 @@ The choice of $g$ does not need to be similar to the true underlying distributio
 
 \dothislater{Find a meta-analysis of medians where this estimator elicits a difference in results. Different example than tired old Pinheiro.}
 
-\section{Existing methods for meta-analysing medians}
-% \section{how have peeps been doing it?}
-
-There are several existing methods for meta-analysing medians. Many of these are evolutions of Han et al.'s methods for approximating the sample mean and standard deviation from the median and the interquartile range~\dothislater{Range or interquartile range?}~\dothislater{Han citation}. Bland extended this method for the case where all quartiles, including minimum and maximum are available~\dothislater{bland citation}. Wan et al.\ compared and contrasted Han and Bland's methods under simulation, and also introduced some estimator's extending on Han et al.'s method~\dothislater{Wan}.
-
 \morewords{Go through each method: what set of summary statistics does each do? Look at table of equations in original overleaf, perhaps.}
-
-\section{An estimator for an approximation of the variance of the sample median}
-
-We provide a solution to meta-analysing medians by adapting this approximation for the variance of the sample median, \(M\),
-\[
-\mathrm{var}(M) \approx (4nf(\nu))^{-2},
-\]
-drawn from population with density function \(f\) and population median \(\nu\).
 
 \section{Performance of estimator in coverage probability simulations}
 
