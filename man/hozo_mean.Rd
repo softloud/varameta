@@ -17,3 +17,11 @@ hozo_mean(a, m, b)
 See \code{\link{estimator_eqn_ref}} for details and references for equation
 (3).
 }
+\seealso{
+Other mean_estimator: 
+\code{\link{bland_mean}()},
+\code{\link{wan_mean_C1}()},
+\code{\link{wan_mean_C2}()},
+\code{\link{wan_mean_C3}()}
+}
+\concept{mean_estimator}

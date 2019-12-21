@@ -10,6 +10,8 @@
 #' @param b Maximum value of sample.
 #' @param n Sample size.
 #'
+#' @family mean_error
+#'
 #' @export
 
 bland_se <- function(a, q_1, m, q_3, b, n) {

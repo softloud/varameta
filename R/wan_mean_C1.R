@@ -7,6 +7,8 @@
 #' @param m Median of sample.
 #' @param b Maximum value of sample.
 #'
+#' @family mean_estimator
+#'
 #' @export
 
 wan_mean_C1 <- function(a, m, b) {

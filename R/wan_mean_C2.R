@@ -9,6 +9,8 @@
 #' @param q_3 Third quartile of sample.
 #' @param b Maximum value of sample.
 #'
+#' @family mean_estimator
+#'
 #' @export
 
 wan_mean_C2 <- function(a, q_1, m, q_3, b) {

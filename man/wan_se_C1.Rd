@@ -17,3 +17,11 @@ wan_se_C1(a, b, n)
 See \code{\link{estimator_eqn_ref}} for details and references for equation
 (9).
 }
+\seealso{
+Other mean_error: 
+\code{\link{bland_se}()},
+\code{\link{hozo_se}()},
+\code{\link{wan_se_C2}()},
+\code{\link{wan_se_C3}()}
+}
+\concept{mean_error}

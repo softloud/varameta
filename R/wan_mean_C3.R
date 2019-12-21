@@ -7,6 +7,8 @@
 #' @param m Median of sample.
 #' @param q_3 Third quartile of sample.
 #'
+#' @family mean_estimator
+#'
 #' @export
 
 wan_mean_C3 <- function(q_1, m, q_3) {

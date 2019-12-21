@@ -17,3 +17,11 @@ wan_mean_C3(q_1, m, q_3)
 See \code{\link{estimator_eqn_ref}} for details and references for equation
 (14).
 }
+\seealso{
+Other mean_estimator: 
+\code{\link{bland_mean}()},
+\code{\link{hozo_mean}()},
+\code{\link{wan_mean_C1}()},
+\code{\link{wan_mean_C2}()}
+}
+\concept{mean_estimator}

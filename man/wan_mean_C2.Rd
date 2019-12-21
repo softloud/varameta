@@ -21,3 +21,11 @@ wan_mean_C2(a, q_1, m, q_3, b)
 See \code{\link{estimator_eqn_ref}} for details and references for equation
 (10).
 }
+\seealso{
+Other mean_estimator: 
+\code{\link{bland_mean}()},
+\code{\link{hozo_mean}()},
+\code{\link{wan_mean_C1}()},
+\code{\link{wan_mean_C3}()}
+}
+\concept{mean_estimator}

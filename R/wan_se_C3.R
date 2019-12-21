@@ -8,6 +8,8 @@
 #' @param q_3 Third quartile of sample.
 #' @param n Sample size.
 #'
+#' @family mean_error
+#'
 #' @export
 
 wan_se_C3 <- function(q_1, m, q_3, n) {

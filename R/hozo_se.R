@@ -9,6 +9,8 @@
 #' @param b Maximum value of sample.
 #' @param n Sample size.
 #'
+#' @family mean_error
+#'
 #' @export
 
 hozo_se <- function(a, m, b, n) {

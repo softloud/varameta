@@ -7,6 +7,8 @@
 #' @param b Maximum value of sample.
 #' @param n Sample size.
 #'
+#' @family mean_error
+#'
 #' @export
 
 wan_se_C1 <- function(a, b, n) {
