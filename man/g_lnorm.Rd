@@ -19,3 +19,12 @@ g_lnorm(n, median, spread, spread_type = "iqr")
 This estimator is for comparison purposes in the computational exploration of the estimator for the sample median proposed by varameter. In this case we assume a log-normal distribution
 \eqn{ \sigma := \frac{1}{\Phi} }
 }
+\seealso{
+Other g_* Possible choices of assumed true density: exponential, Pareto,
+Cauchy, and log-normal.: 
+\code{\link{g_cauchy}()},
+\code{\link{g_exp}()},
+\code{\link{g_norm}()}
+}
+\concept{g_* Possible choices of assumed true density: exponential, Pareto,
+Cauchy, and log-normal.}

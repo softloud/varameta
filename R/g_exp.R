@@ -8,6 +8,9 @@
 #'
 #' @param median median
 #' @param n sample size
+#'
+#' @family g_* Possible choices of assumed true density: exponential, Pareto,
+#' Cauchy, and log-normal.
 
 g_exp <- function(n, median) {
   # Estimate parameters.

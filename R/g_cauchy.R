@@ -12,6 +12,9 @@
 #' @param spread iqr or range value
 #' @param n sample size
 #' @param spread_type iqr or range, defaults to iqr
+#'
+#' @family g_* Possible choices of assumed true density: exponential, Pareto,
+#' Cauchy, and log-normal.
 
 g_cauchy <- function(n, median, spread, spread_type = "iqr") {
   # Estimate parameters.

@@ -21,3 +21,12 @@ This estimator is for comparison purposes in the computational exploration of th
 \details{
 In this case we assume a normal distribution... todo complete this sometime soon.
 }
+\seealso{
+Other g_* Possible choices of assumed true density: exponential, Pareto,
+Cauchy, and log-normal.: 
+\code{\link{g_cauchy}()},
+\code{\link{g_exp}()},
+\code{\link{g_lnorm}()}
+}
+\concept{g_* Possible choices of assumed true density: exponential, Pareto,
+Cauchy, and log-normal.}

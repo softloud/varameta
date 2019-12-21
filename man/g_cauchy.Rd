@@ -25,3 +25,12 @@ We have the quantile function given by \eqn{Q(p) = \eta + \gamma \tan(\pi(p - 1/
 
 Then, to estimate the error of the sample median, we calculate \eqn{(2 \sqrt{n} g(m; \eta = m, \gamma = iqr / 2) )^{-1}}.
 }
+\seealso{
+Other g_* Possible choices of assumed true density: exponential, Pareto,
+Cauchy, and log-normal.: 
+\code{\link{g_exp}()},
+\code{\link{g_lnorm}()},
+\code{\link{g_norm}()}
+}
+\concept{g_* Possible choices of assumed true density: exponential, Pareto,
+Cauchy, and log-normal.}

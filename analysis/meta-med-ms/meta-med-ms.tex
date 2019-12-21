@@ -49,7 +49,7 @@ In published research, skewed data is often summarised by reporting the median a
 \end{equation}
 where $\widehat{\delta}_k$ is the estimated effect from the $k$th study, $\delta$ is the population effect of interest, $\varepsilon_k$ is the error allowing for sampling variability and $\gamma_k\sim N(0,\tau^2)$ is the random effect to allow for differences in the true effects between studies.  Given the estimated effects for $K$ studies, all assumed to be normally distributed with a known (or estimated) variance, a meta-analysis can be carried out to estimate $\delta$ and the random effect variance $\tau^2$.  Our focus is on meta-analysis of three different effects involving the median.  The first is simply the median itself when there is only one group of interest in each study.  The second is the difference of two medians when there is two groups to be compared within each study (such as a case and control group).  The third, which may be more suitable than the difference in medians when measurements of scale differ between studies, is the ratio of medians.   For more on meta-analysis see, e.g., \cite{borenstein2008introduction} and \cite{kulinskaya2008meta}.
 
-\subsection{A solution.}
+\subsection{Why propose a new method?}
 
 In this paper we propose a method for meta-analyses of studies whose effects are reported in the form of median and interquartile range (or range). The previously proposed method of \cite{Hozo2005}, and extensions by \cite{Bland2015, Wan2014}, solve this problem by estimating the mean and standard deviation from the provided summary statistics. For some applications there may be two noticeable drawbacks to this approach.
 
@@ -101,9 +101,9 @@ Heilmann &2007 & 1149.0 & 456.0 & 33 & 1623.6 & 932.9 & 111 & $\bm{m, \iqr}$ \\
 He & 1997 & 183.0 & (110.0, 340.0) & 24 & 315.0 & (145.0, 1150.0) & 30 & $\bm{m, (a, b)}$\\
 \hline \\[-1.8ex]
 \end{tabular}
+\end{minipage}}
 \caption{Data from a meta-analysis of d-dimer levels in pre-eclampsia presented by \cite{Pinheiro2012}, measures of location and scale are varied: there are means and standard deviations; medians and interquartile ranges; quartiles; and medians and ranges. The types of estimates reported are listed in the final column denoted `reported'.}
   \label{tab: pinheiro}
-\end{minipage}}
 \end{table}
 
 
@@ -119,6 +119,66 @@ In order to perform a meta-analysis via conventional methods, we require, at min
 A potential solution is offered by Hozo et al.~\cite \cite{Hozo2005} who suggest estimating the mean and standard deviation from a reported median, minimum and maximum, as well as sample size, i.e from $S_1=\{a, m, b; n\}$. This provides a way to calculate the variance of the effect, as required by contemporary meta-analysis tools, although there are some limitations. Firstly, $S_1$ does not cover all cases of reported medians. In our example considered in Table \ref{tab: pinheiro} to see that there is only applicable study (He).
 
 Bland extends on Hozo et al.'s solution, but for the set $\{a, q_1, m, q_2, b; n\}$ where the minimum, maximum, median, as well as first and third quartiles are reported\cite{Bland2015}. Wan et al. improve on Hozo and Bland's solutions, as well as providing a solution for the set $\{q_1, m, q_3; n\}$ where the interquartile range is provided as an interval along with the median\cite{Wan2014}.  A nice review of the methods, including an improvement, can be found in \cite{shi2018estimate}.  However, it is noted that underlying normality appears to be the motivation for all methods and below we details some limitations.
+
+\begin{table}[ht!]
+  \resizebox{0.7\textwidth}{!}{\begin{minipage}{\textwidth}
+\centering
+
+\begin{tabular}{@{}llll@{}}
+\toprule
+Source & $\overline X$ & $S$ & $C$ \\ \midrule
+Hozo \cite{Hozo2005}	&
+ $\frac{a + 2m + b}{4}$              &
+ $S \approx
+\begin{cases}
+\frac 1 {\sqrt{12}}
+\left[
+(b - a)^2 + \frac{ (a - 2m + b)^2} 4
+\right]^\frac 1 2 & n \leqslant 15\\
+\frac {b - a} 4 & 15 < n \leqslant 70\\
+\frac {b - a} 6 & n > 70.
+\end{cases}$
+     &  $C_1 = \{a, m, b; n\}$   \\
+ Bland \cite{Bland2015}      &
+$ \frac{a + 2q_1 + 2m + 2q_3 + b}{8}$
+                &
+$[
+\frac 1 {16} (a^2 + 2q_1^2 + 2m^2 + 2q_3 + b^2) +$
+                 &
+$C_2 = \{a, q_1, m, q_3, b; n\}$
+                    \\
+
+ &&
+ $\frac 1 8 (aq_1 + q_1 m + m q_3 + q_3 b) -$
+&\\
+ &&
+ $\frac 1 {64}(q + 2q_1 + 2m + 2q_3 + b)^2
+]^{\frac 1 2}$
+
+ &\\
+Wan \cite{Wan2014}       &
+$\frac {a + 2m + b}{4}$
+              &
+$\frac{b - a}{2\Phi^{-1}\left(\frac{n - 0.375}n + 0.25{}\right)}$
+                  &$C_1 = \{a, m, b; n\}$     \\
+Wan \cite{Wan2014}       &   $ \frac{a + 2q_1 + 2m + 2q_3 + b}{8}$
+            &
+            $\frac{b - a}{4\Phi^{-1}\left(\frac{n - 0.375}{n + 0.25}\right)} + \frac{q_3 - q_1}{4\Phi^{-1}\left(\frac{0.75n - 0.1215}{n + 0.25}\right)}$
+
+                &
+                $C_2 = \{a, q_1, m, q_3, b; n\}$
+
+                    \\
+Wan \cite{Wan2014}       &
+$\frac{q_1 + m + q_3}{3}$
+            &
+            $\frac{q_3 - q_1}{2\Phi^{-1}\left(\frac{0.75n - 0.125}{n + 0.25}\right)}$
+             & $C_3 = \{q_1, m, q_3; n\}$    \\ \bottomrule
+\end{tabular}
+\end{minipage}}
+\caption{This table is a rephrasing and detail of Table 3 from Wan et al. \cite{Wan2014}, and guides the simulation discussed in Section \ref{sec: sims}. Here we have details of various estimators for sample mean and sample standard deviation, for different data sets. These estimators are defined in terms of sample summary statistics: minimum $a$, maximum $b$, median $m$, first quartile $q_1$, third quartile $q_3$, and sample size $n$.   Source indicates the first author of the paper the equations are found in. The sample mean and sample standard deviation estimators are presented by columns $\overline X$ and $S$, respectively. The column $C$ presents the sample summary statistics required as parameters in the coupled estimators. }
+\label{tab: eqns}
+\end{table}
 
 Firstly, note that the summary statistics sets $\{a, m, b; n\}$, $\{a, q_1, m, q_2, b; n\}$, and $\{q_1, m, q_3; n\}$ do not cover all of the presentations of summary statistics seen in Table \ref{tab: pinheiro}. Thus, even if Pinheiro et al. had access to all methods, the meta-analysers would still have work ahead of them to include all studies presented here.
 
@@ -160,6 +220,63 @@ The choice of $g$ does not need to be similar to the true underlying distributio
 
 \morewords{Go through each method: what set of summary statistics does each do? Look at table of equations in original overleaf, perhaps.}
 
+\subsection{Approximating the variance of the median from limited information}
+
+Given that the true population density $f$ of equation (\ref{eqn: var est}) is unknown, we propose replacing $f$ with a nominated density $g$ whose parameters are estimated from the information available.  In doing so we obtain our approximated variance in \eqref{eqn: varmed} by choosing a suitable $g\left(M; \hat{\bm \theta}\right)$.
+
+\subsubsection{Using the normal distribution}\label{sect:using_norm}~\\
+
+\noindent For the normal density with parameters $\mu$ and $\sigma$, the quantile function is $\preimage G(p) = \mu + \sigma \preimage \Phi(p)$ where $\Phi$ is the standard normal cumulative distribution function. Using the symmetry of $\Phi$ and assuming that interquartile range has been reported, we know that the true interquartile range is given by $2\sigma\preimage\Phi\left(0.25 \right)$. Thus we have estimators $\hat\mu := M$ and \begin{equation*}
+\hat{\sigma}^{(1)} := \frac {\iqr} {2 \preimage \Phi \left ( 0.25 \right)}.
+\end{equation*}
+
+If the sample range is reported, as was the case with one study in the motivating example provided in Table \ref{tab: pinheiro} then we need a different estimate of $\sigma$. For $x_{[i]}$ denoting the $i$th order statistic for a sample of size $n$, $x_{[i]}$ is an estimate to approximately the $n^{-1}(i - 0.5)$th population quantile. In particular, the maximum, or $n$th order statistic $x_{[n]}$, is an estimate to approximately the $[(n - 0.5)/n]$th population quantile. Thus, by a similar argument, we have
+\begin{equation*}
+\hat{\sigma}^{(2)} := \frac {x_{[n]} - x_{[1]}} {2 \preimage \Phi \left [ (n-0.5)/n \right]}
+\end{equation*}
+where $x_{[n]} - x_{[1]}$ simply the reported range.
+
+From above, if we choose the normal density for $g$, then $\hat{\bm{\theta}}=[\hat \mu, \hat{\sigma}^{(i)}]$ $(i=1,2)$ depending on whether the interquartile range or range is reported.
+
+\subsubsection{Using the log-normal distribution}~\\
+
+\noindent If we were to choose the log-normal density with parameters $\mu$ and $\sigma$, then since the true median of a lognormal density is given by $e^\mu$, we have an estimator for $\mu$, given by
+\begin{equation*}\label{mu-hat}
+\hat \mu := \log(M).
+\end{equation*}
+
+We obtain our estimator for $\sigma$ similarly when the interquartile range is reported. We know that the true interquartile range of the lognormal density is given by $\preimage G\left(\frac 3 4\right) - \preimage G\left(\frac 1 4\right)$ where $G$ is the cumulative distribution function for the lognormal density. We have the associated quantile function
+\[
+\preimage G(p; \mu, \sigma) = \exp(\sigma\preimage \Phi(p) + \mu).
+\]
+Using this information, along with the symmetry of $\Phi$ and our estimate $\hat \mu$, we have
+\begin{equation*}\label{sigma-hat}
+\hat{\sigma}^{(1)} := \frac 1 {\preimage \Phi\left(\frac 3 4\right)} \log\left(\frac {\iqr e^{- \hat \mu} \pm
+\sqrt{\iqr^2 e^{-2 \hat \mu} + 4}
+} {2}\right).
+\end{equation*}
+
+By similar argument to the deriviations for the normal density in Section \ref{sect:using_norm}, if the range is reported then our estimate to $\sigma$ is
+\begin{equation*}\label{sigma-hat-range}
+\hat{\sigma}^{(2)} := \frac 1 {\preimage \Phi\left(\frac {n - \frac 1 2} n\right)} \log\left[\frac {(x_{[n]} - x_{[1]}) e^{- \hat \mu} \pm
+\sqrt{(x_{[n]} - x_{[1]})^2 e^{-2\hat \mu} + 4}
+} {2}\right].
+\end{equation*}
+
+Again, if we choose the log-normal density for $g$, then $\hat{\bm{\theta}}=[\hat \mu, \hat{\sigma}^{(i)}]$ $(i=1,2)$ depending on whether the interquartile range or range is reported.
+
+\subsubsection{Using the exponential distribution} ~\\
+
+\noindent For the exponential density, we need only estimate the rate parameter $\lambda$. Since the true median of the exponential density is given by $\log (2)/ \lambda$, we can estimate $\hat\lambda := \log (2)/ M$.  Here, $\bm{\hat \theta}$ takes the single parameter estimate $\hat \lambda$.
+
+\subsubsection{Using the Cauchy distribution}~\\
+
+\noindent We need to estimate two parameters for the Cauchy density: a location parameter $\eta$ and a scale parameter $\theta$. From the quantile function for the Cauchy distribution $\preimage G(p) = \eta + \theta\tan\left[\pi \left(p - 0.5 \right)\right]$, we know that the true median is the location parameter $\eta$ and that the interquartile range is equal to $2\theta$. Hence, we can estimate $\hat\eta := M$ and if the interquartile range is reported $\hat{\theta}^{(1)} := \iqr/ 2$.  If the range is reported then similar to previous arguments, we can estimate $$\hat{\theta}^{(2)} = \frac{x_{[n]} - x_{[1]}}{2\tan\left[\pi\left(\frac{n-0.5}{n}-\frac{1}{2}\right)\right]}.$$
+When using the Cauchy, we then have $\hat{\bm{\theta}}=[\hat \eta, \hat{\theta}^{(i)}]$ $(i=1,2)$ depending on which range is reported.
+
+\section{Comparison between four choices of $g$}
+
+
 \section{Performance of estimator in coverage probability simulations}
 
 Now that we have defined an estimator for meta-analysing medians, let us explore the efficacy of this estimator under simulation, for different numbers of studies, distributions, and different assumptions about variation between studies and efficacy of intervention.
@@ -171,7 +288,7 @@ One approach for exploring the efficacy of a statistical estimator is to simulat
 \morewords{Mathematics need to be incorporated.}
 
 \begin{alignat*}
-& \log(m_k^I/m_k^C) & = \log(\nu^I/\nu^C) + \gamma_k\\
+\, & \log(m_k^I/m_k^C) & = \log(\nu^I/\nu^C) + \gamma_k\\
 \implies & \log(\lambda_k^C) - \log(\lambda_k^I) & = \log(\lambda^C) - \log(\lambda^I) + \gamma_k\\
 \implies & \log(\lambda_k^C) - \log(\lambda_k^I) & = (\log(\lambda^C) + \gamma_k/2) - (\log(\lambda_k^I) - \gamma_k/2)
 \end{alignat*}
@@ -186,11 +303,24 @@ One approach for exploring the efficacy of a statistical estimator is to simulat
 
 \subsection{simulation results}
 
+\begin{figure}
+   \includegraphics[width=\textwidth]{placeholder-coverage-plot.png}
+   \caption{Simulation results.}
+   \label{fig:sims}
+\end{figure}
+
+
 \section{Meta-analysis of medians}
 
-Our motivating problem was meta-analysis of medians. In so doing, this manuscript raises the question if examining research software engineering methodology, of exploring the efficacy of an estimator, in the context of rapidly evolving statistical tools for simulation and analysis, is of research merit in its own right.
+Our motivating problem was meta-analysis of medians. In so doing, this manuscript raises the question if examining research software engineering methodology, of exploring the efficacy of an estimator, in the context of rapidly evolving statistical tools for simulation and analysis, is of research merit in its own right. We begin by revisiting our motivating example, and turn to metaresearch observations from this analysis.
 
 \morewords{Now we can walk through a meta-analysis}
+
+\subsection{Revisiting the motivating example}
+
+
+
+\subsection{Components of research for computational science}
 
 \morewords{It is not immediately apparent what the best way to confer analyses.}
 

@@ -19,3 +19,12 @@ This estimator assumes we have observed a median, \eqn{m}, and sample size \eqn{
 
 This function then estimates \eqn{\lambda  :=  log(2) / m} and approximates the standard error of the sample median \eqn{(2 \sqrt{n} g(m; \lambda = log(2) / m))^{-1}} where \eqn{g} is the exponential density.
 }
+\seealso{
+Other g_* Possible choices of assumed true density: exponential, Pareto,
+Cauchy, and log-normal.: 
+\code{\link{g_cauchy}()},
+\code{\link{g_lnorm}()},
+\code{\link{g_norm}()}
+}
+\concept{g_* Possible choices of assumed true density: exponential, Pareto,
+Cauchy, and log-normal.}
