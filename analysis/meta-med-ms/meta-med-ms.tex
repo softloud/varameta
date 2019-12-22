@@ -179,6 +179,7 @@ $\frac{q_1 + m + q_3}{3}$
 \caption{This table is a rephrasing and detail of Table 3 from Wan et al. \cite{Wan2014}, and guides the simulation discussed in Section \ref{sec: sims}. Here we have details of various estimators for sample mean and sample standard deviation, for different data sets. These estimators are defined in terms of sample summary statistics: minimum $a$, maximum $b$, median $m$, first quartile $q_1$, third quartile $q_3$, and sample size $n$.   Source indicates the first author of the paper the equations are found in. The sample mean and sample standard deviation estimators are presented by columns $\overline X$ and $S$, respectively. The column $C$ presents the sample summary statistics required as parameters in the coupled estimators. }
 \label{tab: eqns}
 \end{table}
+\dothislater{Flip the fractions in Table \ref{tab: eqns} to the $a/b$ format Hien said to use. Will also be easier to read.}
 
 Firstly, note that the summary statistics sets $\{a, m, b; n\}$, $\{a, q_1, m, q_2, b; n\}$, and $\{q_1, m, q_3; n\}$ do not cover all of the presentations of summary statistics seen in Table \ref{tab: pinheiro}. Thus, even if Pinheiro et al. had access to all methods, the meta-analysers would still have work ahead of them to include all studies presented here.
 
@@ -303,6 +304,8 @@ One approach for exploring the efficacy of a statistical estimator is to simulat
 
 \subsection{simulation results}
 
+Figure \ref{fig:sims}} presents results of
+
 \begin{figure}
    \includegraphics[width=\textwidth]{placeholder-coverage-plot.png}
    \caption{Simulation results.}
@@ -312,18 +315,21 @@ One approach for exploring the efficacy of a statistical estimator is to simulat
 
 \section{Meta-analysis of medians}
 
-Our motivating problem was meta-analysis of medians. In so doing, this manuscript raises the question if examining research software engineering methodology, of exploring the efficacy of an estimator, in the context of rapidly evolving statistical tools for simulation and analysis, is of research merit in its own right. We begin by revisiting our motivating example, and turn to metaresearch observations from this analysis.
-
-\morewords{Now we can walk through a meta-analysis}
+Our motivating problem was meta-analysis of medians, and we have followed the \emph{toolchain walkthrough}\dothislater{footnote} for computationally developing a statistical estimator. This process took us from mathematical derivations, to estimator functions provided by \emph{research compendium}\dothislater{footnote} \package{varameta}, to \emph{coverage probability}\dothislater{footnote} simulations provided by the package \package{simeta} to explore the efficacy of this estimator under different sampling conditions. In so doing, this manuscript raises the question if examining research software engineering methodology, of exploring the efficacy of an estimator, in the context of rapidly evolving statistical tools for simulation and analysis, is of research merit in its own right. We begin by revisiting our motivating example, and turn to metaresearch observations from this analysis.
 
 \subsection{Revisiting the motivating example}
 
+With a method for incorporating medians, we revisit the meta-analysis presented by Pinheiro et al.\dothislater{Remember to replace the tired old Pinheiro example}.
 
+\morewords{Do include the code.}
 
 \subsection{Components of research for computational science}
 
 \morewords{It is not immediately apparent what the best way to confer analyses.}
 
 \morewords{metaresearch context}
+
+This manuscript derives mathematical estimators and presents simulation results of programmed instantiations of the algorithmic solution to the meta-analysis of medians. However, interests in reproducibility
+
 
 \end{document}

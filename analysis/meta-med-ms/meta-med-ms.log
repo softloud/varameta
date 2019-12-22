@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.12.8)  21 DEC 2019 10:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.12.8)  22 DEC 2019 14:21
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -569,166 +569,164 @@ LaTeX Warning: Citation `Wan2014' on page 4 undefined on input line 179.
 
 LaTeX Warning: Reference `sec: sims' on page 4 undefined on input line 179.
 
-
-LaTeX Warning: Citation `dasgupta2008asymptotic' on page 4 undefined on input line 191.
-
 [4]
 
-LaTeX Warning: Reference `sec: comparison' on page 5 undefined on input line 209.
+LaTeX Warning: Citation `dasgupta2008asymptotic' on page 5 undefined on input line 192.
+
+
+LaTeX Warning: Reference `sec: comparison' on page 5 undefined on input line 210.
 
 [5]
 
-/home/cantabile/Documents/repos/varameta/analysis/meta-med-ms/meta-med-ms.tex:215: LaTeX Error: Environment remark undefined.
+/home/cantabile/Documents/repos/varameta/analysis/meta-med-ms/meta-med-ms.tex:216: LaTeX Error: Environment remark undefined.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.215 \begin{remark}
+l.216 \begin{remark}
                     
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-/home/cantabile/Documents/repos/varameta/analysis/meta-med-ms/meta-med-ms.tex:217: LaTeX Error: \begin{document} ended by \end{remark}.
+/home/cantabile/Documents/repos/varameta/analysis/meta-med-ms/meta-med-ms.tex:218: LaTeX Error: \begin{document} ended by \end{remark}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.217 \end{remark}
+l.218 \end{remark}
                   
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 227--228
+Underfull \hbox (badness 10000) in paragraph at lines 228--229
 
  []
 
 [6]
-Underfull \hbox (badness 10000) in paragraph at lines 241--242
+Underfull \hbox (badness 10000) in paragraph at lines 242--243
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 268--269
+Underfull \hbox (badness 10000) in paragraph at lines 269--270
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 272--273
+Underfull \hbox (badness 10000) in paragraph at lines 273--274
 
  []
 
 [7]
-/home/cantabile/Documents/repos/varameta/analysis/meta-med-ms/meta-med-ms.tex:291: Missing number, treated as zero.
+/home/cantabile/Documents/repos/varameta/analysis/meta-med-ms/meta-med-ms.tex:292: Missing number, treated as zero.
 <to be read again> 
                    \protect 
-l.291 \,
+l.292 \,
          & \log(m_k^I/m_k^C) & = \log(\nu^I/\nu^C) + \gamma_k\\
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
 look up `weird error' in the index to The TeXbook.)
 
 
-/home/cantabile/Documents/repos/varameta/analysis/meta-med-ms/meta-med-ms.tex:294: Package amsmath Error: Extra & on this line.
+/home/cantabile/Documents/repos/varameta/analysis/meta-med-ms/meta-med-ms.tex:295: Package amsmath Error: Extra & on this line.
 
 See the amsmath package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.294 \end{alignat*}
+l.295 \end{alignat*}
                     
 \An extra & here is so disastrous that you should probably exit
  and fix things up. 
 
 
-/home/cantabile/Documents/repos/varameta/analysis/meta-med-ms/meta-med-ms.tex:294: Package amsmath Error: Extra & on this line.
+/home/cantabile/Documents/repos/varameta/analysis/meta-med-ms/meta-med-ms.tex:295: Package amsmath Error: Extra & on this line.
 
 See the amsmath package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.294 \end{alignat*}
+l.295 \end{alignat*}
                     
 \An extra & here is so disastrous that you should probably exit
  and fix things up. 
 
 
-/home/cantabile/Documents/repos/varameta/analysis/meta-med-ms/meta-med-ms.tex:294: Package amsmath Error: Extra & on this line.
+/home/cantabile/Documents/repos/varameta/analysis/meta-med-ms/meta-med-ms.tex:295: Package amsmath Error: Extra & on this line.
 
 See the amsmath package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.294 \end{alignat*}
+l.295 \end{alignat*}
                     
 \An extra & here is so disastrous that you should probably exit
  and fix things up. 
 
-/home/cantabile/Documents/repos/varameta/analysis/meta-med-ms/meta-med-ms.tex:294: Misplaced \omit.
+/home/cantabile/Documents/repos/varameta/analysis/meta-med-ms/meta-med-ms.tex:295: Misplaced \omit.
 \math@cr@@@ ...@ \@ne \add@amps \maxfields@ \omit 
                                                   \kern -\alignsep@ \iftag@ ...
-l.294 \end{alignat*}
+l.295 \end{alignat*}
                     
 I expect to see \omit only after tab marks or the \cr of
 an alignment. Proceed, and I'll ignore this case.
 
-/home/cantabile/Documents/repos/varameta/analysis/meta-med-ms/meta-med-ms.tex:294: Misplaced \omit.
+/home/cantabile/Documents/repos/varameta/analysis/meta-med-ms/meta-med-ms.tex:295: Misplaced \omit.
 \math@cr@@@ ...@ \@ne \add@amps \maxfields@ \omit 
                                                   \kern -\alignsep@ \iftag@ ...
-l.294 \end{alignat*}
+l.295 \end{alignat*}
                     
 I expect to see \omit only after tab marks or the \cr of
 an alignment. Proceed, and I'll ignore this case.
 
-/home/cantabile/Documents/repos/varameta/analysis/meta-med-ms/meta-med-ms.tex:294: Misplaced \omit.
+/home/cantabile/Documents/repos/varameta/analysis/meta-med-ms/meta-med-ms.tex:295: Misplaced \omit.
 \math@cr@@@ ...@ \@ne \add@amps \maxfields@ \omit 
                                                   \kern -\alignsep@ \iftag@ ...
-l.294 \end{alignat*}
+l.295 \end{alignat*}
                     
 I expect to see \omit only after tab marks or the \cr of
 an alignment. Proceed, and I'll ignore this case.
 
-<placeholder-coverage-plot.png, id=56, 505.89pt x 361.35pt>
+<placeholder-coverage-plot.png, id=57, 505.89pt x 361.35pt>
 File: placeholder-coverage-plot.png Graphic file (type png)
 <use placeholder-coverage-plot.png>
-Package pdftex.def Info: placeholder-coverage-plot.png  used on input line 307.
+Package pdftex.def Info: placeholder-coverage-plot.png  used on input line 310.
 (pdftex.def)             Requested size: 345.0pt x 246.43153pt.
+[8]
 
-Overfull \hbox (12.54703pt too wide) in paragraph at lines 315--316
-\OT1/cmr/m/n/10 Our mo-ti-vat-ing prob-lem was meta-analysis of me-di-ans. In so do-ing, this manuscript
- []
+LaTeX Warning: Marginpar on page 9 moved.
 
-[8] [9 </home/cantabile/Documents/repos/varameta/analysis/meta-med-ms/placeholder-coverage-plot.png (PNG copy)>] (/home/cantabile/Documents/repos/varameta/analysis/meta-med-ms/meta-med-ms.aux)
+
+LaTeX Warning: Marginpar on page 9 moved.
+
+[9 </home/cantabile/Documents/repos/varameta/analysis/meta-med-ms/placeholder-coverage-plot.png (PNG copy)>] [10] (/home/cantabile/Documents/repos/varameta/analysis/meta-med-ms/meta-med-ms.aux)
 
 LaTeX Warning: There were undefined references.
 
  )
-(\end occurred inside a group at level 1)
-
-### simple group (level 1) entered at line 119 ({)
-### bottom level
 (\end occurred when \ifx on line 119 was incomplete)
 (\end occurred when \ifx on line 119 was incomplete) 
 Here is how much of TeX's memory you used:
- 13125 strings out of 492982
- 258492 string characters out of 6134896
- 395422 words of memory out of 5000000
- 16391 multiletter control sequences out of 15000+600000
+ 13165 strings out of 492982
+ 259417 string characters out of 6134896
+ 408613 words of memory out of 5000000
+ 16431 multiletter control sequences out of 15000+600000
  21422 words of font info for 80 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  64i,20n,81p,1127b,856s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr
-/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti
-10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on /home/cantabile/Documents/repos/varameta/analysis/meta-med-ms/meta-med-ms.pdf (9 pages, 474319 bytes).
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/s
+hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
+8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
+Output written on /home/cantabile/Documents/repos/varameta/analysis/meta-med-ms/meta-med-ms.pdf (10 pages, 485553 bytes).
 PDF statistics:
- 159 PDF objects out of 1000 (max. 8388607)
- 115 compressed objects within 2 object streams
+ 166 PDF objects out of 1000 (max. 8388607)
+ 120 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  18 words of extra memory for PDF output out of 10000 (max. 10000000)
 
