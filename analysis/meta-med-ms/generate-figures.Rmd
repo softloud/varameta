@@ -1,0 +1,102 @@
+---
+title: Figures for Meta-analysis of Medians
+author: Charles T. Gray
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r packages}
+# packages
+
+library(simeta)
+library(actuar)
+library(tidyverse)
+
+```
+## meta-analysis pinheiro
+
+```{r}
+# find data
+
+
+# meta-analyse
+
+# output forestplot
+
+
+```
+
+
+
+## simulation
+
+```{r}
+demo_sim <- metasims(progress = FALSE)
+
+```
+
+
+## table of simulation parameters
+
+```{r}
+
+# make a table of 
+demo_sim %>% 
+  pluck("arguments") %>% 
+  kableExtra::kable()
+
+```
+
+Better to put this in the caption of the coverage plot.
+
+## plots of distributions
+
+```{r}
+distributions <- demo_sim %>% 
+  pluck("distributions") 
+
+
+```
+
+```{r}
+
+tibble(x = c(0,1)) %>% 
+ggplot(aes(x = x)) +
+  stat_function(
+    fun = dnorm, 
+    args = list(mean = 0.5, sd = 0.2))
+
+
+
+```
+
+```{r}
+distributions %>% {
+  map2(.$dist, .$par,
+       .f = function(d, p) {
+         density_fn(0.5, d, p, "d")
+       })
+}
+
+
+```
+
+```{r}
+
+
+```
+
+
+
+## coverage plot
+
+## patchwork all
+```{r }
+
+
+
+```
+

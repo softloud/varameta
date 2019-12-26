@@ -1,0 +1,100 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.9 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{ynt/global//global/global}
+    \entry{gray2019textttcodeproof}{article}{}
+      \name{author}{1}{}{%
+        {{hash=021f382350c9dbe3da3e5f3817a2cd3b}{%
+           family={Gray},
+           familyi={G\bibinitperiod},
+           given={Charles\bibnamedelima T.},
+           giveni={C\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+      }
+      \strng{namehash}{021f382350c9dbe3da3e5f3817a2cd3b}
+      \strng{fullhash}{021f382350c9dbe3da3e5f3817a2cd3b}
+      \strng{bibnamehash}{021f382350c9dbe3da3e5f3817a2cd3b}
+      \strng{authorbibnamehash}{021f382350c9dbe3da3e5f3817a2cd3b}
+      \strng{authornamehash}{021f382350c9dbe3da3e5f3817a2cd3b}
+      \strng{authorfullhash}{021f382350c9dbe3da3e5f3817a2cd3b}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{stat.OT}
+      \field{eprinttype}{arxiv}
+      \field{title}{Code::Proof: {{Prepare}} for Most Weather Conditions}
+      \field{year}{2019}
+      \verb{eprint}
+      \verb 1910.06964
+      \endverb
+    \endentry
+    \entry{grayTruthProofReproducibility2019}{article}{}
+      \name{author}{2}{}{%
+        {{hash=021f382350c9dbe3da3e5f3817a2cd3b}{%
+           family={Gray},
+           familyi={G\bibinitperiod},
+           given={Charles\bibnamedelima T.},
+           giveni={C\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+        {{hash=3a288691b4f9240bbcfe2c382b059ad6}{%
+           family={Marwick},
+           familyi={M\bibinitperiod},
+           given={Ben},
+           giveni={B\bibinitperiod}}}%
+      }
+      \strng{namehash}{c448f052599cba3b11f420b20dfcf2c5}
+      \strng{fullhash}{c448f052599cba3b11f420b20dfcf2c5}
+      \strng{bibnamehash}{c448f052599cba3b11f420b20dfcf2c5}
+      \strng{authorbibnamehash}{c448f052599cba3b11f420b20dfcf2c5}
+      \strng{authornamehash}{c448f052599cba3b11f420b20dfcf2c5}
+      \strng{authorfullhash}{c448f052599cba3b11f420b20dfcf2c5}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{eprintclass}{math}
+      \field{eprinttype}{arxiv}
+      \field{journaltitle}{arXiv:1907.05947 [math]}
+      \field{month}{7}
+      \field{shorttitle}{Truth, {{Proof}}, and {{Reproducibility}}}
+      \field{title}{Truth, {{Proof}}, and {{Reproducibility}}: {{There}}'s No Counter-Attack for the Codeless}
+      \field{year}{2019}
+      \verb{eprint}
+      \verb 1907.05947
+      \endverb
+      \verb{file}
+      \verb /home/cantabile/Zotero/storage/3Y65QUBV/Gray and Marwick - 2019 - Truth, Proof, and Reproducibility There's no coun.pdf;/home/cantabile/Zotero/storage/W9WPV9F9/1907.html
+      \endverb
+      \keyw{06-06,Mathematics - History and Overview}
+    \endentry
+  \enddatalist
+  \missing{Bland2015}
+  \missing{Hozo2005}
+  \missing{Metafor2010}
+  \missing{Pinheiro2012}
+  \missing{Wan2014}
+  \missing{\cite}
+  \missing{borenstein2008introduction}
+  \missing{dasgupta2008asymptotic}
+  \missing{kulinskaya2008meta}
+  \missing{shi2018estimate}
+  \missing{viechtbauerConductingMetaanalyses}
+\endrefsection
+\endinput
+

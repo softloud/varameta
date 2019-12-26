@@ -1,5 +1,15 @@
 \documentclass{article}
 
+% biblio stuff
+\usepackage[
+backend=biber,
+%style=alphabetic,
+sorting=ynt
+]{biblatex}
+
+% update this to whatever the bibliography file is
+\addbibresource{biblio.bib}
+
 %%% title and whatnot %%%
 
 \title{Meta-analysis of Medians}
@@ -30,7 +40,7 @@ The authors are appreciative for the insights and comments from Emily Kothe, Ker
 
 Software tools for meta-analysis, such as Cochrane's
 RevMan~\dothislater{RevMan citation}
-or the R package \package{metafor}~\dothislater{metafor citation},
+or the R package \package{metafor}~\cite{viechtbauerConductingMetaanalyses},
 require estimates of both effect and variance
 of that effect. However, the sample variance for the reported effect of interest is not always available.
 When the reported statistics are medians, measure of spreads commonly provided
@@ -81,32 +91,30 @@ $n$, the sample size.  $\iqr$ denotes the interquantile range and this may be re
 As an example of how studies collated in meta-analyses report these summary statistics differently, consider the dataset presented in Table \ref{tab: pinheiro}, taken from a systematic review of d-dimer in pre-eclampsia \cite{Pinheiro2012}. Ideally, one would want to perform a meta-analysis using the effects from all studies. However, estimator variance is only reported for three of the seven studies presented with the remaining studies reporting medians and ranges.
 
 
-\begin{table}[!htbp]
-\resizebox{0.8\textwidth}{!}{\begin{minipage}{\textwidth}
-    \centering
-    \small
-\begin{tabular}{ccccccccc}% {@{\extracolsep{5pt}} ccccccccc}
-\\[-1.8ex]\hline
-\hline \\[-1.8ex]
-& & \multicolumn{3}{c}{Control group} & \multicolumn{3}{c}{Treatment group} & \\ \cline{3-5} \cline{6-8}
-study & year & location & scale & $n_c$ & location & scale & $n_t$ &
-\bf{reported} \\
-\hline \\[-1.8ex]
-Dusse &2003 & 1146.6 & 311.2 & 28 & 1263.8 & 411.9 & 43 & $\bm{\overline x, s}$  \\
-Schjtlein &1997 & 1390.0 & 559.0 & 97 & 1545.0 & 849.5 & 200 & $\bm{\overline x, s}$  \\
-Terao &1991 & 221.52 & 179.9 & 80 & 347.87 & 460.5 & 13 & $\bm{\overline x, s}$  \\
-Catarino &2008 & 538.2 & (391.2, 822.8) & 42 & 448.5  & (313.0, 1091.3) & 44 & $\bm{m, (q_1, q_3)}$ \\
-Bellart &1998 & 545.0 & 225.0 & 65 & 2090.0 & 1800.0 & 12 & $\bm{m, \iqr}$ \\
-Heilmann &2007 & 1149.0 & 456.0 & 33 & 1623.6 & 932.9 & 111 & $\bm{m, \iqr}$ \\
-He & 1997 & 183.0 & (110.0, 340.0) & 24 & 315.0 & (145.0, 1150.0) & 30 & $\bm{m, (a, b)}$\\
-\hline \\[-1.8ex]
-\end{tabular}
-\end{minipage}}
-\caption{Data from a meta-analysis of d-dimer levels in pre-eclampsia presented by \cite{Pinheiro2012}, measures of location and scale are varied: there are means and standard deviations; medians and interquartile ranges; quartiles; and medians and ranges. The types of estimates reported are listed in the final column denoted `reported'.}
-  \label{tab: pinheiro}
-\end{table}
-
-
+% \begin{table}[!htbp]
+% \resizebox{0.8\textwidth}{!}{\begin{minipage}{0.8\textwidth}
+%     \centering
+%     \small
+% \begin{tabular}{ccccccccc}% {@{\extracolsep{5pt}} ccccccccc}
+% \\[-1.8ex]\hline
+% \hline \\[-1.8ex]
+% & & \multicolumn{3}{c}{Control group} & \multicolumn{3}{c}{Treatment group} & \\ \cline{3-5} \cline{6-8}
+% study & year & location & scale & $n_c$ & location & scale & $n_t$ &
+% \bf{reported} \\
+% \hline \\[-1.8ex]
+% Dusse &2003 & 1146.6 & 311.2 & 28 & 1263.8 & 411.9 & 43 & $\bm{\overline x, s}$  \\
+% Schjtlein &1997 & 1390.0 & 559.0 & 97 & 1545.0 & 849.5 & 200 & $\bm{\overline x, s}$  \\
+% Terao &1991 & 221.52 & 179.9 & 80 & 347.87 & 460.5 & 13 & $\bm{\overline x, s}$  \\
+% Catarino &2008 & 538.2 & (391.2, 822.8) & 42 & 448.5  & (313.0, 1091.3) & 44 & $\bm{m, (q_1, q_3)}$ \\
+% Bellart &1998 & 545.0 & 225.0 & 65 & 2090.0 & 1800.0 & 12 & $\bm{m, \iqr}$ \\
+% Heilmann &2007 & 1149.0 & 456.0 & 33 & 1623.6 & 932.9 & 111 & $\bm{m, \iqr}$ \\
+% He & 1997 & 183.0 & (110.0, 340.0) & 24 & 315.0 & (145.0, 1150.0) & 30 & $\bm{m, (a, b)}$\\
+% \hline \\[-1.8ex]
+% \end{tabular}
+% \end{minipage}}
+% \caption{Data from a meta-analysis of d-dimer levels in pre-eclampsia presented by \cite{Pinheiro2012}, measures of location and scale are varied: there are means and standard deviations; medians and interquartile ranges; quartiles; and medians and ranges. The types of estimates reported are listed in the final column denoted `reported'.}
+% \label{tab: pinheiro}
+% \end{table}
 
 Three studies (first authors Dusse, Schjtlein, and Terao) detailed in the table provide the sample mean, $\overline x$, and standard deviation, $s$. Two studies (Bellart and Heilmann) provide the sample median, $m$, and interquartile range, $\iqr$. One study (Catrino) provides the sample median, as well as the first and third quartiles, $q_1$ and $q_3$. Finally, one more study (He) provides the sample median and the minimum $a$ and maximum $b$ observed values. All studies provide the sample size $n$ and their respective estimates of location and scale for both the control and the pre-eclamptic groups.
 
@@ -121,7 +129,7 @@ A potential solution is offered by Hozo et al.~\cite \cite{Hozo2005} who suggest
 Bland extends on Hozo et al.'s solution, but for the set $\{a, q_1, m, q_2, b; n\}$ where the minimum, maximum, median, as well as first and third quartiles are reported\cite{Bland2015}. Wan et al. improve on Hozo and Bland's solutions, as well as providing a solution for the set $\{q_1, m, q_3; n\}$ where the interquartile range is provided as an interval along with the median\cite{Wan2014}.  A nice review of the methods, including an improvement, can be found in \cite{shi2018estimate}.  However, it is noted that underlying normality appears to be the motivation for all methods and below we details some limitations.
 
 \begin{table}[ht!]
-  \resizebox{0.7\textwidth}{!}{\begin{minipage}{\textwidth}
+  \resizebox{0.65\textwidth}{!}{\begin{minipage}{\textwidth}
 \centering
 
 \begin{tabular}{@{}llll@{}}
@@ -288,13 +296,13 @@ One approach for exploring the efficacy of a statistical estimator is to simulat
 
 \morewords{Mathematics need to be incorporated.}
 
-\begin{alignat*}
+\begin{alignat*}{2}
 \, & \log(m_k^I/m_k^C) & = \log(\nu^I/\nu^C) + \gamma_k\\
 \implies & \log(\lambda_k^C) - \log(\lambda_k^I) & = \log(\lambda^C) - \log(\lambda^I) + \gamma_k\\
 \implies & \log(\lambda_k^C) - \log(\lambda_k^I) & = (\log(\lambda^C) + \gamma_k/2) - (\log(\lambda_k^I) - \gamma_k/2)
 \end{alignat*}
 
-\begin{alignat*}
+\begin{alignat*}{1}
  \lambda_k^C & = \lambda^C  \exp(\gamma_k/2)\\
  \lambda_k^I & = \lambda^I  \exp(-\gamma_k/2)
 \end{alignat*}
@@ -304,13 +312,17 @@ One approach for exploring the efficacy of a statistical estimator is to simulat
 
 \subsection{simulation results}
 
-Figure \ref{fig:sims}} presents results of
+\morewords{paused for writing tracking}
+
+Figure \ref{fig:sims} presents results of
 
 \begin{figure}
    \includegraphics[width=\textwidth]{placeholder-coverage-plot.png}
    \caption{Simulation results.}
    \label{fig:sims}
 \end{figure}
+
+
 
 
 \section{Meta-analysis of medians}
@@ -321,7 +333,10 @@ Our motivating problem was meta-analysis of medians, and we have followed the \e
 
 With a method for incorporating medians, we revisit the meta-analysis presented by Pinheiro et al.\dothislater{Remember to replace the tired old Pinheiro example}.
 
-\morewords{Do include the code.}
+\morewords{Figure: forest plot}
+\morewords{paused for writing tracking}
+
+
 
 \subsection{Components of research for computational science}
 
@@ -329,7 +344,14 @@ With a method for incorporating medians, we revisit the meta-analysis presented 
 
 \morewords{metaresearch context}
 
-This manuscript derives mathematical estimators and presents simulation results of programmed instantiations of the algorithmic solution to the meta-analysis of medians. However, interests in reproducibility
+This manuscript derives mathematical estimators and presents simulation results of programmed instantiations of the algorithmic solution to the meta-analysis of medians. Rapid advances in the adoption software engineering provide an auxillary context of metaresearch; these are explored in companion manuscripts that describe the theoretical underpinnings of reproducible computing~\cite{grayTruthProofReproducibility2019} and the practical steps in preparing this analysis as a reproducible research compendium~\cite{gray2019textttcodeproof}. Which is to say, metaresearch questions from this project have generated more products of research than the question of meta-analysing medians itself.
+
+This manuscript is one product of a research question. However, against the backdrop of technological revolutions in data collection and code sharing, contemporary researchers face a constant challenge of upskilling in computational tools, in addition to the challenges of the discipline in which the researcher is working.
+
+%%% Bibliography
+
+\medskip
+%\printbibliography
 
 
 \end{document}

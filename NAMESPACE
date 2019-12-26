@@ -3,6 +3,7 @@
 export("%>%")
 export(bland_mean)
 export(bland_se)
+export(dist_name)
 export(effect_se)
 export(hozo_mean)
 export(hozo_se)

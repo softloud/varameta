@@ -1,0 +1,69 @@
+---
+title: "varameta"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{varmeta}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+set.seed(39)
+library(varameta)
+```
+
+## objective
+
+The `varameta::` package aims to bridge the toolchain gap from a dataset containing medians to a software package, such as `metafor::`, for meta-analysis.
+
+## calculate standard error of mean or median based on effect, spread, and sample size
+
+A wrapper function `effect_se` provides a quick method of calculating the error of an effect based on its measure of effect, spread, sample size. 
+
+```{r mean}
+# consider a randomly generated sample
+(a_sample <- rlnorm(10, 4, 0.2))
+
+# summary statistics for this sample
+a_sample %>% log() %>% summary()
+
+# calculate the standard error based on the median, interquartile range, and 
+# sample size
+
+effect_se(
+  centre = median(a_sample),
+  spread = IQR(a_sample),
+  n = length(a_sample),
+  centre_type = "median",
+  spread_type = "iqr"
+)
+
+```
+
+
+### standard error of the sample median
+
+### standard error of the sample mean
+
+- explicit example
+- then with sampling
+
+
+## variance of the sample median
+
+- explicit example
+- then with sampling
+
+
+## vectorised calculations
+
+## other estimators
+
+All other estimators available for meta-analysis are provided in `varameta::` for use in a compative analysis. 
