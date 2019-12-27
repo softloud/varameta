@@ -1,6 +1,8 @@
 ---
 title: "varameta"
-output: rmarkdown::html_vignette
+output: 
+  rmarkdown::html_vignette:
+    number_sections: true
 vignette: >
   %\VignetteIndexEntry{varmeta}
   %\VignetteEngine{knitr::rmarkdown}
@@ -17,20 +19,26 @@ knitr::opts_chunk$set(
 ```{r setup}
 set.seed(39)
 library(varameta)
+library(tidyverse)
+
+sample_size <- 10
+
 ```
 
-## objective
+# objective
 
 The `varameta::` package aims to bridge the toolchain gap from a dataset containing medians to a software package, such as `metafor::`, for meta-analysis.
 
-## calculate standard error of mean or median based on effect, spread, and sample size
+# quick and dirty
+
+# calculate standard error of mean or median based on effect, spread, and sample size
 
 A wrapper function `effect_se` provides a quick method of calculating the error of an effect based on its measure of effect, spread, sample size. 
 
 Consider a randomly generated sample.
 
 ```{r sample}
-(a_sample <- rlnorm(10,-1, 0.1))
+(a_sample <- rlnorm(sample_size,-1, 0.1))
 
 # summary statistics for this sample
 a_sample %>% log() %>% summary()
@@ -82,22 +90,64 @@ effect_se(
 ```
 
 
-### standard error of the sample median
-
-### standard error of the sample mean
-
-- explicit example
-- then with sampling
+## standard error of the sample median
 
 
-## variance of the sample median
+
+# variance of the sample median
 
 - explicit example
 - then with sampling
 
 
-## vectorised calculations
+# vectorised calculations
 
-## other estimators
+## standard error of the sample mean
+
+```{r}
+# take a sample
+se_mean_eg_sample <- rexp(sample_size)
+
+```
+
+Now, we wish to calculate the standard error $s/\sqrt n$ of the sample mean, calcualted with the the sample standard deviation and the squared-root of the sample size.
+
+
+```{r}
+
+# mean and sd
+effect_se(
+  centre = mean(se_mean_eg_sample),
+  spread = sd(se_mean_eg_sample),
+  n = length(se_mean_eg_sample),
+  centre_type = "mean",
+  spread_type = "sd"
+)
+
+# compare
+sd(se_mean_eg_sample) /
+  sqrt(length(se_mean_eg_sample))
+
+# mean and var
+effect_se(
+  centre = mean(se_mean_eg_sample),
+  spread = var(se_mean_eg_sample),
+  n = length(se_mean_eg_sample),
+  centre_type = "mean",
+  spread_type = "var"
+)
+
+# compare
+sqrt(var(se_mean_eg_sample) /
+  length(se_mean_eg_sample))
+
+
+```
+
+
+
+
+
+# other estimators
 
 All other estimators available for meta-analysis are provided in `varameta::` for use in a compative analysis. 
