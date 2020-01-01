@@ -191,7 +191,7 @@ Using the delta method, the variance of the log ratio of two sample medians is g
 
 In practice we do not know the true population median $\nu$, nor the true population density $f$, so estimates are required . It is common to only have access to the sample median and interquartile range (or range) from a single study. Or, in the case of the comparison of two samples, we may have two sample medians and associated interquartile ranges (or ranges).
 
-However, as we shall explore in Section \ref{sec: comparison}, both the log-normal and the normal densities provide surprisingly close approximations of the true densities evaluated at the median.  In this paper, we propose the following adaptation of equation (\ref{eqn: var est})
+However, as we shall explore in Section~\ref{sec: comparison}, both the log-normal and the normal densities provide surprisingly close approximations of the true densities evaluated at the median.  In this paper, we propose the following adaptation of equation (\ref{eqn: var est})
 \begin{equation} \label{eqn: varmed}
 \varmed(M) := \frac 1 {4n\left[ g\left(M; \hat{\bm \theta}\right)\right]^2}
 \end{equation}
@@ -201,9 +201,7 @@ where $g$ is a pre-specified density and $\hat{\bm \theta}$ is a vector of param
 The choice of $g$ does not need to be similar to the true underlying distribution.  Instead, it only need be close to the density evaluated at the median. It turns out that there are excellent choices for $g$ that for appropriately chosen $\bm{\theta}$, $g(\nu;\bm \theta)\approx f(\nu)$ for a diverse range of densities, $f$.
 \end{remark}
 
-\dothislater{Find a meta-analysis of medians where this estimator elicits a difference in results. Different example than tired old Pinheiro.}
-
-\morewords{Go through each method: what set of summary statistics does each do? Look at table of equations in original overleaf, perhaps.}
+We now derive each of these parameter sets, for the normal, log-normal, exponential, and Cauchy distributions, before comparing the estimators derived in Section \ref{sec: comparison}.
 
 \subsection{Approximating the variance of the median from limited information}
 
@@ -260,7 +258,7 @@ Again, if we choose the log-normal density for $g$, then $\hat{\bm{\theta}}=[\ha
 When using the Cauchy, we then have $\hat{\bm{\theta}}=[\hat \eta, \hat{\theta}^{(i)}]$ $(i=1,2)$ depending on which range is reported.
 
 \section{Comparison between four choices of $g$}
-
+\label{sec: comparison}
 
 \section{Performance of estimator in coverage probability simulations}
 
@@ -303,6 +301,11 @@ Figure \ref{fig:sims} presents results of
 
 \section{Meta-analysis of medians}
 
+\morewords{Find a meta-analysis of medians where this estimator elicits a difference in results. Different example than tired old Pinheiro.}
+
+\morewords{Go through each method: what set of summary statistics does each do? Look at table of equations in original overleaf, perhaps.}
+
+
 Our motivating problem was meta-analysis of medians, and we have followed the \emph{toolchain walkthrough}\dothislater{footnote} for computationally developing a statistical estimator. This process took us from mathematical derivations, to estimator functions provided by \emph{research compendium}\dothislater{footnote} \package{varameta}, to \emph{coverage probability}\dothislater{footnote} simulations provided by the package \package{simeta} to explore the efficacy of this estimator under different sampling conditions. In so doing, this manuscript raises the question if examining research software engineering methodology, of exploring the efficacy of an estimator, in the context of rapidly evolving statistical tools for simulation and analysis, is of research merit in its own right. We begin by revisiting our motivating example, and turn to metaresearch observations from this analysis.
 
 \subsection{Revisiting the motivating example}
@@ -324,7 +327,7 @@ This manuscript derives mathematical estimators and presents simulation results 
 
 This manuscript is one product of a research question. However, against the backdrop of technological revolutions in data collection and code sharing, contemporary researchers face a constant challenge of upskilling in computational tools, in addition to the challenges of the discipline in which the researcher is working. This manuscript used two packages, \package{varameta} and \package{simeta} to perform analysis; this manuscript is but one research component of the compendium of research to assess estimators for meta-analysis of medians. This splintered approach has the advantage that each component can exist for a different utility, individually, but together form a compendium of research.
 
-Sharing and reflecting on how we do this can surely be of benefit to others, especially for those with the leisure to learn new techniques, such as graduate students.   
+Sharing and reflecting on how we do this can surely be of benefit to others, especially for those with the leisure to learn new techniques, such as graduate students.
 
 %%% Bibliography
 

@@ -63,6 +63,30 @@
       \verb /home/cantabile/Zotero/storage/B7836IKR/Hozo et al. - 2005 - Estimating the mean and variance from the median, .pdf;/home/cantabile/Zotero/storage/YNCAHMGX/1471-2288-5-13.html
       \endverb
     \endentry
+    \entry{dasgupta2008asymptotic}{book}{}
+      \name{author}{1}{}{%
+        {{hash=7d1e1cfbca10faad26b3c267e1d2350b}{%
+           family={DasGupta},
+           familyi={D\bibinitperiod},
+           given={Anirban},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer Science \& Business Media}%
+      }
+      \strng{namehash}{7d1e1cfbca10faad26b3c267e1d2350b}
+      \strng{fullhash}{7d1e1cfbca10faad26b3c267e1d2350b}
+      \strng{bibnamehash}{7d1e1cfbca10faad26b3c267e1d2350b}
+      \strng{authorbibnamehash}{7d1e1cfbca10faad26b3c267e1d2350b}
+      \strng{authornamehash}{7d1e1cfbca10faad26b3c267e1d2350b}
+      \strng{authorfullhash}{7d1e1cfbca10faad26b3c267e1d2350b}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Asymptotic theory of statistics and probability}
+      \field{year}{2008}
+    \endentry
     \entry{viechtbauerConductingMetaanalysesMetafor2010}{article}{}
       \name{author}{1}{}{%
         {{hash=8fb2046b93076a185201e54f9ef91d63}{%
@@ -308,7 +332,6 @@
     \endentry
   \enddatalist
   \missing{borenstein2008introduction}
-  \missing{dasgupta2008asymptotic}
   \missing{kulinskaya2008meta}
   \missing{shi2018estimate}
   \missing{~}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.12.8)  1 JAN 2020 15:46
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.12.8)  1 JAN 2020 16:12
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -974,13 +974,6 @@ Package biblatex Warning: The following entry could not be found
 
 Package biblatex Warning: The following entry could not be found
 (biblatex)                in the database:
-(biblatex)                dasgupta2008asymptotic
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
 (biblatex)                kulinskaya2008meta
 (biblatex)                Please verify the spelling and rerun
 (biblatex)                LaTeX afterwards.
@@ -1090,41 +1083,37 @@ LaTeX Warning: Reference `sec: sims' on page 4 undefined on input line 163.
 
 LaTeX Warning: Reference `tab: pinheiro' on page 4 undefined on input line 168.
 
-[4]
-
-LaTeX Warning: Reference `sec: comparison' on page 5 undefined on input line 194.
-
-[5]
-Underfull \hbox (badness 10000) in paragraph at lines 212--213
+[4] [5]
+Underfull \hbox (badness 10000) in paragraph at lines 210--211
 
  []
 
 
-LaTeX Warning: Reference `tab: pinheiro' on page 6 undefined on input line 218.
+LaTeX Warning: Reference `tab: pinheiro' on page 6 undefined on input line 216.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 226--227
+Underfull \hbox (badness 10000) in paragraph at lines 224--225
 
  []
 
 [6]
-Underfull \hbox (badness 10000) in paragraph at lines 253--254
+Underfull \hbox (badness 10000) in paragraph at lines 251--252
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 257--258
+Underfull \hbox (badness 10000) in paragraph at lines 255--256
 
  []
 
 [7]
 
-LaTeX Warning: Reference `fig:sims' on page 8 undefined on input line 293.
+LaTeX Warning: Reference `fig:sims' on page 8 undefined on input line 291.
 
 <placeholder-coverage-plot.png, id=52, 505.89pt x 361.35pt>
 File: placeholder-coverage-plot.png Graphic file (type png)
 <use placeholder-coverage-plot.png>
-Package pdftex.def Info: placeholder-coverage-plot.png  used on input line 296.
+Package pdftex.def Info: placeholder-coverage-plot.png  used on input line 294.
 (pdftex.def)             Requested size: 345.0pt x 246.43153pt.
 
 LaTeX Warning: Marginpar on page 8 moved.
@@ -1132,7 +1121,7 @@ LaTeX Warning: Marginpar on page 8 moved.
 
 LaTeX Warning: Marginpar on page 8 moved.
 
-[8] [9 </home/cantabile/Documents/repos/varameta/analysis/meta-med-ms/placeholder-coverage-plot.png (PNG copy)>] [10] (/home/cantabile/Documents/repos/varameta/analysis/meta-med-ms/meta-med-ms.aux)
+[8] [9 </home/cantabile/Documents/repos/varameta/analysis/meta-med-ms/placeholder-coverage-plot.png (PNG copy)>] [10] [11] (/home/cantabile/Documents/repos/varameta/analysis/meta-med-ms/meta-med-ms.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -1141,19 +1130,19 @@ Package logreq Info: Writing requests to 'meta-med-ms.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 21025 strings out of 492982
+ 21023 strings out of 492982
  398557 string characters out of 6134896
- 815372 words of memory out of 5000000
- 24201 multiletter control sequences out of 15000+600000
+ 814367 words of memory out of 5000000
+ 24199 multiletter control sequences out of 15000+600000
  19864 words of font info for 74 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 64i,20n,81p,1162b,1595s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 64i,20n,81p,1162b,1594s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
 fonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on /home/cantabile/Documents/repos/varameta/analysis/meta-med-ms/meta-med-ms.pdf (10 pages, 456868 bytes).
+Output written on /home/cantabile/Documents/repos/varameta/analysis/meta-med-ms/meta-med-ms.pdf (11 pages, 457353 bytes).
 PDF statistics:
- 150 PDF objects out of 1000 (max. 8388607)
- 108 compressed objects within 2 object streams
+ 153 PDF objects out of 1000 (max. 8388607)
+ 110 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  18 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -97,7 +97,7 @@ ma_sample %>%
 ```
 
 
-# calculate standard error of mean or median based on effect, spread, and sample size
+# Calculate the standard error of mean or median based on effect, spread, and sample size
 
 A wrapper function `effect_se` provides a quick method of calculating the error of an effect based on its measure of effect, spread, sample size. 
 
@@ -138,9 +138,7 @@ tibble(x = c(0, 1)) %>%
 
 ```
 
-```{r}
-
-
+```{r effect se median}
 # calculate the standard error based on the median, interquartile range, and
 # sample size
 
@@ -157,16 +155,6 @@ effect_se(
 
 
 ## standard error of the sample median
-
-
-
-# variance of the sample median
-
-- explicit example
-- then with sampling
-
-
-# vectorised calculations
 
 ## standard error of the sample mean
 
@@ -210,11 +198,39 @@ sqrt(var(se_mean_eg_sample) /
 
 ```
 
-
-# other estimators
+# Vectorised calculations for meta-analysis datasets
 
 ```{r, fig.align='center', fig.width=6}
-panda("varameta:: provides several estimators for the variances of the sample median")
+panda("vectorisation is my favourite part of R", panda = 14)
+```
+
+
+```{r}
+# borrowing from sister package simeta:: to simulate a dataset
+(meta_data <- sim_stats() %>% 
+  dplyr::filter(group == "control"))
+
+# add a vecorised
+# todo function this (after report)
+meta_data %>% 
+  mutate(
+    effect_se = pmap_dbl(
+      list(centre = effect, spread = effect_spread, n = n),
+      effect_se,
+      centre_type = "median",
+      spread_type = "iqr"
+    )
+  )
+
+```
+
+
+# Other estimators
+
+```{r, fig.align='center', fig.width=6}
+panda(
+  panda = 49,
+  "varameta:: provides several estimators for the variances of the sample median")
 ```
 
 
