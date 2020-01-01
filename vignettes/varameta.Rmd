@@ -3,6 +3,7 @@ title: "varameta"
 output: 
   rmarkdown::html_vignette:
     number_sections: true
+bibliography: references.bib
 vignette: >
   %\VignetteIndexEntry{varmeta}
   %\VignetteEngine{knitr::rmarkdown}
@@ -16,20 +17,85 @@ knitr::opts_chunk$set(
 )
 ```
 
-```{r setup}
+```{r setup, message=FALSE}
+
+# for reproducibility
 set.seed(39)
+
+# packages
 library(varameta)
 library(tidyverse)
+library(simeta)
+library(panda)
 
+# move to parameter when done with chunk-wise?
 sample_size <- 10
 
 ```
 
-# objective
+# Objective of the `varameta::` package
 
-The `varameta::` package aims to bridge the toolchain gap from a dataset containing medians to a software package, such as `metafor::`, for meta-analysis.
+The `varameta::` package aims to bridge the toolchain gap from a dataset containing medians to a software package, such as `metafor::` [@viechtbauerConductingMetaanalysesMetafor2010], for meta-analysis.
 
-# quick and dirty
+
+```{r, fig.align='center', fig.width=6}
+panda("varameta:: is for meta-analysing medians")
+
+```
+
+
+
+# A minimal demonstration of calculating the variance of the sample median
+
+```{r, fig.align='center', fig.width=6}
+panda("show me the code!")
+```
+
+
+## Compute standard error of the sample median
+
+```{r}
+# get a sample
+a_sample <- rexp(sample_size)
+
+# get standard error of the sample median
+effect_se(
+  centre = median(a_sample),
+  spread = IQR(a_sample),
+  n = length(a_sample),
+  centre_type = "median",
+  spread_type = "iqr"
+)
+
+```
+
+
+## Vectorised calculations for dataframes
+
+Here we borrow a function from the companion `simeta::` package. See below for details.
+
+```{r}
+# generate random meta-analysis dataset
+# one row per study
+(ma_sample <- sim_stats() %>%
+  # filter down to one group per study
+  dplyr::filter(group == "control"))
+
+
+ma_sample %>%
+  # append a column with the standard error of the median for each study
+  mutate(effect_se = pmap_dbl(
+    list(centre = effect,
+         spread = effect_spread,
+         n = n),
+    effect_se,
+    centre_type = "median",
+    spread_type = "iqr"
+  ))
+
+
+```
+
 
 # calculate standard error of mean or median based on effect, spread, and sample size
 
@@ -145,9 +211,13 @@ sqrt(var(se_mean_eg_sample) /
 ```
 
 
-
-
-
 # other estimators
 
+```{r, fig.align='center', fig.width=6}
+panda("there's more to varameta::")
+```
+
+
 All other estimators available for meta-analysis are provided in `varameta::` for use in a compative analysis. 
+
+# References
