@@ -1,5 +1,5 @@
 ---
-title: "varameta"
+title: "varameta::"
 output: 
   rmarkdown::html_vignette:
     number_sections: true
@@ -214,7 +214,7 @@ sqrt(var(se_mean_eg_sample) /
 # other estimators
 
 ```{r, fig.align='center', fig.width=6}
-panda("there's more to varameta::")
+panda("varameta:: provides several estimators for the variances of the sample median")
 ```
 
 

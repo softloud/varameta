@@ -1,22 +1,22 @@
 [0] Config.pm:302> INFO - This is Biber 2.9
 [0] Config.pm:305> INFO - Logfile is 'meta-med-ms.blg'
-[33] biber:313> INFO - === Wed Jan  1, 2020, 14:33:34
-[57] Biber.pm:371> INFO - Reading 'meta-med-ms.bcf'
-[117] Biber.pm:857> INFO - Found 12 citekeys in bib section 0
-[130] Biber.pm:3981> INFO - Processing section 0
-[139] Biber.pm:4154> INFO - Looking for bibtex format file 'references.bib' for section 0
-[141] bibtex.pm:1468> INFO - LaTeX decoding ...
-[154] bibtex.pm:1294> INFO - Found BibTeX data source 'references.bib'
-[170] Utils.pm:169> WARN - Range field 'pages' in entry 'blandEstimatingMeanStandard2014' is malformed, falling back to literal
-[201] Utils.pm:169> WARN - I didn't find a database entry for 'borenstein2008introduction' (section 0)
-[201] Utils.pm:169> WARN - I didn't find a database entry for 'kulinskaya2008meta' (section 0)
-[201] Utils.pm:169> WARN - I didn't find a database entry for 'shi2018estimate' (section 0)
-[201] Utils.pm:169> WARN - I didn't find a database entry for '~' (section 0)
-[201] Utils.pm:169> WARN - I didn't find a database entry for 'dasgupta2008asymptotic' (section 0)
-[215] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[215] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[215] Biber.pm:3809> INFO - Sorting list 'ynt/global//global/global' of type 'entry' with template 'ynt' and locale 'en-US'
-[215] Biber.pm:3815> INFO - No sort tailoring available for locale 'en-US'
-[223] bbl.pm:617> INFO - Writing 'meta-med-ms.bbl' with encoding 'UTF-8'
-[227] bbl.pm:720> INFO - Output to meta-med-ms.bbl
-[227] Biber.pm:110> INFO - WARNINGS: 6
+[29] biber:313> INFO - === Wed Jan  1, 2020, 15:39:47
+[50] Biber.pm:371> INFO - Reading 'meta-med-ms.bcf'
+[106] Biber.pm:857> INFO - Found 12 citekeys in bib section 0
+[118] Biber.pm:3981> INFO - Processing section 0
+[127] Biber.pm:4154> INFO - Looking for bibtex format file 'references.bib' for section 0
+[128] bibtex.pm:1468> INFO - LaTeX decoding ...
+[141] bibtex.pm:1294> INFO - Found BibTeX data source 'references.bib'
+[156] Utils.pm:169> WARN - Range field 'pages' in entry 'blandEstimatingMeanStandard2014' is malformed, falling back to literal
+[185] Utils.pm:169> WARN - I didn't find a database entry for 'borenstein2008introduction' (section 0)
+[185] Utils.pm:169> WARN - I didn't find a database entry for 'kulinskaya2008meta' (section 0)
+[185] Utils.pm:169> WARN - I didn't find a database entry for 'shi2018estimate' (section 0)
+[185] Utils.pm:169> WARN - I didn't find a database entry for '~' (section 0)
+[185] Utils.pm:169> WARN - I didn't find a database entry for 'dasgupta2008asymptotic' (section 0)
+[197] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[197] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[197] Biber.pm:3809> INFO - Sorting list 'ynt/global//global/global' of type 'entry' with template 'ynt' and locale 'en-US'
+[198] Biber.pm:3815> INFO - No sort tailoring available for locale 'en-US'
+[206] bbl.pm:617> INFO - Writing 'meta-med-ms.bbl' with encoding 'UTF-8'
+[209] bbl.pm:720> INFO - Output to meta-med-ms.bbl
+[209] Biber.pm:110> INFO - WARNINGS: 6

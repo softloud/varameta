@@ -90,7 +90,7 @@ $n$, the sample size.  $\iqr$ denotes the interquantile range and this may be re
 
 As an example of how studies collated in meta-analyses report these summary statistics differently, consider the dataset presented in Table \ref{tab: pinheiro}, taken from a systematic review of d-dimer in pre-eclampsia~\cite{pinheiroDdimerPreeclampsiaSystematic2012}. Ideally, one would want to perform a meta-analysis using the effects from all studies. However, estimator variance is only reported for three of the seven studies presented with the remaining studies reporting medians and ranges.
 
-\input{pinheiro-table.tex}
+%\input{pinheiro-table.tex}
 %
 Three studies (first authors Dusse, Schjtlein, and Terao) detailed in the table provide the sample mean, $\overline x$, and standard deviation, $s$. Two studies (Bellart and Heilmann) provide the sample median, $m$, and interquartile range, $\iqr$. One study (Catrino) provides the sample median, as well as the first and third quartiles, $q_1$ and $q_3$. Finally, one more study (He) provides the sample median and the minimum $a$ and maximum $b$ observed values. All studies provide the sample size $n$ and their respective estimates of location and scale for both the control and the pre-eclamptic groups.
 
@@ -295,7 +295,7 @@ Figure \ref{fig:sims} presents results of
 \begin{figure}
    \includegraphics[width=\textwidth]{placeholder-coverage-plot.png}
    \caption{Simulation results.}
-   \label{fig:sims}
+   %\label{fig:sims}
 \end{figure}
 
 
@@ -322,7 +322,9 @@ With a method for incorporating medians, we revisit the meta-analysis presented 
 
 This manuscript derives mathematical estimators and presents simulation results of programmed instantiations of the algorithmic solution to the meta-analysis of medians. Rapid advances in the adoption software engineering provide an auxillary context of metaresearch; these are explored in companion manuscripts that describe the theoretical underpinnings of reproducible computing~\cite{grayTruthProofReproducibility2019} and the practical steps in preparing this analysis as a reproducible research compendium~\cite{gray2019textttcodeproof}. Which is to say, metaresearch questions from this project have generated more products of research than the question of meta-analysing medians itself.
 
-This manuscript is one product of a research question. However, against the backdrop of technological revolutions in data collection and code sharing, contemporary researchers face a constant challenge of upskilling in computational tools, in addition to the challenges of the discipline in which the researcher is working.
+This manuscript is one product of a research question. However, against the backdrop of technological revolutions in data collection and code sharing, contemporary researchers face a constant challenge of upskilling in computational tools, in addition to the challenges of the discipline in which the researcher is working. This manuscript used two packages, \package{varameta} and \package{simeta} to perform analysis; this manuscript is but one research component of the compendium of research to assess estimators for meta-analysis of medians. This splintered approach has the advantage that each component can exist for a different utility, individually, but together form a compendium of research.
+
+Sharing and reflecting on how we do this can surely be of benefit to others, especially for those with the leisure to learn new techniques, such as graduate students.   
 
 %%% Bibliography
 
