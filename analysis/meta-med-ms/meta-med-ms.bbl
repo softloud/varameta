@@ -19,6 +19,229 @@
 
 \refsection{0}
   \datalist[entry]{ynt/global//global/global}
+    \entry{hozoEstimatingMeanVariance2005}{article}{}
+      \name{author}{3}{}{%
+        {{hash=81f438ebadded31f0b6efcf30aed7098}{%
+           family={Hozo},
+           familyi={H\bibinitperiod},
+           given={Stela\bibnamedelima Pudar},
+           giveni={S\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{hash=21859764cf30bd92087033a14ffb3ab6}{%
+           family={Djulbegovic},
+           familyi={D\bibinitperiod},
+           given={Benjamin},
+           giveni={B\bibinitperiod}}}%
+        {{hash=6c0a8b29176f89b1b0219399df384155}{%
+           family={Hozo},
+           familyi={H\bibinitperiod},
+           given={Iztok},
+           giveni={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{30a562d2c04f58ba49ac3402612efc56}
+      \strng{fullhash}{30a562d2c04f58ba49ac3402612efc56}
+      \strng{bibnamehash}{30a562d2c04f58ba49ac3402612efc56}
+      \strng{authorbibnamehash}{30a562d2c04f58ba49ac3402612efc56}
+      \strng{authornamehash}{30a562d2c04f58ba49ac3402612efc56}
+      \strng{authorfullhash}{30a562d2c04f58ba49ac3402612efc56}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1471-2288}
+      \field{journaltitle}{BMC Medical Research Methodology}
+      \field{month}{4}
+      \field{number}{1}
+      \field{title}{Estimating the Mean and Variance from the Median, Range, and the Size of a Sample}
+      \field{volume}{5}
+      \field{year}{2005}
+      \field{pages}{13}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1186/1471-2288-5-13
+      \endverb
+      \verb{file}
+      \verb /home/cantabile/Zotero/storage/B7836IKR/Hozo et al. - 2005 - Estimating the mean and variance from the median, .pdf;/home/cantabile/Zotero/storage/YNCAHMGX/1471-2288-5-13.html
+      \endverb
+    \endentry
+    \entry{viechtbauerConductingMetaanalysesMetafor2010}{article}{}
+      \name{author}{1}{}{%
+        {{hash=8fb2046b93076a185201e54f9ef91d63}{%
+           family={Viechtbauer},
+           familyi={V\bibinitperiod},
+           given={Wolfgang},
+           giveni={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{8fb2046b93076a185201e54f9ef91d63}
+      \strng{fullhash}{8fb2046b93076a185201e54f9ef91d63}
+      \strng{bibnamehash}{8fb2046b93076a185201e54f9ef91d63}
+      \strng{authorbibnamehash}{8fb2046b93076a185201e54f9ef91d63}
+      \strng{authornamehash}{8fb2046b93076a185201e54f9ef91d63}
+      \strng{authorfullhash}{8fb2046b93076a185201e54f9ef91d63}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Statistical Software}
+      \field{number}{3}
+      \field{title}{Conducting Meta-Analyses in {R} with the {{metafor}} Package}
+      \field{volume}{36}
+      \field{year}{2010}
+      \field{pages}{1\bibrangedash 48}
+      \range{pages}{48}
+    \endentry
+    \entry{pinheiroDdimerPreeclampsiaSystematic2012}{article}{}
+      \name{author}{7}{}{%
+        {{hash=2e97242bcd17159e108bb7383223c145}{%
+           family={Pinheiro},
+           familyi={P\bibinitperiod},
+           given={Melina\bibnamedelimb de\bibnamedelima Barros},
+           giveni={M\bibinitperiod\bibinitdelim d\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+        {{hash=6cd9758d97ae4d675272f3fcf8d52bfa}{%
+           family={Junqueira},
+           familyi={J\bibinitperiod},
+           given={Daniela\bibnamedelimb Rezende\bibnamedelima Garcia},
+           giveni={D\bibinitperiod\bibinitdelim R\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+        {{hash=823af30357420871500dcc083a857072}{%
+           family={Coelho},
+           familyi={C\bibinitperiod},
+           given={Fernanda\bibnamedelima Fonseca},
+           giveni={F\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+        {{hash=c94d404e76d88161eef45ec60b8a955c}{%
+           family={Freitas},
+           familyi={F\bibinitperiod},
+           given={Let{í}cia\bibnamedelima G.},
+           giveni={L\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+        {{hash=a5a08294939162e7f4cbe7b7af793332}{%
+           family={Carvalho},
+           familyi={C\bibinitperiod},
+           given={Maria\bibnamedelima G.},
+           giveni={M\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+        {{hash=2ad31ee33aa949957b0968e335f8f5ca}{%
+           family={Gomes},
+           familyi={G\bibinitperiod},
+           given={Karina\bibnamedelima Braga},
+           giveni={K\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+        {{hash=8a34073fdcdb58c9722a85d9dc539e9a}{%
+           family={Dusse},
+           familyi={D\bibinitperiod},
+           given={Luci\bibnamedelimb Maria\bibnamedelima Santana},
+           giveni={L\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{14b3273c97733a5e0a9ee433cbc666b0}
+      \strng{fullhash}{0b9b037d3037fbac2c627d590d2ed6fb}
+      \strng{bibnamehash}{14b3273c97733a5e0a9ee433cbc666b0}
+      \strng{authorbibnamehash}{14b3273c97733a5e0a9ee433cbc666b0}
+      \strng{authornamehash}{14b3273c97733a5e0a9ee433cbc666b0}
+      \strng{authorfullhash}{0b9b037d3037fbac2c627d590d2ed6fb}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{issn}{0009-8981}
+      \field{journaltitle}{Clinica Chimica Acta}
+      \field{month}{12}
+      \field{shorttitle}{D-Dimer in Preeclampsia}
+      \field{title}{D-Dimer in Preeclampsia: {{Systematic}} Review and Meta-Analysis}
+      \field{volume}{414}
+      \field{year}{2012}
+      \field{pages}{166\bibrangedash 170}
+      \range{pages}{5}
+      \verb{doi}
+      \verb 10.1016/j.cca.2012.08.003
+      \endverb
+      \verb{file}
+      \verb /home/cantabile/Zotero/storage/B8RUI6V5/Pinheiro et al. - 2012 - D-dimer in preeclampsia Systematic review and met.pdf;/home/cantabile/Zotero/storage/6WD3356V/S0009898112004007.html
+      \endverb
+      \keyw{D-dimer,Diagnosis,Meta-analysis,Preeclampsia,Systematic review}
+    \endentry
+    \entry{blandEstimatingMeanStandard2014}{article}{}
+      \name{author}{1}{}{%
+        {{hash=dbf1bc562f5d328263b011a90c00b488}{%
+           family={Bland},
+           familyi={B\bibinitperiod},
+           given={Martin},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{dbf1bc562f5d328263b011a90c00b488}
+      \strng{fullhash}{dbf1bc562f5d328263b011a90c00b488}
+      \strng{bibnamehash}{dbf1bc562f5d328263b011a90c00b488}
+      \strng{authorbibnamehash}{dbf1bc562f5d328263b011a90c00b488}
+      \strng{authornamehash}{dbf1bc562f5d328263b011a90c00b488}
+      \strng{authorfullhash}{dbf1bc562f5d328263b011a90c00b488}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1929-6029}
+      \field{journaltitle}{International Journal of Statistics in Medical Research}
+      \field{month}{1}
+      \field{number}{1}
+      \field{title}{Estimating {{Mean}} and {{Standard Deviation}} from the {{Sample Size}}, {{Three Quartiles}}, {{Minimum}}, and {{Maximum}}}
+      \field{volume}{4}
+      \field{year}{2014}
+      \field{pages}{57-64-64}
+      \range{pages}{-1}
+      \verb{file}
+      \verb /home/cantabile/Zotero/storage/7MAYR6VB/Bland - 2014 - Estimating Mean and Standard Deviation from the Sa.pdf;/home/cantabile/Zotero/storage/9MEFFXXJ/2688.html
+      \endverb
+      \keyw{maximum,mean,minimum,Quartile,standard deviation,systematic review.}
+      \warn{\item Range field 'pages' in entry 'blandEstimatingMeanStandard2014' is malformed, falling back to literal}
+    \endentry
+    \entry{wanEstimatingSampleMean2014}{article}{}
+      \name{author}{4}{}{%
+        {{hash=f7c209fad9735d6d66931704f0b93364}{%
+           family={Wan},
+           familyi={W\bibinitperiod},
+           given={Xiang},
+           giveni={X\bibinitperiod}}}%
+        {{hash=f6a0ffc7d35dc9a95de473f988886554}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Wenqian},
+           giveni={W\bibinitperiod}}}%
+        {{hash=4bab4a58ee0665ad886f907cc78b9b00}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Jiming},
+           giveni={J\bibinitperiod}}}%
+        {{hash=73e2ee2d1b50e464ef93141423f7479f}{%
+           family={Tong},
+           familyi={T\bibinitperiod},
+           given={Tiejun},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{bcbe5ccd18dd4b05c5c3a0a59f47b215}
+      \strng{fullhash}{7219d82ea4d46dc67bd34993a9d90d03}
+      \strng{bibnamehash}{bcbe5ccd18dd4b05c5c3a0a59f47b215}
+      \strng{authorbibnamehash}{bcbe5ccd18dd4b05c5c3a0a59f47b215}
+      \strng{authornamehash}{bcbe5ccd18dd4b05c5c3a0a59f47b215}
+      \strng{authorfullhash}{7219d82ea4d46dc67bd34993a9d90d03}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1471-2288}
+      \field{journaltitle}{BMC Medical Research Methodology}
+      \field{month}{12}
+      \field{number}{1}
+      \field{title}{Estimating the Sample Mean and Standard Deviation from the Sample Size, Median, Range and/or Interquartile Range}
+      \field{volume}{14}
+      \field{year}{2014}
+      \field{pages}{135}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1186/1471-2288-14-135
+      \endverb
+      \verb{file}
+      \verb /home/cantabile/Zotero/storage/R77KA9KM/Wan et al. - 2014 - Estimating the sample mean and standard deviation .pdf;/home/cantabile/Zotero/storage/7S3KY3BN/1471-2288-14-135.html
+      \endverb
+    \endentry
     \entry{gray2019textttcodeproof}{article}{}
       \name{author}{1}{}{%
         {{hash=021f382350c9dbe3da3e5f3817a2cd3b}{%
@@ -84,17 +307,11 @@
       \keyw{06-06,Mathematics - History and Overview}
     \endentry
   \enddatalist
-  \missing{Bland2015}
-  \missing{Hozo2005}
-  \missing{Metafor2010}
-  \missing{Pinheiro2012}
-  \missing{Wan2014}
-  \missing{\cite}
   \missing{borenstein2008introduction}
   \missing{dasgupta2008asymptotic}
   \missing{kulinskaya2008meta}
   \missing{shi2018estimate}
-  \missing{viechtbauerConductingMetaanalyses}
+  \missing{~}
 \endrefsection
 \endinput
 

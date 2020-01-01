@@ -79,7 +79,7 @@
       <file>meta-med-ms.bcf</file>
     </requires>
     <requires type="editable">
-      <file>biblio.bib</file>
+      <file>references.bib</file>
     </requires>
   </external>
 </requests>

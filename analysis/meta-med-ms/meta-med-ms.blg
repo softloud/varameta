@@ -1,27 +1,22 @@
 [0] Config.pm:302> INFO - This is Biber 2.9
 [0] Config.pm:305> INFO - Logfile is 'meta-med-ms.blg'
-[30] biber:313> INFO - === Thu Dec 26, 2019, 12:37:21
-[51] Biber.pm:371> INFO - Reading 'meta-med-ms.bcf'
-[107] Biber.pm:857> INFO - Found 13 citekeys in bib section 0
-[119] Biber.pm:3981> INFO - Processing section 0
-[129] Biber.pm:4154> INFO - Looking for bibtex format file 'biblio.bib' for section 0
-[130] bibtex.pm:1468> INFO - LaTeX decoding ...
-[138] bibtex.pm:1294> INFO - Found BibTeX data source 'biblio.bib'
-[148] Utils.pm:169> WARN - I didn't find a database entry for 'viechtbauerConductingMetaanalyses' (section 0)
-[148] Utils.pm:169> WARN - I didn't find a database entry for 'Metafor2010' (section 0)
-[148] Utils.pm:169> WARN - I didn't find a database entry for 'borenstein2008introduction' (section 0)
-[148] Utils.pm:169> WARN - I didn't find a database entry for 'kulinskaya2008meta' (section 0)
-[148] Utils.pm:169> WARN - I didn't find a database entry for 'Hozo2005' (section 0)
-[148] Utils.pm:169> WARN - I didn't find a database entry for 'Bland2015' (section 0)
-[148] Utils.pm:169> WARN - I didn't find a database entry for 'Wan2014' (section 0)
-[148] Utils.pm:169> WARN - I didn't find a database entry for 'shi2018estimate' (section 0)
-[148] Utils.pm:169> WARN - I didn't find a database entry for 'Pinheiro2012' (section 0)
-[148] Utils.pm:169> WARN - I didn't find a database entry for '\cite' (section 0)
-[148] Utils.pm:169> WARN - I didn't find a database entry for 'dasgupta2008asymptotic' (section 0)
-[157] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[157] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[157] Biber.pm:3809> INFO - Sorting list 'ynt/global//global/global' of type 'entry' with template 'ynt' and locale 'en-US'
-[157] Biber.pm:3815> INFO - No sort tailoring available for locale 'en-US'
-[160] bbl.pm:617> INFO - Writing 'meta-med-ms.bbl' with encoding 'UTF-8'
-[161] bbl.pm:720> INFO - Output to meta-med-ms.bbl
-[161] Biber.pm:110> INFO - WARNINGS: 11
+[33] biber:313> INFO - === Wed Jan  1, 2020, 14:33:34
+[57] Biber.pm:371> INFO - Reading 'meta-med-ms.bcf'
+[117] Biber.pm:857> INFO - Found 12 citekeys in bib section 0
+[130] Biber.pm:3981> INFO - Processing section 0
+[139] Biber.pm:4154> INFO - Looking for bibtex format file 'references.bib' for section 0
+[141] bibtex.pm:1468> INFO - LaTeX decoding ...
+[154] bibtex.pm:1294> INFO - Found BibTeX data source 'references.bib'
+[170] Utils.pm:169> WARN - Range field 'pages' in entry 'blandEstimatingMeanStandard2014' is malformed, falling back to literal
+[201] Utils.pm:169> WARN - I didn't find a database entry for 'borenstein2008introduction' (section 0)
+[201] Utils.pm:169> WARN - I didn't find a database entry for 'kulinskaya2008meta' (section 0)
+[201] Utils.pm:169> WARN - I didn't find a database entry for 'shi2018estimate' (section 0)
+[201] Utils.pm:169> WARN - I didn't find a database entry for '~' (section 0)
+[201] Utils.pm:169> WARN - I didn't find a database entry for 'dasgupta2008asymptotic' (section 0)
+[215] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[215] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[215] Biber.pm:3809> INFO - Sorting list 'ynt/global//global/global' of type 'entry' with template 'ynt' and locale 'en-US'
+[215] Biber.pm:3815> INFO - No sort tailoring available for locale 'en-US'
+[223] bbl.pm:617> INFO - Writing 'meta-med-ms.bbl' with encoding 'UTF-8'
+[227] bbl.pm:720> INFO - Output to meta-med-ms.bbl
+[227] Biber.pm:110> INFO - WARNINGS: 6
