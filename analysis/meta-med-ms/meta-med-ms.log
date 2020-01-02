@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.12.8)  2 JAN 2020 12:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.12.8)  2 JAN 2020 19:24
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1042,20 +1042,20 @@ Package csquotes Info: Redefining alias 'default' -> 'english'.
  (/home/cantabile/Documents/repos/varameta/analysis/meta-med-ms/meta-med-ms.aux)
 \openout1 = `meta-med-ms.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
 Package biblatex Info: Input encoding 'utf8' detected.
 Package biblatex Info: Automatic encoding selection.
 (biblatex)             Assuming data encoding 'utf8'.
@@ -1083,25 +1083,11 @@ Package biblatex Warning: The following entry could not be found
 (biblatex)                Please verify the spelling and rerun
 (biblatex)                LaTeX afterwards.
 
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
-(biblatex)                shi2018estimate
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
-(biblatex)                ~
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
 )
-Package biblatex Info: Reference section=0 on input line 27.
-Package biblatex Info: Reference segment=0 on input line 27.
+Package biblatex Info: Reference section=0 on input line 29.
+Package biblatex Info: Reference segment=0 on input line 29.
 \AtBeginShipoutBox=\box39
-Package hyperref Info: Link coloring ON on input line 27.
+Package hyperref Info: Link coloring ON on input line 29.
  (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
  (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
@@ -1109,9 +1095,9 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count336
 )
-LaTeX Info: Redefining \ref on input line 27.
-LaTeX Info: Redefining \pageref on input line 27.
-LaTeX Info: Redefining \nameref on input line 27.
+LaTeX Info: Redefining \ref on input line 29.
+LaTeX Info: Redefining \pageref on input line 29.
+LaTeX Info: Redefining \nameref on input line 29.
  (/home/cantabile/Documents/repos/varameta/analysis/meta-med-ms/meta-med-ms.out) (/home/cantabile/Documents/repos/varameta/analysis/meta-med-ms/meta-med-ms.out)
 \@outlinefile=\write6
 \openout6 = `meta-med-ms.out'.
@@ -1141,41 +1127,46 @@ Package grfext Info: Graphics extension search list:
  (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 )) ABD: EveryShipout initializing macros
-LaTeX Font Info:    Try loading font information for U+msa on input line 30.
+LaTeX Font Info:    Try loading font information for U+msa on input line 32.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 30.
+LaTeX Font Info:    Try loading font information for U+msb on input line 32.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 30.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 32.
  (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <8> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 30.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 32.
+
+Overfull \hbox (16.91446pt too wide) in paragraph at lines 32--32
+ [][] 
+ []
+
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <6> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 30.
-Package hyperref Info: bookmark level for unknown todo defaults to 0 on input line 42.
- [1
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 32.
+Package hyperref Info: bookmark level for unknown todo defaults to 0 on input line 44.
+[1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
 
-LaTeX Warning: Reference `sec: var est' on page 2 undefined on input line 77.
+LaTeX Warning: Reference `sec: var est' on page 2 undefined on input line 79.
 
 
-LaTeX Warning: Reference `sec: sims' on page 2 undefined on input line 77.
+LaTeX Warning: Reference `sec: sims' on page 2 undefined on input line 79.
 
 
-LaTeX Warning: Reference `sec: conclusion' on page 2 undefined on input line 77.
+LaTeX Warning: Reference `sec: conclusion' on page 2 undefined on input line 79.
 
 [2]
 Runaway argument?
-/home/cantabile/Documents/repos/varameta/analysis/meta-med-ms/meta-med-ms.tex:108: Forbidden control sequence found while scanning use of \@ifnextchar.
+/home/cantabile/Documents/repos/varameta/analysis/meta-med-ms/meta-med-ms.tex:110: Forbidden control sequence found while scanning use of \@ifnextchar.
 <inserted text> 
                 \par 
-l.108 ...65 & 2090.0 & 1800.0 & 12 & $\bm{m, \iqr}
+l.110 ...65 & 2090.0 & 1800.0 & 12 & $\bm{m, \iqr}
                                                   $ \\
 I suspect you have forgotten a `}', causing me
 to read past where you wanted me to stop.
@@ -1183,10 +1174,10 @@ I'll try to recover; but if the error is serious,
 you'd better type `E' or `X' now and fix your file.
 
 Runaway argument?
-/home/cantabile/Documents/repos/varameta/analysis/meta-med-ms/meta-med-ms.tex:109: Forbidden control sequence found while scanning use of \@ifnextchar.
+/home/cantabile/Documents/repos/varameta/analysis/meta-med-ms/meta-med-ms.tex:111: Forbidden control sequence found while scanning use of \@ifnextchar.
 <inserted text> 
                 \par 
-l.109 ...33 & 1623.6 & 932.9 & 111 & $\bm{m, \iqr}
+l.111 ...33 & 1623.6 & 932.9 & 111 & $\bm{m, \iqr}
                                                   $ \\
 I suspect you have forgotten a `}', causing me
 to read past where you wanted me to stop.
@@ -1194,58 +1185,67 @@ I'll try to recover; but if the error is serious,
 you'd better type `E' or `X' now and fix your file.
 
 
-Overfull \hbox (102.66934pt too wide) in paragraph at lines 97--113
+Overfull \hbox (102.66934pt too wide) in paragraph at lines 99--115
  [][] 
  []
 
 [3]
-Overfull \hbox (116.63004pt too wide) in paragraph at lines 184--184
+Overfull \hbox (4.605pt too wide) in paragraph at lines 129--130
+[]\OT1/cmr/m/n/10 Bland ex-tends on Hozo \OT1/cmr/m/it/10 et al.\OT1/cmr/m/n/10 's so-lu-tion, but for the set $\OML/cmm/m/it/10 C[] \OT1/cmr/m/n/10 := \OMS/cmsy/m/n/10 f\OML/cmm/m/it/10 a; q[]; m; q[]; b\OT1/cmr/m/n/10 ; \OML/cmm/m/it/10 n\OMS/cmsy/m/n/10 g$
+ []
+
+
+Overfull \hbox (116.63004pt too wide) in paragraph at lines 186--186
  [][] 
  []
 
 
-LaTeX Warning: Reference `sec: sims' on page 4 undefined on input line 185.
+LaTeX Warning: Reference `sec: sims' on page 4 undefined on input line 187.
 
 
-LaTeX Warning: Reference `sec: sims' on page 4 undefined on input line 185.
+LaTeX Warning: Reference `sec: sims' on page 4 undefined on input line 187.
 
-[4] [5]
-Underfull \hbox (badness 10000) in paragraph at lines 232--233
+[4]
+
+LaTeX Warning: Marginpar on page 5 moved.
+
+[5]
+Underfull \hbox (badness 10000) in paragraph at lines 234--235
 
  []
 
 [6]
-Underfull \hbox (badness 10000) in paragraph at lines 246--247
+Underfull \hbox (badness 10000) in paragraph at lines 248--249
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 273--274
+Underfull \hbox (badness 10000) in paragraph at lines 275--276
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 277--278
+Underfull \hbox (badness 10000) in paragraph at lines 279--280
 
  []
 
 [7]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 282.
+(hyperref)                removing `math shift' on input line 284.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 282.
+(hyperref)                removing `math shift' on input line 284.
 
 [8]
 
-LaTeX Warning: Reference `fig:sims' on page 9 undefined on input line 315.
+LaTeX Warning: Reference `fig:sims' on page 9 undefined on input line 317.
 
-<placeholder-coverage-plot.png, id=210, 505.89pt x 361.35pt>
+<placeholder-coverage-plot.png, id=213, 505.89pt x 361.35pt>
 File: placeholder-coverage-plot.png Graphic file (type png)
 <use placeholder-coverage-plot.png>
-Package pdftex.def Info: placeholder-coverage-plot.png  used on input line 318.
+Package pdftex.def Info: placeholder-coverage-plot.png  used on input line 320.
 (pdftex.def)             Requested size: 345.0pt x 246.43153pt.
 
 LaTeX Warning: Marginpar on page 9 moved.
@@ -1253,12 +1253,17 @@ LaTeX Warning: Marginpar on page 9 moved.
 
 LaTeX Warning: Marginpar on page 9 moved.
 
-[9 </home/cantabile/Documents/repos/varameta/analysis/meta-med-ms/placeholder-coverage-plot.png (PNG copy)>] [10] [11]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 363.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 363.
+[9 </home/cantabile/Documents/repos/varameta/analysis/meta-med-ms/placeholder-coverage-plot.png (PNG copy)>] [10]
+Overfull \hbox (6.09167pt too wide) in paragraph at lines 363--363
+\OT1/cmr/m/n/10 a-tion from the Five Num-ber Sum-mary?" In: \OT1/cmr/m/it/10 arXiv preprint arXiv:1801.01267
+ []
+
+[11]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 365.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 365.
  (/home/cantabile/Documents/repos/varameta/analysis/meta-med-ms/meta-med-ms.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 363.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 363.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 365.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 365.
 Package rerunfilecheck Info: File `meta-med-ms.out' has not changed.
 (rerunfilecheck)             Checksum: 72F5DF4E77CF6C0FA6106A27FD3406BE;1459.
 
@@ -1270,20 +1275,20 @@ Package logreq Info: Writing requests to 'meta-med-ms.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 24616 strings out of 492982
- 453950 string characters out of 6134896
+ 24619 strings out of 492982
+ 454067 string characters out of 6134896
  890787 words of memory out of 5000000
- 27679 multiletter control sequences out of 15000+600000
+ 27681 multiletter control sequences out of 15000+600000
  19863 words of font info for 74 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 64i,20n,81p,1162b,1640s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 64i,20n,81p,1162b,1641s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
 nts/cm/cmmi9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1
 /public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on /home/cantabile/Documents/repos/varameta/analysis/meta-med-ms/meta-med-ms.pdf (11 pages, 510766 bytes).
+Output written on /home/cantabile/Documents/repos/varameta/analysis/meta-med-ms/meta-med-ms.pdf (11 pages, 512580 bytes).
 PDF statistics:
- 364 PDF objects out of 1000 (max. 8388607)
- 310 compressed objects within 4 object streams
- 69 named destinations out of 1000 (max. 500000)
+ 367 PDF objects out of 1000 (max. 8388607)
+ 313 compressed objects within 4 object streams
+ 70 named destinations out of 1000 (max. 500000)
  162 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1937,21 +1937,20 @@
     <bcf:citekey order="11">pinheiroDdimerPreeclampsiaSystematic2012</bcf:citekey>
     <bcf:citekey order="12">blandEstimatingMeanStandard2014</bcf:citekey>
     <bcf:citekey order="13">pinheiroDdimerPreeclampsiaSystematic2012</bcf:citekey>
-    <bcf:citekey order="14">~</bcf:citekey>
-    <bcf:citekey order="15">hozoEstimatingMeanVariance2005</bcf:citekey>
-    <bcf:citekey order="16">blandEstimatingMeanStandard2014</bcf:citekey>
-    <bcf:citekey order="17">wanEstimatingSampleMean2014</bcf:citekey>
-    <bcf:citekey order="18">shi2018estimate</bcf:citekey>
-    <bcf:citekey order="19">hozoEstimatingMeanVariance2005</bcf:citekey>
-    <bcf:citekey order="20">blandEstimatingMeanStandard2014</bcf:citekey>
+    <bcf:citekey order="14">hozoEstimatingMeanVariance2005</bcf:citekey>
+    <bcf:citekey order="15">blandEstimatingMeanStandard2014</bcf:citekey>
+    <bcf:citekey order="16">wanEstimatingSampleMean2014</bcf:citekey>
+    <bcf:citekey order="17">shi2018estimate</bcf:citekey>
+    <bcf:citekey order="18">hozoEstimatingMeanVariance2005</bcf:citekey>
+    <bcf:citekey order="19">blandEstimatingMeanStandard2014</bcf:citekey>
+    <bcf:citekey order="20">wanEstimatingSampleMean2014</bcf:citekey>
     <bcf:citekey order="21">wanEstimatingSampleMean2014</bcf:citekey>
     <bcf:citekey order="22">wanEstimatingSampleMean2014</bcf:citekey>
     <bcf:citekey order="23">wanEstimatingSampleMean2014</bcf:citekey>
     <bcf:citekey order="24">wanEstimatingSampleMean2014</bcf:citekey>
-    <bcf:citekey order="25">wanEstimatingSampleMean2014</bcf:citekey>
-    <bcf:citekey order="26">dasgupta2008asymptotic</bcf:citekey>
-    <bcf:citekey order="27">grayTruthProofReproducibility2019</bcf:citekey>
-    <bcf:citekey order="28">gray2019textttcodeproof</bcf:citekey>
+    <bcf:citekey order="25">dasgupta2008asymptotic</bcf:citekey>
+    <bcf:citekey order="26">grayTruthProofReproducibility2019</bcf:citekey>
+    <bcf:citekey order="27">gray2019textttcodeproof</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="ynt">

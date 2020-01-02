@@ -266,6 +266,53 @@
       \verb /home/cantabile/Zotero/storage/R77KA9KM/Wan et al. - 2014 - Estimating the sample mean and standard deviation .pdf;/home/cantabile/Zotero/storage/7S3KY3BN/1471-2288-14-135.html
       \endverb
     \endentry
+    \entry{shi2018estimate}{article}{}
+      \name{author}{6}{}{%
+        {{hash=cc2bc854360791eddaa4403991727fe6}{%
+           family={Shi},
+           familyi={S\bibinitperiod},
+           given={Jiandong},
+           giveni={J\bibinitperiod}}}%
+        {{hash=f11584c9a41ce4971e9942cfff345351}{%
+           family={Luo},
+           familyi={L\bibinitperiod},
+           given={Dehui},
+           giveni={D\bibinitperiod}}}%
+        {{hash=a4f114da41bceeb89f9666294ccfc533}{%
+           family={Weng},
+           familyi={W\bibinitperiod},
+           given={Hong},
+           giveni={H\bibinitperiod}}}%
+        {{hash=54f47530f36e44c38a213dd376c104ca}{%
+           family={Zeng},
+           familyi={Z\bibinitperiod},
+           given={Xian-Tao},
+           giveni={X\bibinithyphendelim T\bibinitperiod}}}%
+        {{hash=91ab7372f36b83a7b8f77fe41e7d28e1}{%
+           family={Lin},
+           familyi={L\bibinitperiod},
+           given={Lu},
+           giveni={L\bibinitperiod}}}%
+        {{hash=73e2ee2d1b50e464ef93141423f7479f}{%
+           family={Tong},
+           familyi={T\bibinitperiod},
+           given={Tiejun},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{50b72d2984c2d1ef6a6cfc96db196e29}
+      \strng{fullhash}{79ddda45635e69745106f43f6998980c}
+      \strng{bibnamehash}{50b72d2984c2d1ef6a6cfc96db196e29}
+      \strng{authorbibnamehash}{50b72d2984c2d1ef6a6cfc96db196e29}
+      \strng{authornamehash}{50b72d2984c2d1ef6a6cfc96db196e29}
+      \strng{authorfullhash}{79ddda45635e69745106f43f6998980c}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{arXiv preprint arXiv:1801.01267}
+      \field{title}{How to Estimate the Sample Mean and Standard Deviation from the Five Number Summary?}
+      \field{year}{2018}
+    \endentry
     \entry{gray2019textttcodeproof}{article}{}
       \name{author}{1}{}{%
         {{hash=021f382350c9dbe3da3e5f3817a2cd3b}{%
@@ -333,8 +380,6 @@
   \enddatalist
   \missing{borenstein2008introduction}
   \missing{kulinskaya2008meta}
-  \missing{shi2018estimate}
-  \missing{~}
 \endrefsection
 \endinput
 

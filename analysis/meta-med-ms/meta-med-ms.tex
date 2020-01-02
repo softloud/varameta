@@ -14,9 +14,11 @@ sorting=ynt
 
 \title{Meta-analysis of Medians}
 
-\author{Charles T. Gray, Luke Prendergast, and Hien Nguyen\thanks{
-The authors are appreciative for the insights and comments from Emily Kothe, Kerrie Mengersen, and Kate Smith-Miles.
+\author{Charles T. Gray, Luke Prendergast, Emily Kothe, and Hien Nguyen\thanks{
+The authors are appreciative for the insights and comments from Kerrie Mengersen, and Kate Smith-Miles.
 }}
+
+%todo ask kate & kerrie how they'd like to be acknowledged
 
 %%% packages and macros
 
@@ -81,7 +83,7 @@ To illustrate this problem, we begin with an example meta-analysis from medical 
 
 To motivate our method, we provide an example of the variety of summary statistics that can arise in meta-analyses. We shall return to this example in Section \ref{sec: pin again} to see how our method facilitates a meta-regression of all studies, rather than just the three studies originally considered which were based on means and standard deviations.
 
-We choose notations similar to those used by Wan et al.~\cite{wanEstimatingSampleMean2014}.  Define:
+We choose notations similar to those used by Wan \emph{et al.}~\cite{wanEstimatingSampleMean2014}.  Define:
 $a$, the minimum value;
 $q_1$, the first quartile;
 $m$, the median;
@@ -110,24 +112,24 @@ Heilmann &2007 & 1149.0 & 456.0 & 33 & 1623.6 & 932.9 & 111 & $\bm{m, \iqr}$ \\
 He & 1997 & 183.0 & (110.0, 340.0) & 24 & 315.0 & (145.0, 1150.0) & 30 & $\bm{m, (a, b)}$\\
 \hline \\[-1.8ex]
 \end{tabular}
-\caption{Data from a meta-analysis of d-dimer levels in pre-eclampsia presented by \cite{pinheiroDdimerPreeclampsiaSystematic2012}, measures of location and scale are varied: there are means and standard deviations; medians and interquartile ranges; quartiles; and medians and ranges. The types of estimates reported are listed in the final column denoted `reported'.} 
+\caption{Data from a meta-analysis of d-dimer levels in pre-eclampsia presented by \cite{pinheiroDdimerPreeclampsiaSystematic2012}, measures of location and scale are varied: there are means and standard deviations; medians and interquartile ranges; quartiles; and medians and ranges. The types of estimates reported are listed in the final column denoted `reported'.}
   \label{tab: pinheiro}
 \end{table}
 
 Three studies (first authors Dusse, Schjtlein, and Terao) detailed in the table provide the sample mean, $\overline x$, and standard deviation, $s$. Two studies (Bellart and Heilmann) provide the sample median, $m$, and interquartile range, $\iqr$. One study (Catrino) provides the sample median, as well as the first and third quartiles, $q_1$ and $q_3$. Finally, one more study (He) provides the sample median and the minimum $a$ and maximum $b$ observed values. All studies provide the sample size $n$ and their respective estimates of location and scale for both the control and the pre-eclamptic groups.
 
-In order to perform a meta-analysis via conventional methods, we require, at minimum, the studies' effect estimates, associated variances, and sample sizes. While full access to the raw data of each study would enable researchers to calculate the necessary sample variance for each study, there are many practical reasons, such as the time it would take to gather the data, that reduce the practicality of this approach, a point that is well made by others~\cite[e.g., p. 57]{blandEstimatingMeanStandard2014}.   Since only three studies presented in Table \ref{tab: pinheiro} report sample variance, Pinheiro et al.'s meta-analysis was restricted to these three datasets~\cite{pinheiroDdimerPreeclampsiaSystematic2012}. This paper provides a method that allows meta-analyses to be performed over studies reporting a variety of summary statistics, such as those outlined in Table \ref{tab: pinheiro}.
+In order to perform a meta-analysis via conventional methods, we require, at minimum, the studies' effect estimates, associated variances, and sample sizes. While full access to the raw data of each study would enable researchers to calculate the necessary sample variance for each study, there are many practical reasons, such as the time it would take to gather the data, that reduce the practicality of this approach, a point that is well made by others~\cite[e.g., p. 57]{blandEstimatingMeanStandard2014}.   Since only three studies presented in Table \ref{tab: pinheiro} report sample variance, Pinheiro \emph{et al.}'s meta-analysis was restricted to these three datasets~\cite{pinheiroDdimerPreeclampsiaSystematic2012}. This paper provides a method that allows meta-analyses to be performed over studies reporting a variety of summary statistics, such as those outlined in Table \ref{tab: pinheiro}.
 
 \section{Existing solutions to this problem} \label{sec: prev methods}
 
 % Possibly refer to other paper in this section.
 
-A potential solution is offered by Hozo et al.~\cite~\cite{hozoEstimatingMeanVariance2005} who suggest estimating the mean and standard deviation from a reported median, minimum and maximum, as well as sample size, i.e from $S_1=\{a, m, b; n\}$. This provides a way to calculate the variance of the effect, as required by contemporary meta-analysis tools, although there are some limitations. Firstly, $S_1$ does not cover all cases of reported medians. In our example considered in Table \ref{tab: pinheiro} to see that there is only applicable study (He).
+A potential solution is offered by Hozo \emph{et al.}~\cite{hozoEstimatingMeanVariance2005}, who suggest estimating the mean and standard deviation from a reported median, minimum and maximum, as well as sample size, i.e from $C_1:=\{a, m, b; n\}$. This provides a way to calculate the variance of the effect, as required by contemporary meta-analysis tools, although there are some limitations. Firstly, $C_1$ does not cover all cases of reported medians. In our example considered in Table \ref{tab: pinheiro} to see that there is only applicable study (He).
 
-Bland extends on Hozo et al.'s solution, but for the set $\{a, q_1, m, q_2, b; n\}$ where the minimum, maximum, median, as well as first and third quartiles are reported\cite{blandEstimatingMeanStandard2014}. Wan et al. improve on Hozo and Bland's solutions, as well as providing a solution for the set $\{q_1, m, q_3; n\}$ where the interquartile range is provided as an interval along with the median\cite{wanEstimatingSampleMean2014}.  A nice review of the methods, including an improvement, can be found in~\cite{shi2018estimate}.  However, it is noted that underlying normality appears to be the motivation for all methods and below we details some limitations.
+Bland extends on Hozo \emph{et al.}'s solution, but for the set $C_2 := \{a, q_1, m, q_2, b; n\}$ where the minimum, maximum, median, as well as first and third quartiles are reported\cite{blandEstimatingMeanStandard2014}. Wan \emph{et al.} improve on Hozo and Bland's solutions, as well as providing a solution for the set $C_3 := \{q_1, m, q_3; n\}$ where the interquartile range is provided as an interval along with the median\cite{wanEstimatingSampleMean2014}.  A nice review of the methods, including an improvement, can be found in~\cite{shi2018estimate}.  However, it is noted that underlying normality appears to be the motivation for all methods and below we details some limitations.
 
 \begin{table}[ht!]
-  \resizebox{0.65\textwidth}{!}{\begin{minipage}{\textwidth}
+  \resizebox{0.75\textwidth}{!}{\begin{minipage}{\textwidth}
 \centering
 
 \begin{tabular}{@{}llll@{}}
@@ -182,12 +184,12 @@ $\frac{q_1 + m + q_3}{3}$
              & $C_3 = \{q_1, m, q_3; n\}$    \\ \bottomrule
 \end{tabular}
 \end{minipage}}
-\caption{This table is a rephrasing and detail of Table 3 from Wan et al.~\cite{wanEstimatingSampleMean2014}, and guides the simulation discussed in Section \ref{sec: sims}. Here we have details of various estimators for sample mean and sample standard deviation, for different data sets. These estimators are defined in terms of sample summary statistics: minimum $a$, maximum $b$, median $m$, first quartile $q_1$, third quartile $q_3$, and sample size $n$.   Source indicates the first author of the paper the equations are found in. The sample mean and sample standard deviation estimators are presented by columns $\overline X$ and $S$, respectively. The column $C$ presents the sample summary statistics required as parameters in the coupled estimators. }
+\caption{This table is a rephrasing and detail of Table 3 from Wan \emph{et al.}~\cite{wanEstimatingSampleMean2014}, and guides the simulation discussed in Section \ref{sec: sims}. Here we have details of various estimators for sample mean and sample standard deviation, for different data sets. These estimators are defined in terms of sample summary statistics: minimum $a$, maximum $b$, median $m$, first quartile $q_1$, third quartile $q_3$, and sample size $n$.   Source indicates the first author of the paper the equations are found in. The sample mean and sample standard deviation estimators are presented by columns $\overline X$ and $S$, respectively. The column $C$ presents the sample summary statistics required as parameters in the coupled estimators. }
 \label{tab: eqns}
 \end{table}
 \dothislater{Flip the fractions in Table \ref{tab: eqns} to the $a/b$ format Hien said to use. Will also be easier to read.}
 
-Firstly, note that the summary statistics sets $\{a, m, b; n\}$, $\{a, q_1, m, q_2, b; n\}$, and $\{q_1, m, q_3; n\}$ do not cover all of the presentations of summary statistics seen in Table \ref{tab: pinheiro}. Thus, even if Pinheiro et al. had access to all methods, the meta-analysers would still have work ahead of them to include all studies presented here.
+Firstly, note that the summary statistics sets $\{a, m, b; n\}$, $\{a, q_1, m, q_2, b; n\}$, and $\{q_1, m, q_3; n\}$ do not cover all of the presentations of summary statistics seen in Table \ref{tab: pinheiro}. Thus, even if Pinheiro \emph{et al.} had access to all methods, the meta-analysers would still have work ahead of them to include all studies presented here.
 
 Secondly, and more importantly, to convert medians and interquartile ranges (or ranges) to means and standard deviations ignores the implicit information conveyed by the reported summary statistics; that is, that the study's authors perceived an asymmetry in the data. Our motivation is to provide a solution that enables meta-analyses to retain this information and, in addition, provide a method of comparing the studies that reported means with the studies that reported medians.
 
@@ -335,7 +337,7 @@ Our motivating problem was meta-analysis of medians, and we have followed the \e
 \subsection{Revisiting the motivating example}
 \label{sec: pin again}
 
-With a method for incorporating medians, we revisit the meta-analysis presented by Pinheiro et al.\dothislater{Remember to replace the tired old Pinheiro example}.
+With a method for incorporating medians, we revisit the meta-analysis presented by Pinheiro \emph{et al.}\dothislater{Remember to replace the tired old Pinheiro example}.
 
 \morewords{Figure: forest plot}
 \morewords{paused for writing tracking}
