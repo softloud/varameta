@@ -3,6 +3,11 @@ title: "varameta::"
 output: 
   rmarkdown::html_vignette:
     number_sections: true
+    toc: true
+pdf_document:
+    toc: true
+    highlight: null
+    number_sections: yes
 bibliography: references.bib
 vignette: >
   %\VignetteIndexEntry{varmeta}
@@ -15,6 +20,10 @@ knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>"
 )
+
+# but thisi is't working, for some reason
+# rmarkdown::render("vignettes/varameta.Rmd", "all")
+
 ```
 
 ```{r setup, message=FALSE}
@@ -169,9 +178,44 @@ effect_se(
 
 ```
 
+
+```{r, fig.align='center', fig.width=6}
+panda("show me the math!")
+```
+
 This calculation 
 
 todo: eqn to finish off section! 
+words around eqns to finish off section
+blah blah see companion manuscript..
+
+
+\[
+\mathrm v(M) := \frac 1 {4n\left[ g\left(M; \hat{\theta}\right)\right]^2}
+\]
+
+\[
+\hat \mu := \log(M).
+\]
+
+\[
+G^{-1}(p; \mu, \sigma) = \exp(\sigma\Phi^{-1}(p) + \mu).
+\]
+
+
+\[
+\hat{\sigma}^{(1)} := \frac 1 {\Phi^{-1}\left(\frac 3 4\right)} \log\left(\frac {\mathrm{iqr} e^{- \hat \mu} \pm
+\sqrt{\mathrm{iqr}^2 e^{-2 \hat \mu} + 4}
+} {2}\right)
+\]
+
+
+\[
+\hat{\sigma}^{(2)} := \frac 1 {\Phi^{-1}\left(\frac {n - \frac 1 2} n\right)} \log\left[\frac {(x_{[n]} - x_{[1]}) e^{- \hat \mu} \pm
+\sqrt{(x_{[n]} - x_{[1]})^2 e^{-2\hat \mu} + 4}
+} {2}\right].
+\]
+
 
 
 
