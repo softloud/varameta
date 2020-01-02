@@ -91,11 +91,10 @@ $n$, the sample size.  $\iqr$ denotes the interquantile range and this may be re
 
 As an example of how studies collated in meta-analyses report these summary statistics differently, consider the dataset presented in Table \ref{tab: pinheiro}, taken from a systematic review of d-dimer in pre-eclampsia~\cite{pinheiroDdimerPreeclampsiaSystematic2012}. Ideally, one would want to perform a meta-analysis using the effects from all studies. However, estimator variance is only reported for three of the seven studies presented with the remaining studies reporting medians and ranges.
 
-\begin{table}[!htbp]
-\resizebox{0.65b\textwidth}{!}{\begin{minipage}{0.8\textwidth}
-    \centering
-    \small
-\begin{tabular}{ccccccccc}% {@{\extracolsep{5pt}} ccccccccc}
+% Why is this table out of alignment?
+\begin{table}[!htbp] \centering
+  \small
+\begin{tabular}{@{\extracolsep{5pt}} ccccccccc}
 \\[-1.8ex]\hline
 \hline \\[-1.8ex]
 & & \multicolumn{3}{c}{Control group} & \multicolumn{3}{c}{Treatment group} & \\ \cline{3-5} \cline{6-8}
@@ -111,9 +110,8 @@ Heilmann &2007 & 1149.0 & 456.0 & 33 & 1623.6 & 932.9 & 111 & $\bm{m, \iqr}$ \\
 He & 1997 & 183.0 & (110.0, 340.0) & 24 & 315.0 & (145.0, 1150.0) & 30 & $\bm{m, (a, b)}$\\
 \hline \\[-1.8ex]
 \end{tabular}
-\end{minipage}}
-\caption{Data from a meta-analysis of d-dimer levels in pre-eclampsia presented by~\cite{pinheiroDdimerPreeclampsiaSystematic2012}, measures of location and scale are varied: there are means and standard deviations; medians and interquartile ranges; quartiles; and medians and ranges. The types of estimates reported are listed in the final column denoted `reported'.}
-\label{tab: pinheiro}
+\caption{Data from a meta-analysis of d-dimer levels in pre-eclampsia presented by \cite{pinheiroDdimerPreeclampsiaSystematic2012}, measures of location and scale are varied: there are means and standard deviations; medians and interquartile ranges; quartiles; and medians and ranges. The types of estimates reported are listed in the final column denoted `reported'.} 
+  \label{tab: pinheiro}
 \end{table}
 
 Three studies (first authors Dusse, Schjtlein, and Terao) detailed in the table provide the sample mean, $\overline x$, and standard deviation, $s$. Two studies (Bellart and Heilmann) provide the sample median, $m$, and interquartile range, $\iqr$. One study (Catrino) provides the sample median, as well as the first and third quartiles, $q_1$ and $q_3$. Finally, one more study (He) provides the sample median and the minimum $a$ and maximum $b$ observed values. All studies provide the sample size $n$ and their respective estimates of location and scale for both the control and the pre-eclamptic groups.
