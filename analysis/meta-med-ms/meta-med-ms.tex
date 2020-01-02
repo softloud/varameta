@@ -71,7 +71,8 @@ The methods to convert to a mean and standard deviation perform well when the un
 Those initially who published the summary measures, may have chosen to report medians and ranges because they had decided that moment-based measures such as the mean were not suitable descriptors.
 \end{disadv}
 
-In the presence of underlying skewed distributions, both Disadvantages 1 and 2\dothislater{find Disadvantages and work into text} may cause a real threat to the validity of any inference following conversion from quantiles measures to moment-based measures.  The method that we propose can be easily adapted to both single-study and meta-analysis contexts.  In the case of meta-analyses, meta-regression may also be conducted when some of the studies report means and standard deviations and others report medians and interquartile ranges.  This can be done by introducing a moderator factor variable to explain the differences between an effect based on means and an effect based on medians.
+In the presence of underlying skewed distributions, both Disadvantages 1 and 2\dothislater{find Disadvantages and work into text} may cause a real threat to the validity of any inference following conversion from
+% provide defintion quantiles measures to moment-based measures.  The method that we propose can be easily adapted to both single-study and meta-analysis contexts.  In the case of meta-analyses, meta-regression may also be conducted when some of the studies report means and standard deviations and others report medians and interquartile ranges.  This can be done by introducing a moderator factor variable to explain the differences between an effect based on means and an effect based on medians.
 
 To illustrate this problem, we begin with an example meta-analysis from medical research. We then briefly touch on how our method contributes to the existing solutions for this problem. In Section \ref{sec: var est}, we define our estimator for the variance of the sample median and consider alternatives. We show how this estimator can be used in meta-analysis, and extend to meta-regression if the difference between the means and medians are of interest. Simulation results are provided in Section \ref{sec: sims} that assess the performance of our estimator in both the single-study and meta-analysis setting.   Finally, in Section \ref{sec: pin again}, we return to the motivating example, discussed in Section \ref{sec: motiv}, to demonstrate how our method can be applied. Concluding remarks are provided in Section \ref{sec: conclusion}.
 
@@ -90,8 +91,31 @@ $n$, the sample size.  $\iqr$ denotes the interquantile range and this may be re
 
 As an example of how studies collated in meta-analyses report these summary statistics differently, consider the dataset presented in Table \ref{tab: pinheiro}, taken from a systematic review of d-dimer in pre-eclampsia~\cite{pinheiroDdimerPreeclampsiaSystematic2012}. Ideally, one would want to perform a meta-analysis using the effects from all studies. However, estimator variance is only reported for three of the seven studies presented with the remaining studies reporting medians and ranges.
 
-%\input{pinheiro-table.tex}
-%
+\begin{table}[!htbp]
+\resizebox{0.65b\textwidth}{!}{\begin{minipage}{0.8\textwidth}
+    \centering
+    \small
+\begin{tabular}{ccccccccc}% {@{\extracolsep{5pt}} ccccccccc}
+\\[-1.8ex]\hline
+\hline \\[-1.8ex]
+& & \multicolumn{3}{c}{Control group} & \multicolumn{3}{c}{Treatment group} & \\ \cline{3-5} \cline{6-8}
+study & year & location & scale & $n_c$ & location & scale & $n_t$ &
+\bf{reported} \\
+\hline \\[-1.8ex]
+Dusse &2003 & 1146.6 & 311.2 & 28 & 1263.8 & 411.9 & 43 & $\bm{\overline x, s}$  \\
+Schjtlein &1997 & 1390.0 & 559.0 & 97 & 1545.0 & 849.5 & 200 & $\bm{\overline x, s}$  \\
+Terao &1991 & 221.52 & 179.9 & 80 & 347.87 & 460.5 & 13 & $\bm{\overline x, s}$  \\
+Catarino &2008 & 538.2 & (391.2, 822.8) & 42 & 448.5  & (313.0, 1091.3) & 44 & $\bm{m, (q_1, q_3)}$ \\
+Bellart &1998 & 545.0 & 225.0 & 65 & 2090.0 & 1800.0 & 12 & $\bm{m, \iqr}$ \\
+Heilmann &2007 & 1149.0 & 456.0 & 33 & 1623.6 & 932.9 & 111 & $\bm{m, \iqr}$ \\
+He & 1997 & 183.0 & (110.0, 340.0) & 24 & 315.0 & (145.0, 1150.0) & 30 & $\bm{m, (a, b)}$\\
+\hline \\[-1.8ex]
+\end{tabular}
+\end{minipage}}
+\caption{Data from a meta-analysis of d-dimer levels in pre-eclampsia presented by~\cite{pinheiroDdimerPreeclampsiaSystematic2012}, measures of location and scale are varied: there are means and standard deviations; medians and interquartile ranges; quartiles; and medians and ranges. The types of estimates reported are listed in the final column denoted `reported'.}
+\label{tab: pinheiro}
+\end{table}
+
 Three studies (first authors Dusse, Schjtlein, and Terao) detailed in the table provide the sample mean, $\overline x$, and standard deviation, $s$. Two studies (Bellart and Heilmann) provide the sample median, $m$, and interquartile range, $\iqr$. One study (Catrino) provides the sample median, as well as the first and third quartiles, $q_1$ and $q_3$. Finally, one more study (He) provides the sample median and the minimum $a$ and maximum $b$ observed values. All studies provide the sample size $n$ and their respective estimates of location and scale for both the control and the pre-eclamptic groups.
 
 In order to perform a meta-analysis via conventional methods, we require, at minimum, the studies' effect estimates, associated variances, and sample sizes. While full access to the raw data of each study would enable researchers to calculate the necessary sample variance for each study, there are many practical reasons, such as the time it would take to gather the data, that reduce the practicality of this approach, a point that is well made by others~\cite[e.g., p. 57]{blandEstimatingMeanStandard2014}.   Since only three studies presented in Table \ref{tab: pinheiro} report sample variance, Pinheiro et al.'s meta-analysis was restricted to these three datasets~\cite{pinheiroDdimerPreeclampsiaSystematic2012}. This paper provides a method that allows meta-analyses to be performed over studies reporting a variety of summary statistics, such as those outlined in Table \ref{tab: pinheiro}.
@@ -257,8 +281,10 @@ Again, if we choose the log-normal density for $g$, then $\hat{\bm{\theta}}=[\ha
 \noindent We need to estimate two parameters for the Cauchy density: a location parameter $\eta$ and a scale parameter $\theta$. From the quantile function for the Cauchy distribution $\preimage G(p) = \eta + \theta\tan\left[\pi \left(p - 0.5 \right)\right]$, we know that the true median is the location parameter $\eta$ and that the interquartile range is equal to $2\theta$. Hence, we can estimate $\hat\eta := M$ and if the interquartile range is reported $\hat{\theta}^{(1)} := \iqr/ 2$.  If the range is reported then similar to previous arguments, we can estimate $$\hat{\theta}^{(2)} = \frac{x_{[n]} - x_{[1]}}{2\tan\left[\pi\left(\frac{n-0.5}{n}-\frac{1}{2}\right)\right]}.$$
 When using the Cauchy, we then have $\hat{\bm{\theta}}=[\hat \eta, \hat{\theta}^{(i)}]$ $(i=1,2)$ depending on which range is reported.
 
-\section{Comparison between four choices of $g$}
+\subsection{Comparison between four choices of $g$}
 \label{sec: comparison}
+
+\morewords{provide definition}
 
 \section{Performance of estimator in coverage probability simulations}
 
@@ -309,6 +335,7 @@ Figure \ref{fig:sims} presents results of
 Our motivating problem was meta-analysis of medians, and we have followed the \emph{toolchain walkthrough}\dothislater{footnote} for computationally developing a statistical estimator. This process took us from mathematical derivations, to estimator functions provided by \emph{research compendium}\dothislater{footnote} \package{varameta}, to \emph{coverage probability}\dothislater{footnote} simulations provided by the package \package{simeta} to explore the efficacy of this estimator under different sampling conditions. In so doing, this manuscript raises the question if examining research software engineering methodology, of exploring the efficacy of an estimator, in the context of rapidly evolving statistical tools for simulation and analysis, is of research merit in its own right. We begin by revisiting our motivating example, and turn to metaresearch observations from this analysis.
 
 \subsection{Revisiting the motivating example}
+\label{sec: pin again}
 
 With a method for incorporating medians, we revisit the meta-analysis presented by Pinheiro et al.\dothislater{Remember to replace the tired old Pinheiro example}.
 
