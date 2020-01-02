@@ -138,10 +138,13 @@ tibble(x = c(0, 1)) %>%
 
 ```
 
-```{r effect se median}
-# calculate the standard error based on the median, interquartile range, and
-# sample size
 
+## Estimate the standard error of the sample median
+
+With the `varameta::` package we execute the following code to estimate the standard error of the sample median, with sample summary statistics: `median`; `IQR` (interquartile range); `length` for sample size.
+
+```{r effect se iqr}
+# standard error based on the median, interquartile range, and sample size
 effect_se(
   centre = median(a_sample),
   spread = IQR(a_sample),
@@ -150,13 +153,29 @@ effect_se(
   spread_type = "iqr"
 )
 
+```
+
+The calculation can be adapted for the range.
+
+```{r se with range}
+# standard error based on the median, range, and sample size
+effect_se(
+  centre = median(a_sample),
+  spread = abs(diff(range(a_sample))),
+  n = length(a_sample),
+  centre_type = "median",
+  spread_type = "range"
+)
 
 ```
 
+This calculation 
 
-## standard error of the sample median
+todo: eqn to finish off section! 
 
-## standard error of the sample mean
+
+
+## Calculate the standard error of the sample mean
 
 ```{r}
 # take a sample
