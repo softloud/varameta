@@ -4,7 +4,7 @@ output:
   rmarkdown::html_vignette:
     number_sections: true
     toc: true
-pdf_document:
+  pdf_document:
     toc: true
     highlight: null
     number_sections: yes
@@ -21,7 +21,7 @@ knitr::opts_chunk$set(
   comment = "#>"
 )
 
-# but thisi is't working, for some reason
+# run this to update the pdf, as well
 # rmarkdown::render("vignettes/varameta.Rmd", "all")
 
 ```
