@@ -263,18 +263,23 @@ sqrt(var(se_mean_eg_sample) /
 
 # Vectorised calculations for meta-analysis datasets
 
+The functions of the `varameta::` package integrate with `tidyverse::` [@wickham_tidyverse_2017]. In this section, we show details for how to caculate the standard error of the effect when there are medians, but also when there are means included.
+
 ```{r, fig.align='center', fig.width=6}
 panda("vectorisation is my favourite part of R", panda = 14)
 ```
 
+
+Here's how we might calculate the standard error for when all reported statistics are medians.
 
 ```{r}
 # borrowing from sister package simeta:: to simulate a dataset
 (meta_data <- sim_stats() %>% 
   dplyr::filter(group == "control"))
 
-# add a vecorised
-# todo function this (after report)
+# each row of the dataset is a study
+
+# add a column with the standar error for each study:
 meta_data %>% 
   mutate(
     effect_se = pmap_dbl(
@@ -285,17 +290,32 @@ meta_data %>%
     )
   )
 
+# todo function this (after report)
+
 ```
 
+This can be adapted for more complex situations by treating the `centre_type` and `spread_type` arguments as dynamic variables that can change from study to study. For this we turn to a real-life dataset, taken from a study in d-dimer levels in pre-eclampsia [@pinheiroDdimerPreeclampsiaSystematic2012]. 
+
+```{r }
+pinheiro_data %>% 
+  kableExtra::kable() %>% 
+  kableExtra::kable_styling()
+
+```
+
+In these data, each row contains `study` and `year` variables to identify which manuscript the data were drawn from, and the measures of `centre` and `spread` reported. For control, \(j = c\), and treatment (or intervention), \(j = t\), groups, reported summary statistcs are provided: sample size `n_j`, median `m_j`, spread in reported form `s_j` and as a range `s_j_d`.
+
+Suppose we are interested in the log-ratio of sample medians for this dataset. 
+
+> todo: do calculation
 
 # Other estimators
 
-```{r, fig.align='center', fig.width=6}
+```{r, fig.align='center', fig.width}
 panda(
   panda = 49,
   "varameta:: provides several estimators for the variances of the sample median")
 ```
-
 
 All other estimators available for meta-analysis are provided in `varameta::` for use in a compative analysis. 
 
