@@ -311,12 +311,24 @@ Suppose we are interested in the log-ratio of sample medians for this dataset.
 
 # Other estimators
 
-```{r, fig.align='center', fig.width}
-panda(
-  panda = 49,
-  "varameta:: provides several estimators for the variances of the sample median")
+```{r, fig.align='center', fig.width=6}
+panda(panda = 49,
+      "varameta:: provides several estimators for the variances of the sample median")
+
 ```
 
-All other estimators available for meta-analysis are provided in `varameta::` for use in a compative analysis. 
+When developing the estimator provided for the variance of the sample median, several other estimators were coded and included in the `varameta::` package. In this section, we provide information about how compare and understand the estimators, and what inputs they work on.  
+
+## Estimator key
+
+> create table
+> refer to paper
+
+## Hozo et al.'s estimators
+
+## Bland's estimators
+
+## Wan et al.'s estimators
+
 
 # References
