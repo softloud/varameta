@@ -63,6 +63,30 @@
       \verb /home/cantabile/Zotero/storage/B7836IKR/Hozo et al. - 2005 - Estimating the mean and variance from the median, .pdf;/home/cantabile/Zotero/storage/YNCAHMGX/1471-2288-5-13.html
       \endverb
     \endentry
+    \entry{borenstein2008introduction}{book}{}
+      \name{author}{1}{}{%
+        {{hash=d24d9f67049602af1968a3fdd9859d55}{%
+           family={Borenstein},
+           familyi={B\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {JSTOR}%
+      }
+      \strng{namehash}{d24d9f67049602af1968a3fdd9859d55}
+      \strng{fullhash}{d24d9f67049602af1968a3fdd9859d55}
+      \strng{bibnamehash}{d24d9f67049602af1968a3fdd9859d55}
+      \strng{authorbibnamehash}{d24d9f67049602af1968a3fdd9859d55}
+      \strng{authornamehash}{d24d9f67049602af1968a3fdd9859d55}
+      \strng{authorfullhash}{d24d9f67049602af1968a3fdd9859d55}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Introduction to metaanalysis}
+      \field{year}{2008}
+    \endentry
     \entry{dasgupta2008asymptotic}{book}{}
       \name{author}{1}{}{%
         {{hash=7d1e1cfbca10faad26b3c267e1d2350b}{%
@@ -85,6 +109,41 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Asymptotic theory of statistics and probability}
+      \field{year}{2008}
+    \endentry
+    \entry{kulinskaya2008meta}{book}{}
+      \name{author}{3}{}{%
+        {{hash=932d810d3fc97e7100006e5fd2af292a}{%
+           family={Kulinskaya},
+           familyi={K\bibinitperiod},
+           given={E.},
+           giveni={E\bibinitperiod}}}%
+        {{hash=82b2272fc3cc64beb50bae9d79ffbe83}{%
+           family={Morgenthaler},
+           familyi={M\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+        {{hash=b23bd10c552f3e6c9b74ad3966da7ee5}{%
+           family={Staudte},
+           familyi={S\bibinitperiod},
+           given={R.\bibnamedelimi G.},
+           giveni={R\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {John Wiley \& Sons}%
+      }
+      \strng{namehash}{4e56c2b4a0c9b5e0db8271d53df92274}
+      \strng{fullhash}{4e56c2b4a0c9b5e0db8271d53df92274}
+      \strng{bibnamehash}{4e56c2b4a0c9b5e0db8271d53df92274}
+      \strng{authorbibnamehash}{4e56c2b4a0c9b5e0db8271d53df92274}
+      \strng{authornamehash}{4e56c2b4a0c9b5e0db8271d53df92274}
+      \strng{authorfullhash}{4e56c2b4a0c9b5e0db8271d53df92274}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Meta analysis: a guide to calibrating and combining statistical evidence}
+      \field{volume}{756}
       \field{year}{2008}
     \endentry
     \entry{viechtbauerConductingMetaanalysesMetafor2010}{article}{}
@@ -466,8 +525,6 @@
       \endverb
     \endentry
   \enddatalist
-  \missing{borenstein2008introduction}
-  \missing{kulinskaya2008meta}
 \endrefsection
 \endinput
 

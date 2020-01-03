@@ -1,13 +1,13 @@
 # Fdb version 3
-["biber meta-med-ms"] 1578037087 "meta-med-ms.bcf" "meta-med-ms.bbl" "meta-med-ms" 1578037089
-  "meta-med-ms.bcf" 1578037089 90952 538c1152277543a28b575ca36b763c94 ""
-  "references.bib" 1578020266 6194 7e63c909213370a4687c024fbcc615ef ""
+["biber meta-med-ms"] 1578085795 "meta-med-ms.bcf" "meta-med-ms.bbl" "meta-med-ms" 1578085799
+  "meta-med-ms.bcf" 1578085799 90952 538c1152277543a28b575ca36b763c94 ""
+  "references.bib" 1578085784 6582 18d26593f849d6cf22b1fd1d036c579e ""
   (generated)
   "meta-med-ms.blg"
   "meta-med-ms.bbl"
-["pdflatex"] 1578037088 "meta-med-ms.tex" "/home/cantabile/Documents/repos/varameta/analysis/meta-med-ms/meta-med-ms.pdf" "meta-med-ms" 1578037089
+["pdflatex"] 1578085797 "meta-med-ms.tex" "/home/cantabile/Documents/repos/varameta/analysis/meta-med-ms/meta-med-ms.pdf" "meta-med-ms" 1578085799
   "/etc/texmf/web2c/texmf.cnf" 1575776909 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/cantabile/Documents/repos/varameta/analysis/meta-med-ms/meta-med-ms.aux" 1578037089 19354 38177701f40397a22bb5c7340a8c8e70 ""
+  "/home/cantabile/Documents/repos/varameta/analysis/meta-med-ms/meta-med-ms.aux" 1578085799 19516 270432ecf584440c9e7a44d047373390 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1511824771 3332 103109f5612ad95229751940c61aada0 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy5.tfm" 1480098698 1120 1e8878807317373affa7f7bba4cf2f6a ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy6.tfm" 1480098698 1124 14ccf5552bc7f77ca02a8a402bea8bfb ""
@@ -234,19 +234,19 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1520210507 32485 c64754543d8ac501bea6e75e209ea521 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1575776961 2700761 ac0584cc9514ab21918550a6948c4ee2 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1575776987 4131809 0447c86d96ac0ccb3601b0179a479cf3 ""
-  "meta-med-ms.aux" 1578037089 19354 38177701f40397a22bb5c7340a8c8e70 ""
-  "meta-med-ms.bbl" 1578037088 19892 fff7b305b00bd6ed272d17d142a5164c "biber meta-med-ms"
-  "meta-med-ms.out" 1578037089 1459 72f5df4e77cf6c0fa6106a27fd3406be ""
-  "meta-med-ms.run.xml" 1578037089 2354 a2f2bf99ded84dc42e48a117d23c7d06 ""
-  "meta-med-ms.tex" 1578037081 28440 b0fd0aeff16bf4eed1b3a72bd34491ae ""
+  "meta-med-ms.aux" 1578085799 19516 270432ecf584440c9e7a44d047373390 ""
+  "meta-med-ms.bbl" 1578085796 22185 27334f9eecd1df6c8b3eb8ae58e44537 "biber meta-med-ms"
+  "meta-med-ms.out" 1578085799 1459 72f5df4e77cf6c0fa6106a27fd3406be ""
+  "meta-med-ms.run.xml" 1578085799 2354 a2f2bf99ded84dc42e48a117d23c7d06 ""
+  "meta-med-ms.tex" 1578085652 28441 52dd4d49b5ff31ecb48931edb3f6ef96 ""
   "placeholder-coverage-plot.png" 1577834508 141182 9ccc4e3648c456ee1290117480eb7b67 ""
   "preamble.tex" 1577928186 1026 e4729fab227a8c62cf3945bb6528c152 ""
   (generated)
+  "/home/cantabile/Documents/repos/varameta/analysis/meta-med-ms/meta-med-ms.pdf"
+  "meta-med-ms.pdf"
   "meta-med-ms.bcf"
   "meta-med-ms.run.xml"
-  "/home/cantabile/Documents/repos/varameta/analysis/meta-med-ms/meta-med-ms.pdf"
+  "meta-med-ms.aux"
+  "meta-med-ms.log"
   "/home/cantabile/Documents/repos/varameta/analysis/meta-med-ms/meta-med-ms.log"
   "meta-med-ms.out"
-  "meta-med-ms.aux"
-  "meta-med-ms.pdf"
-  "meta-med-ms.log"
