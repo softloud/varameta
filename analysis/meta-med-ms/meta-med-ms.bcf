@@ -1955,8 +1955,12 @@
     <bcf:citekey order="28">wanEstimatingSampleMean2014</bcf:citekey>
     <bcf:citekey order="29">wanEstimatingSampleMean2014</bcf:citekey>
     <bcf:citekey order="30">dasgupta2008asymptotic</bcf:citekey>
-    <bcf:citekey order="31">grayTruthProofReproducibility2019</bcf:citekey>
-    <bcf:citekey order="32">gray2019textttcodeproof</bcf:citekey>
+    <bcf:citekey order="31">gray2019textttcodeproof</bcf:citekey>
+    <bcf:citekey order="32">grayTruthProofReproducibility2019</bcf:citekey>
+    <bcf:citekey order="33">grayVarametaEstimatorsVariance2020</bcf:citekey>
+    <bcf:citekey order="34">graySimetaSimulateMetaanalysis2020</bcf:citekey>
+    <bcf:citekey order="35">grayTruthProofReproducibility2019</bcf:citekey>
+    <bcf:citekey order="36">gray2019textttcodeproof</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="ynt">

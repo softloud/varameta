@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.12.8)  3 JAN 2020 13:57
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.12.8)  3 JAN 2020 18:38
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1243,29 +1243,22 @@ File: placeholder-coverage-plot.png Graphic file (type png)
 <use placeholder-coverage-plot.png>
 Package pdftex.def Info: placeholder-coverage-plot.png  used on input line 317.
 (pdftex.def)             Requested size: 345.0pt x 246.43153pt.
-[9 </home/cantabile/Documents/repos/varameta/analysis/meta-med-ms/placeholder-coverage-plot.png (PNG copy)>]
-
-LaTeX Warning: Marginpar on page 10 moved.
-
-
-LaTeX Warning: Marginpar on page 10 moved.
-
-[10]
-Overfull \hbox (5.07057pt too wide) in paragraph at lines 360--360
+[9 </home/cantabile/Documents/repos/varameta/analysis/meta-med-ms/placeholder-coverage-plot.png (PNG copy)>] [10]
+Overfull \hbox (5.07057pt too wide) in paragraph at lines 355--355
 []\OT1/cmr/m/n/10 Anirban Das-Gupta. \OT1/cmr/m/it/10 Asymp-totic the-ory of statis-tics and prob-a-bil-ity\OT1/cmr/m/n/10 . Springer
  []
 
 
-Overfull \hbox (19.14728pt too wide) in paragraph at lines 360--360
+Overfull \hbox (19.14728pt too wide) in paragraph at lines 355--355
 \OT1/cmr/m/n/10 vi-a-tion from the Five Num-ber Sum-mary?" In: \OT1/cmr/m/it/10 arXiv preprint arXiv:1801.01267
  []
 
 [11]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 362.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 362.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 357.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 357.
  (/home/cantabile/Documents/repos/varameta/analysis/meta-med-ms/meta-med-ms.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 362.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 362.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 357.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 357.
 Package rerunfilecheck Info: File `meta-med-ms.out' has not changed.
 (rerunfilecheck)             Checksum: 72F5DF4E77CF6C0FA6106A27FD3406BE;1459.
 
@@ -1277,20 +1270,20 @@ Package logreq Info: Writing requests to 'meta-med-ms.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 24617 strings out of 492982
- 454394 string characters out of 6134896
- 895787 words of memory out of 5000000
- 27678 multiletter control sequences out of 15000+600000
+ 24584 strings out of 492982
+ 453698 string characters out of 6134896
+ 889787 words of memory out of 5000000
+ 27650 multiletter control sequences out of 15000+600000
  19863 words of font info for 74 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 64i,20n,81p,1162b,1640s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 64i,20n,81p,1162b,1629s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
 nts/cm/cmmi9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1
 /public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on /home/cantabile/Documents/repos/varameta/analysis/meta-med-ms/meta-med-ms.pdf (11 pages, 513625 bytes).
+Output written on /home/cantabile/Documents/repos/varameta/analysis/meta-med-ms/meta-med-ms.pdf (11 pages, 511887 bytes).
 PDF statistics:
- 374 PDF objects out of 1000 (max. 8388607)
- 320 compressed objects within 4 object streams
- 71 named destinations out of 1000 (max. 500000)
+ 372 PDF objects out of 1000 (max. 8388607)
+ 318 compressed objects within 4 object streams
+ 66 named destinations out of 1000 (max. 500000)
  162 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -23,21 +23,83 @@ You can install varameta from github with:
 devtools::install_github("softloud/varameta")
 ```
 
-## talk
-
-| where                                    | when           | title                                                                                       |
-| ---------------------------------------- | -------------- | ------------------------------------------------------------------------------------------- |
-| Fenner School of Environment and Society | September 2018 | [`varameta::` meta-analysis of medians](http://cantabile.rbind.io/talks/fenner-2018/slides) |
-
-## example
-
-This is a basic example which shows you how to solve a common problem:
+# A minimal demonstration of calculating the variance of the sample median
 
 ``` r
-## basic example code
+# packages
+library(panda) # for panda
+library(tidyverse)
+library(simeta) # for sim_stats
+library(varameta) 
+
+# for reproducibility
+set.seed(39)
 ```
 
-## secondary objectives
+``` r
+panda("show me the code!")
+#> Set panda = 41 to reproduce this panda.
+```
+
+<img src="README-unnamed-chunk-3-1.png" style="display: block; margin: auto;" />
+
+## Compute standard error of the sample median
+
+``` r
+
+sample_size <- 30
+
+# get a sample
+a_sample <- rexp(sample_size)
+
+# get standard error of the sample median
+effect_se(
+  centre = median(a_sample),
+  spread = IQR(a_sample),
+  n = length(a_sample),
+  centre_type = "median",
+  spread_type = "iqr"
+)
+#> [1] 0.1093218
+```
+
+## Vectorised calculations for dataframes
+
+Here we borrow a function from the companion `simeta::` package. See
+below for details.
+
+``` r
+# generate random meta-analysis dataset
+# one row per study
+
+(ma_sample <- sim_stats() %>%
+  # filter down to one group per study
+  dplyr::filter(group == "control"))
+#> # A tibble: 3 x 5
+#>   study   group   effect effect_spread     n
+#>   <chr>   <chr>    <dbl>         <dbl> <dbl>
+#> 1 study_1 control   49.3         0.272    32
+#> 2 study_2 control   50.2         0.241    71
+#> 3 study_3 control   59.0         0.313    37
+
+
+ma_sample %>%
+  # append a column with the standard error of the median for each study
+  mutate(effect_se = pmap_dbl(
+    list(centre = effect,
+         spread = effect_spread,
+         n = n),
+    effect_se,
+    centre_type = "median",
+    spread_type = "iqr"
+  ))
+#> # A tibble: 3 x 6
+#>   study   group   effect effect_spread     n effect_se
+#>   <chr>   <chr>    <dbl>         <dbl> <dbl>     <dbl>
+#> 1 study_1 control   49.3         0.272    32    0.0447
+#> 2 study_2 control   50.2         0.241    71    0.0266
+#> 3 study_3 control   59.0         0.313    37    0.0477
+```
 
 ### packaged analyses
 

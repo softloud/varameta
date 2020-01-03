@@ -28,23 +28,73 @@ You can install varameta from github with:
 devtools::install_github("softloud/varameta")
 ```
 
-## talk
+# A minimal demonstration of calculating the variance of the sample median 
 
-where | when | title 
------------------------------|--------|--------------------------------------------------
-Fenner School of Environment and Society | September 2018 | [`varameta::` meta-analysis of medians](http://cantabile.rbind.io/talks/fenner-2018/slides) 
+```{r message = FALSE}
+# packages
+library(panda) # for panda
+library(tidyverse)
+library(simeta) # for sim_stats
+library(varameta) 
 
-## example
-
-This is a basic example which shows you how to solve a common problem:
-
-```{r example}
-## basic example code
+# for reproducibility
+set.seed(39)
 
 ```
 
-## secondary objectives 
 
+```{r, fig.align='center', fig.width=6}
+panda("show me the code!")
+```
+
+
+## Compute standard error of the sample median
+
+```{r }
+
+sample_size <- 30
+
+# get a sample
+a_sample <- rexp(sample_size)
+
+# get standard error of the sample median
+effect_se(
+  centre = median(a_sample),
+  spread = IQR(a_sample),
+  n = length(a_sample),
+  centre_type = "median",
+  spread_type = "iqr"
+)
+
+```
+
+
+## Vectorised calculations for dataframes
+
+Here we borrow a function from the companion `simeta::` package. See below for details.
+
+```{r}
+# generate random meta-analysis dataset
+# one row per study
+
+(ma_sample <- sim_stats() %>%
+  # filter down to one group per study
+  dplyr::filter(group == "control"))
+
+
+ma_sample %>%
+  # append a column with the standard error of the median for each study
+  mutate(effect_se = pmap_dbl(
+    list(centre = effect,
+         spread = effect_spread,
+         n = n),
+    effect_se,
+    centre_type = "median",
+    spread_type = "iqr"
+  ))
+
+
+```
 
 ### packaged analyses
 
