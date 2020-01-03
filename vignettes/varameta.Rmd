@@ -221,12 +221,6 @@ G^{-1}(p; \mu, \sigma) = \exp(\sigma\Phi^{-1}(p) + \mu).
 
 ## Calculate the standard error of the sample mean
 
-```{r}
-# take a sample
-se_mean_eg_sample <- rexp(sample_size)
-
-```
-
 Now, we wish to calculate the standard error $s/\sqrt n$ of the sample mean, calcualted with the the sample standard deviation and the squared-root of the sample size.
 
 
@@ -234,29 +228,29 @@ Now, we wish to calculate the standard error $s/\sqrt n$ of the sample mean, cal
 
 # mean and sd
 effect_se(
-  centre = mean(se_mean_eg_sample),
-  spread = sd(se_mean_eg_sample),
-  n = length(se_mean_eg_sample),
+  centre = mean(a_sample),
+  spread = sd(a_sample),
+  n = length(a_sample),
   centre_type = "mean",
   spread_type = "sd"
 )
 
 # compare
-sd(se_mean_eg_sample) /
-  sqrt(length(se_mean_eg_sample))
+sd(a_sample) /
+  sqrt(length(a_sample))
 
 # mean and var
 effect_se(
-  centre = mean(se_mean_eg_sample),
-  spread = var(se_mean_eg_sample),
-  n = length(se_mean_eg_sample),
+  centre = mean(a_sample),
+  spread = var(a_sample),
+  n = length(a_sample),
   centre_type = "mean",
   spread_type = "var"
 )
 
 # compare
-sqrt(var(se_mean_eg_sample) /
-  length(se_mean_eg_sample))
+sqrt(var(a_sample) /
+  length(a_sample))
 
 
 ```
@@ -324,11 +318,49 @@ When developing the estimator provided for the variance of the sample median, se
 > create table
 > refer to paper
 
-## Hozo et al.'s estimators
+The estimators provided in the `varameta::` package each use a particular set of summary statistics as inputs. 
+
+minimum | first quartile | median | third quartile | maximum | sample size
+-|-|-|-|-|-
+\(a\)|\(q_1\)|\(m\)|\(q_3\)|\(b\)|\(n\)
+
+The output is a variance estimation for each, but for all but `effect_se`, these provide estimates for mean and standard deviation, from the quartiles reported. 
+
+
+study | input statistics | centre | spread
+- | -| - | -
+Prendergast |\(C_3 := \{q_1, m, q_3; n\}\) and \(C_1 := \{a, m, b; n\}\) | `NA` | `effect_se`
+Hozo | \(C_1 := \{a, m, b; n\}\) | `hozo_mean` | `hozo_se` 
+Bland | \(C_2 := \{a, q_1, m, q_3, b; n\}\)| `bland_mean` | `bland_se`
+Wan | \(C_1 := \{a, m, b; n\}\)| `wan_mean_C1` | `wan_se_C1`
+Wan | \(C_2 := \{a, q_1, m, q_3, b; n\}\)|  `wan_mean_C2` | `wan_se_C2` 
+Wan | \(C_3 := \{q_1, m, q_3; n\}\)|  `wan_mean_C3` | `wan_se_C3`
+
+## Hozo *et al.*'s estimators
 
 ## Bland's estimators
 
-## Wan et al.'s estimators
+## Wan *et al.*'s estimators
+
+Wan *et al.* provide estimators for the same summary sample sets as Hozo *et al.* and Wan *et al.*'s methods.   
+
+
+
+```{r}
+
+wan_mean_C1(
+  min(a_sample),
+  median(a_sample),
+  max(a_sample)
+)
+
+wan_se_C1(
+  min(a_sample),
+  max(a_sample),
+  n = length(a_sample)
+)
+
+```
 
 
 # References
