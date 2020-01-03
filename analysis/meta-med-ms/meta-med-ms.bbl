@@ -377,6 +377,52 @@
       \endverb
       \keyw{06-06,Mathematics - History and Overview}
     \endentry
+    \entry{reviewmanagerRevMan}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=3e4615d97bf1a1cb97b5f9c5749ad4c6}{%
+           family={Manager},
+           familyi={M\bibinitperiod},
+           given={Review},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{3e4615d97bf1a1cb97b5f9c5749ad4c6}
+      \strng{fullhash}{3e4615d97bf1a1cb97b5f9c5749ad4c6}
+      \strng{bibnamehash}{3e4615d97bf1a1cb97b5f9c5749ad4c6}
+      \strng{authorbibnamehash}{3e4615d97bf1a1cb97b5f9c5749ad4c6}
+      \strng{authornamehash}{3e4615d97bf1a1cb97b5f9c5749ad4c6}
+      \strng{authorfullhash}{3e4615d97bf1a1cb97b5f9c5749ad4c6}
+      \field{sortinit}{9}
+      \field{sortinithash}{1dd72ab054147731c9d824b49aba0534}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{{RevMan}} 5}
+      \verb{file}
+      \verb /home/cantabile/Zotero/storage/J5CC7SYD/revman-5.html
+      \endverb
+    \endentry
+    \entry{reviewmanagerRevManWeb}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=3e4615d97bf1a1cb97b5f9c5749ad4c6}{%
+           family={Manager},
+           familyi={M\bibinitperiod},
+           given={Review},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{3e4615d97bf1a1cb97b5f9c5749ad4c6}
+      \strng{fullhash}{3e4615d97bf1a1cb97b5f9c5749ad4c6}
+      \strng{bibnamehash}{3e4615d97bf1a1cb97b5f9c5749ad4c6}
+      \strng{authorbibnamehash}{3e4615d97bf1a1cb97b5f9c5749ad4c6}
+      \strng{authornamehash}{3e4615d97bf1a1cb97b5f9c5749ad4c6}
+      \strng{authorfullhash}{3e4615d97bf1a1cb97b5f9c5749ad4c6}
+      \field{sortinit}{9}
+      \field{sortinithash}{1dd72ab054147731c9d824b49aba0534}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{{RevMan Web}}}
+      \verb{file}
+      \verb /home/cantabile/Zotero/storage/E7HJSVVF/revman-web.html
+      \endverb
+    \endentry
   \enddatalist
   \missing{borenstein2008introduction}
   \missing{kulinskaya2008meta}

@@ -41,16 +41,13 @@ The authors are appreciative for the insights and comments from Kerrie Mengersen
 \section{Medians pose a problem in meta-analyses}
 
 Software tools for meta-analysis, such as Cochrane's
-RevMan~\dothislater{RevMan citation}
+RevMan~\cite{reviewmanagerRevMan}, newly superseded by the cloud-based RevMan Web~\cite{reviewmanagerRevManWeb}
 or the R package \package{metafor}~\cite{viechtbauerConductingMetaanalysesMetafor2010},
 require estimates of both effect and variance
 of that effect. However, the sample variance for the reported effect of interest is not always available.
-When the reported statistics are medians, measure of spreads commonly provided
-are the range or interquartile range. This leads to the omission of studies that report medians from the meta-anaysis. In this manuscript we present a method for estimating the variance of the sample median so that studies reporting medians may be included in meta-analyses.
+When the reported statistics are medians, measure of spreads commonly provided are in the form of quartiles, as opposed to the required variance of the effect of interest. This leads to the omission of studies that report medians from the meta-anaysis. In this manuscript we present a method for estimating the variance of the sample median so that studies reporting medians may be included in meta-analyses.
 
-\morewords{people would like to meta-analyse medians, but they can't}
-
-\morewords{expand this section, demonstrate how to do a meta-analysis}
+This manuscript is a component of the research compendium created to solve this problem. In this case, the research compendium comprises not just a manuscript, but a pair of software packages, \package{varameta}, which translates estimators presented in this manuscript to code, and \package{simeta}, for simulating meta-analysis data, to see how the estimators in \package{varameta} perform. Thus, in addition to intrinsic questions regarding meta-analysing medians, this manuscript considers on the ideas presented in the companion papers~\cite{gray2019textttcodeproof, grayTruthProofReproducibility2019} that ruminate, with this analysis as a case study, on why and how we may build reproducible research compendia.
 
 \subsection{What's the problem?}
 

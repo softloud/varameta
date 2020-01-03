@@ -308,6 +308,7 @@ INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx9.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmtt10.tfm
+INPUT /var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam7.tfm
@@ -319,7 +320,6 @@ INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmmib10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmmib7.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbsy10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy7.tfm
-INPUT /var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmti10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmmi9.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmsy9.tfm
