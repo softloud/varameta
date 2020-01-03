@@ -1,5 +1,6 @@
 ---
 title: "varameta::"
+author: "Charles T. Gray"
 output: 
   rmarkdown::html_vignette:
     number_sections: true
@@ -65,7 +66,7 @@ panda("show me the code!")
 
 ```{r}
 # get a sample
-a_sample <- rexp(sample_size)
+a_sample <- rlnorm(sample_size,-1, 0.1)
 
 # get standard error of the sample median
 effect_se(
@@ -146,6 +147,18 @@ tibble(x = c(0, 1)) %>%
 
 
 ```
+
+
+```{r}
+# for comparison we shall store the true distribution stats
+true_stats <- list(
+  mean = exp(-1 + 0.01/2),
+  median = exp(-1),
+  variance = (exp(0.01) - 1) * exp(2*-1 + 0.01)
+)
+
+```
+
 
 
 ## Estimate the standard error of the sample median
@@ -326,7 +339,6 @@ minimum | first quartile | median | third quartile | maximum | sample size
 
 The output is a variance estimation for each, but for all but `effect_se`, these provide estimates for mean and standard deviation, from the quartiles reported. 
 
-
 study | input statistics | centre | spread
 - | -| - | -
 Prendergast |\(C_3 := \{q_1, m, q_3; n\}\) and \(C_1 := \{a, m, b; n\}\) | `NA` | `effect_se`
@@ -342,12 +354,25 @@ Wan | \(C_3 := \{q_1, m, q_3; n\}\)|  `wan_mean_C3` | `wan_se_C3`
 
 ## Wan *et al.*'s estimators
 
-Wan *et al.* provide estimators for the same summary sample sets as Hozo *et al.* and Wan *et al.*'s methods.   
+These estimators take various sample quartiles and return estimates for the mean and the standard deviation.
 
+Wan *et al.* provide estimators for the same summary sample sets as Hozo *et al.* and Bland's methods, as well as a novel method for when the interquartile range, but not the range, is available. All estimators require the sample size for the estimate of the standard error of the mean.
 
+For comparison, we recall the true statistics we calculated earlier. 
 
 ```{r}
+# mean for the distribution sampled from
+true_stats %>% pluck("mean")
 
+# variance for the distribution sampled from
+true_stats %>% pluck("variance")
+
+```
+
+
+The estimator for set $C_1 = \{a, m, b; n\}$ requires the range and the median. This is their improvement on Hozo's method. 
+
+```{r wan c1}
 wan_mean_C1(
   min(a_sample),
   median(a_sample),
@@ -362,5 +387,45 @@ wan_se_C1(
 
 ```
 
+The second estimator requires the same summary statistics, \(C_2 := \{a, q_1, m, q_3, b; n\}\), as Bland's method. 
+
+```{r wan c2}
+wan_mean_C2(
+  min(a_sample),
+  quantile(a_sample, 0.25),
+  median(a_sample),
+  quantile(a_sample, 0.75),
+  max(a_sample)
+)
+
+wan_se_C2(
+  min(a_sample),
+  quantile(a_sample, 0.25),
+  median(a_sample),
+  quantile(a_sample, 0.75),
+  max(a_sample),
+  n = length(a_sample)
+)
+
+```
+
+The third method requries the summary statistics \(C_3 := \{q_1, m, q_3; n\}\), a case not considered by Hozo or Bland. 
+
+
+```{r wan c3}
+wan_mean_C3(
+  quantile(a_sample, 0.25),
+  median(a_sample),
+  quantile(a_sample, 0.75)
+)
+
+wan_se_C3(
+  quantile(a_sample, 0.25),
+  median(a_sample),
+  quantile(a_sample, 0.75),
+  n = length(a_sample)
+)
+
+```
 
 # References
