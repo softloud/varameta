@@ -377,6 +377,48 @@
       \endverb
       \keyw{06-06,Mathematics - History and Overview}
     \endentry
+    \entry{graySimetaSimulateMetaanalysis2020}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=66a0076b600e7fc3d94289b5190c2a3d}{%
+           family={Gray},
+           familyi={G\bibinitperiod},
+           given={Charles},
+           giveni={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{66a0076b600e7fc3d94289b5190c2a3d}
+      \strng{fullhash}{66a0076b600e7fc3d94289b5190c2a3d}
+      \strng{bibnamehash}{66a0076b600e7fc3d94289b5190c2a3d}
+      \strng{authorbibnamehash}{66a0076b600e7fc3d94289b5190c2a3d}
+      \strng{authornamehash}{66a0076b600e7fc3d94289b5190c2a3d}
+      \strng{authorfullhash}{66a0076b600e7fc3d94289b5190c2a3d}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Simeta: {{Simulate}} Meta-Analysis Data}
+      \field{year}{2020}
+    \endentry
+    \entry{grayVarametaEstimatorsVariance2020}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=66a0076b600e7fc3d94289b5190c2a3d}{%
+           family={Gray},
+           familyi={G\bibinitperiod},
+           given={Charles},
+           giveni={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{66a0076b600e7fc3d94289b5190c2a3d}
+      \strng{fullhash}{66a0076b600e7fc3d94289b5190c2a3d}
+      \strng{bibnamehash}{66a0076b600e7fc3d94289b5190c2a3d}
+      \strng{authorbibnamehash}{66a0076b600e7fc3d94289b5190c2a3d}
+      \strng{authornamehash}{66a0076b600e7fc3d94289b5190c2a3d}
+      \strng{authorfullhash}{66a0076b600e7fc3d94289b5190c2a3d}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Varameta: {{Estimators}} for the {{Variance}} of the {{Sample Median}}}
+      \field{year}{2020}
+    \endentry
     \entry{reviewmanagerRevMan}{misc}{}
       \name{author}{1}{}{%
         {{hash=3e4615d97bf1a1cb97b5f9c5749ad4c6}{%
