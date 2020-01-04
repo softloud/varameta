@@ -409,7 +409,7 @@ wan_se_C2(
 
 ```
 
-The third method requries the summary statistics \(C_3 := \{q_1, m, q_3; n\}\), a case not considered by Hozo or Bland. 
+The third method requries the summary statistics \(C_3 := \{q_1, m, q_3; n\}\), a case not considered by Hozo or Bland.  
 
 
 ```{r wan c3}
