@@ -328,25 +328,25 @@ When developing the estimator provided for the variance of the sample median, se
 
 ## Estimator key
 
-> create table
-> refer to paper
-
 The estimators provided in the `varameta::` package each use a particular set of summary statistics as inputs. 
 
 minimum | first quartile | median | third quartile | maximum | sample size
 -|-|-|-|-|-
 \(a\)|\(q_1\)|\(m\)|\(q_3\)|\(b\)|\(n\)
 
-The output is a variance estimation for each, but for all but `effect_se`, these provide estimates for mean and standard deviation, from the quartiles reported. 
+The output is a variance estimation for each, but for all but `effect_se`, these provide estimates for mean and standard deviation, from the quartiles reported.
 
-study | input statistics | centre | spread
+publication | input statistics | mean estimator | sd estimator
 - | -| - | -
-Prendergast |\(C_3 := \{q_1, m, q_3; n\}\) and \(C_1 := \{a, m, b; n\}\) | `NA` | `effect_se`
-Hozo | \(C_1 := \{a, m, b; n\}\) | `hozo_mean` | `hozo_se` 
-Bland | \(C_2 := \{a, q_1, m, q_3, b; n\}\)| `bland_mean` | `bland_se`
-Wan | \(C_1 := \{a, m, b; n\}\)| `wan_mean_C1` | `wan_se_C1`
-Wan | \(C_2 := \{a, q_1, m, q_3, b; n\}\)|  `wan_mean_C2` | `wan_se_C2` 
-Wan | \(C_3 := \{q_1, m, q_3; n\}\)|  `wan_mean_C3` | `wan_se_C3`
+Prendergast (forthcoming, 2020) |\(C_3 := \{q_1, m, q_3; n\}\) and \(C_1 := \{a, m, b; n\}\) | `NA` | `effect_se`
+[@hozoEstimatingMeanVariance2005] | \(C_1 := \{a, m, b; n\}\) | `hozo_mean` | `hozo_se` 
+[@blandEstimatingMeanStandard2014] | \(C_2 := \{a, q_1, m, q_3, b; n\}\)| `bland_mean` | `bland_se`
+[@wanEstimatingSampleMean2014] | \(C_1 := \{a, m, b; n\}\)| `wan_mean_C1` | `wan_se_C1`
+[@wanEstimatingSampleMean2014] | \(C_2 := \{a, q_1, m, q_3, b; n\}\)|  `wan_mean_C2` | `wan_se_C2` 
+[@wanEstimatingSampleMean2014]| \(C_3 := \{q_1, m, q_3; n\}\)|  `wan_mean_C3` | `wan_se_C3`
+
+The References section has details of all publications referred to in the above table.
+
 
 ## Hozo *et al.*'s estimators
 
