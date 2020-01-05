@@ -123,7 +123,7 @@ In order to perform a meta-analysis via conventional methods, we require, at min
 
 A potential solution is offered by Hozo \emph{et al.}~\cite{hozoEstimatingMeanVariance2005}, who suggest estimating the mean and standard deviation from a reported median, minimum and maximum, as well as sample size, i.e from $C_1:=\{a, m, b; n\}$. This provides a way to calculate the variance of the effect, as required by contemporary meta-analysis tools, although there are some limitations. Firstly, $C_1$ does not cover all cases of reported medians. In our example considered in Table \ref{tab: pinheiro} to see that there is only applicable study (He).
 
-Bland extends on Hozo \emph{et al.}'s solution, but for the set $C_2 := \{a, q_1, m, q_2, b; n\}$ where the minimum, maximum, median, as well as first and third quartiles are reported\cite{blandEstimatingMeanStandard2014}. Wan \emph{et al.} improve on Hozo and Bland's solutions, as well as providing a solution for the set $C_3 := \{q_1, m, q_3; n\}$ where the interquartile range is provided as an interval along with the median\cite{wanEstimatingSampleMean2014}.  A nice review of the methods, including an improvement, can be found in~\cite{shi2018estimate}.  However, it is noted that underlying normality appears to be the motivation for all methods and below we details some limitations.
+Bland extends on Hozo \emph{et al.}'s solution, but for the set $C_2 := \{a, q_1, m, q_2, b; n\}$ where the minimum, maximum, median, as well as first and third quartiles are reported~\cite{blandEstimatingMeanStandard2014}. Wan \emph{et al.} improve on Hozo and Bland's solutions, as well as providing a solution for the set $C_3 := \{q_1, m, q_3; n\}$ where the interquartile range is provided as an interval along with the median\cite{wanEstimatingSampleMean2014}.  A nice review of the methods, including an improvement, can be found in~\cite{shi2018estimate}.  However, it is noted that underlying normality appears to be the motivation for all methods and below we details some limitations.
 
 \begin{table}[ht!]
   \resizebox{0.75\textwidth}{!}{\begin{minipage}{\textwidth}
@@ -226,7 +226,7 @@ We now derive each of these parameter sets, for the normal, log-normal, exponent
 
 \subsection{Approximating the variance of the median from limited information}
 
-Given that the true population density $f$ of equation (\ref{eqn: var est}) is unknown, we propose replacing $f$ with a nominated density $g$ whose parameters are estimated from the information available.  In doing so we obtain our approximated variance in \eqref{eqn: varmed} by choosing a suitable $g\left(M; \hat{\bm \theta}\right)$.
+Given that the true population density $f$ of equation (\ref{eqn: var est}) is unknown, we propose replacing $f$ with a nominated density $g$ whose parameters are estimated from the information available. In so doing we obtain our approximated variance in \eqref{eqn: varmed} by choosing a suitable $g\left(M; \hat{\bm \theta}\right)$.
 
 \subsubsection{Using the normal distribution}\label{sect:using_norm}~\\
 
