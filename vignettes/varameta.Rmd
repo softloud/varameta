@@ -350,6 +350,24 @@ The References section has details of all publications referred to in the above 
 
 ## Hozo *et al.*'s estimators
 
+Hozo *et al.* [@hozoEstimatingMeanVariance2005] provide a method for estimating the sample mean and the standard deviation from the sample minimum, maximum, and sample size.
+
+```{r}
+hozo_mean(
+  min(a_sample),
+  median(a_sample),
+  max(a_sample)
+)
+
+hozo_se(
+  min(a_sample),
+  median(a_sample),
+  max(a_sample),
+  n = length(a_sample)
+)
+```
+
+
 ## Bland's estimators
 
 ## Wan *et al.*'s estimators
