@@ -1,9 +1,3 @@
-#' @importFrom magrittr %>%
-#'
-#' @export
-magrittr::`%>%`
-
-
 #' Estimators for Meta-Analysing Medians
 #'
 #' This package bundles together extension functions for the `R` package

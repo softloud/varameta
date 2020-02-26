@@ -3,3 +3,4 @@
 ^LICENSE\.md$
 analysis
 ^README\.Rmd$
+^\.travis\.yml$

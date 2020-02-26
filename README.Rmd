@@ -13,6 +13,10 @@ knitr::opts_chunk$set(
 
 ```
 
+<!-- badges: start -->
+[![Travis build status](https://travis-ci.org/softloud/varameta.svg?branch=master)](https://travis-ci.org/softloud/varameta)
+<!-- badges: end -->
+
 # varameta
 
 The goal of `varameta` is to provide a solution to meta-analysing medians. Existing solutions either convert medians to means, or omit the studies that report medians. `varameta` provides all existing methods, including a new esitmator for the variance of the sample median, enabling meta-analysis of medians. 
