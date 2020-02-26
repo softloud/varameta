@@ -11,8 +11,9 @@
 \BOOKMARK [3][-]{subsubsection.4.1.4}{Using the Cauchy distribution}{subsection.4.1}% 11
 \BOOKMARK [2][-]{subsection.4.2}{Comparison between four choices of g}{section.4}% 12
 \BOOKMARK [1][-]{section.5}{Performance of estimator in coverage probability simulations}{}% 13
-\BOOKMARK [2][-]{subsection.5.1}{Simulation methodology}{section.5}% 14
-\BOOKMARK [2][-]{subsection.5.2}{simulation results}{section.5}% 15
-\BOOKMARK [1][-]{section.6}{Meta-analysis of medians}{}% 16
-\BOOKMARK [2][-]{subsection.6.1}{Revisiting the motivating example}{section.6}% 17
-\BOOKMARK [2][-]{subsection.6.2}{Components of research for computational science}{section.6}% 18
+\BOOKMARK [2][-]{subsection.5.1}{Coverage probability simulation}{section.5}% 14
+\BOOKMARK [2][-]{subsection.5.2}{Simulating meta-analysis data}{section.5}% 15
+\BOOKMARK [2][-]{subsection.5.3}{simulation results}{section.5}% 16
+\BOOKMARK [1][-]{section.6}{Meta-analysis of medians}{}% 17
+\BOOKMARK [2][-]{subsection.6.1}{Revisiting the motivating example}{section.6}% 18
+\BOOKMARK [2][-]{subsection.6.2}{Components of research for computational science}{section.6}% 19

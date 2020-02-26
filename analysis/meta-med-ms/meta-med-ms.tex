@@ -289,13 +289,35 @@ When using the Cauchy, we then have $\hat{\bm{\theta}}=[\hat \eta, \hat{\theta}^
 
 \section{Performance of estimator in coverage probability simulations}
 
-Now that we have defined an estimator for meta-analysing medians, let us explore the efficacy of this estimator under simulation, for different numbers of studies, distributions, and different assumptions about variation between studies and efficacy of intervention.
+Now that we have defined an estimator for meta-analysing medians, we explore the efficacy of this estimator under simulation, for different numbers of studies, distributions, and different assumptions about variation between studies and efficacy of intervention.
 
-\subsection{Simulation methodology}
+\subsection{Coverage probability simulation}
 
-One approach for exploring the efficacy of a statistical estimator is to simulate \emph{coverage probability}. In a coverage probability simulation, each trial requires randomly generated data.
+
+The approach we adopt for exploring the efficacy of a statistical estimator is to simulate \textbf{coverage probability}. In a coverage probability simulation, each trial randomly generates data from known parameter, calculates the estimator, produces a confidence interval based on that estimator. The trial is recorded as successful if the true parameter of interest falls within the confidence interval.
+
+Enumerating these steps provides an algorithm for performing a coverage probability \textbf{trial}, one instance of a simulation.
+
+\begin{enumerate}
+ \item Draw a random sample from the distribution that is characterised by the parameter of interest, $\nu$;
+ \item Calculate summary statistics from the random sample;
+ \item Calculate an estimate of $\nu$ from the summary statistics;
+ \item Construct a confidence interval using the parameter estimate;
+ \item Check if $\nu$ falls within the confidence interval.
+\end{enumerate}
+
+In particular, we calculate a $(1-\alpha)\times100\%$ confidence interval $\hat{\nu}\pm z_{1-\alpha/2}\sqrt{\hat{\gamma}}$, where $z_{a}=\Phi^{-1}\left(a\right)$ is the $a\text{th}$ quantile of the standard normal distribution, and $\Phi$ is the standard normal distribution function
+
+We intend \textbf{simulation} to be understood as the results of all trials.   The \textbf{coverage} of the simulation is the proportion of trials for which the confidence interval contains the true parameter value.
+
+\morewords{Should mention in discuss that cov prob sim not the only way}
+
+
+\subsection{Simulating meta-analysis data}
 
 \morewords{Mathematics need to be incorporated.}
+
+Simulating meta-analysis data
 
 \begin{alignat*}{2}
 \, & \log(m_k^I/m_k^C) & = \log(\nu^I/\nu^C) + \gamma_k\\
@@ -307,7 +329,6 @@ One approach for exploring the efficacy of a statistical estimator is to simulat
  \lambda_k^C & = \lambda^C  \exp(\gamma_k/2)\\
  \lambda_k^I & = \lambda^I  \exp(-\gamma_k/2)
 \end{alignat*}
-
 
 \morewords{See \package{simeta} and \package{varameta::}}
 
