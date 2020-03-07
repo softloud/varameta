@@ -12,7 +12,14 @@ License: MIT + file LICENSE
 ByteCompile: true
 Encoding: UTF-8
 LazyData: true
-Imports: bookdown
+Imports: 
+    bookdown,
+    magrittr,
+    nlme,
+    assertthat,
+    dplyr,
+    purrr,
+    tibble
 Suggests: 
     testthat (>= 2.1.0),
     knitr,

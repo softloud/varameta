@@ -1,8 +1,6 @@
 context("estimators")
 
 library(varameta)
-library(tidyverse)
-
 
 # testing sample ----------------------------------------------------------
 
@@ -18,33 +16,33 @@ ts <-
   c(sample(seq(5, 15), 1), # some estimators are case-wise defined
     sample(seq(16, 70), 1),
     sample(seq(70, 100), 1)) %>%
-  map(runif) %>% # sample some uninteresting data
+  purrr::map(runif) %>% # sample some uninteresting data
   {
     # calculate summary statistics
-    tibble(
-      min = map_dbl(., min),
-      max = map_dbl(., max),
-      first_q = map_dbl(., quantile, probs = 0.25),
-      third_q = map_dbl(., quantile, probs = 0.75),
-      iqr = map_dbl(., IQR),
-      mean = map_dbl(., mean),
-      median = map_dbl(., median),
-      sd = map_dbl(., sd),
-      n = map_int(., length)
+    tibble::tibble(
+      min = purrr::map_dbl(., min),
+      max = purrr::map_dbl(., max),
+      first_q = purrr::map_dbl(., quantile, probs = 0.25),
+      third_q = purrr::map_dbl(., quantile, probs = 0.75),
+      iqr = purrr::map_dbl(., IQR),
+      mean = purrr::map_dbl(., mean),
+      median = purrr::map_dbl(., median),
+      sd = purrr::map_dbl(., sd),
+      n = purrr::map_int(., length)
     )
   } %>% # calculate estimators and worked examples
-  mutate(
-    # effect_se_iqr = pmap_dbl(list(centre = median, spread = iqr, n = n),
+  dplyr::mutate(
+    # effect_se_iqr = purrr::pmap_dbl(list(centre = median, spread = iqr, n = n),
     #                          .f = varameta::effect_se,
     #                          centre_type = "median",
     #                          spread_type = "iqr"),
-    hozo_mean = pmap_dbl(list(
+    hozo_mean = purrr::pmap_dbl(list(
       a = min,
       m = median,
       b = max
     ), hozo_mean),
     hozo_mean_wkd = (min + 2 * median + max) / 4,
-    hozo_se = pmap_dbl(list(
+    hozo_se = purrr::pmap_dbl(list(
       a = min,
       m = median,
       b = max,
@@ -55,7 +53,7 @@ ts <-
       sqrt(n),
     hozo_se_wkd_case2 = ((max - min) / 4) / sqrt(n),
     hozo_se_wkd_case3 = ((max - min) / 6) / sqrt(n),
-    bland_mean = pmap_dbl(
+    bland_mean = purrr::pmap_dbl(
       list(
         a =  min,
         q_1 = first_q,
@@ -66,7 +64,7 @@ ts <-
       bland_mean
     ),
     bland_mean_wkd = (min + 2 * first_q + 2 * median + 2 * third_q + max) / 8,
-    bland_se = pmap_dbl(
+    bland_se = purrr::pmap_dbl(
       list(
         a =  min,
         q_1 = first_q,
@@ -93,27 +91,27 @@ ts <-
                     2 * third_q +
                     max) ^ 2
     ) / n),
-    wan_mean_C1 = pmap_dbl(list(
+    wan_mean_C1 = purrr::pmap_dbl(list(
       a = min,
       m = median,
       b = max
     ),
     wan_mean_C1),
     wan_mean_C1_wkd = (min + 2 * median + max) / 4,
-    wan_se_C1 = pmap_dbl(list(
+    wan_se_C1 = purrr::pmap_dbl(list(
       a = min,
       b = max,
       n = n
     ),
     wan_se_C1),
-    wan_se_C1_wkd = pmap_dbl(
+    wan_se_C1_wkd = purrr::pmap_dbl(
       list(a = min, b = max, n = n),
       .f =
         function(a, b, n) {
           ((b - a) / (2 * qnorm((n - 0.375) / (n + 0.25)))) / sqrt(n)
         }
     ),
-    wan_mean_C2 = pmap_dbl(
+    wan_mean_C2 = purrr::pmap_dbl(
       list(
         a = min,
         q_1 = first_q,
@@ -124,7 +122,7 @@ ts <-
       wan_mean_C2
     ),
     wan_mean_C2_wkd = (min + 2 * first_q + 2 * median + 2 * third_q + max) / 8,
-    wan_se_C2 = pmap_dbl(list(
+    wan_se_C2 = purrr::pmap_dbl(list(
       a = min,
       q_1 = first_q,
       m = median,
@@ -135,10 +133,10 @@ ts <-
     wan_se_C2),
     wan_se_C2_wkd = ((max - min) / (4 * qnorm((n - 0.375) / (n + 0.25))) +
                        (third_q - first_q) / (4 * qnorm((0.75 * n - 0.125) / (n + 0.25)))) / sqrt(n),
-    wan_mean_C3 = pmap_dbl(list(q_1 = first_q, m = median, q_3 = third_q),
+    wan_mean_C3 = purrr::pmap_dbl(list(q_1 = first_q, m = median, q_3 = third_q),
                            wan_mean_C3),
     wan_mean_C3_wkd = (first_q + median + third_q) / 3,
-    wan_se_C3 = pmap_dbl(list(
+    wan_se_C3 = purrr::pmap_dbl(list(
       q_1 = first_q,
       m = median,
       q_3 = third_q,
