@@ -19,7 +19,6 @@ See \code{\link{estimator_eqn_ref}} for details and references for equation
 }
 \seealso{
 Other mean_estimator: 
-\code{\link{bland_mean}()},
 \code{\link{hozo_mean}()},
 \code{\link{wan_mean_C1}()},
 \code{\link{wan_mean_C2}()}
