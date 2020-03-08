@@ -28,10 +28,13 @@ Method provided by Bland [todo: citation].
 }
 \seealso{
 Other one_neet Inputs and outputs neet tested.: 
+\code{\link{g_}},
+\code{\link{hozo}},
 \code{\link{wan_c1}},
 \code{\link{wan_c2}}
 
 Other meansd_estimator Approximate an estimator for the mean from quartiles.: 
+\code{\link{hozo}},
 \code{\link{wan_c1}},
 \code{\link{wan_c2}}
 }

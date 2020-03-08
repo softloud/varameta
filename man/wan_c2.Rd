@@ -29,10 +29,13 @@ Estimate the Sample Mean from Quartiles, Range, and Size
 \seealso{
 Other one_neet Inputs and outputs neet tested.: 
 \code{\link{bland}},
+\code{\link{g_}},
+\code{\link{hozo}},
 \code{\link{wan_c1}}
 
 Other meansd_estimator Approximate an estimator for the mean from quartiles.: 
 \code{\link{bland}},
+\code{\link{hozo}},
 \code{\link{wan_c1}}
 }
 \concept{meansd_estimator Approximate an estimator for the mean from quartiles.}

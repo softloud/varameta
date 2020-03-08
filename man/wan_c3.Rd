@@ -22,8 +22,4 @@ wan_se_C3(q_1, m, q_3, n)
 \description{
 Estimate the Sample Mean from the Sample Median and Range
 }
-\seealso{
-Other mean_estimator: 
-\code{\link{hozo_mean}()}
-}
 \concept{mean_estimator}

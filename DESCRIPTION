@@ -18,6 +18,7 @@ Imports:
     nlme,
     assertthat,
     dplyr,
+    neet,
     purrr,
     tibble
 Suggests: 
