@@ -2,9 +2,14 @@
 #'
 #' These estimators are for comparison purposes with the estimator proposed.
 #'
-#' This estimator assumes we have observed a m, \eqn{m}, and sample size \eqn{n}. We naively assume an exponential distribution \eqn{\sim exp(\lambda)}, so that the m \eqn{\nu := log(2)/\lambda}.
+#' This estimator assumes we have observed a m, \eqn{m}, and sample size
+#' \eqn{n}. We naively assume an exponential distribution
+#' \eqn{\sim exp(\lambda)}, so that the m \eqn{\nu := log(2)/\lambda}.
 #'
-#' This function then estimates \eqn{\lambda  :=  log(2) / m} and approximates the standard error of the sample m $?(2 \sqrt{n} g(m; \lambda = log(2) / m))^{-1}$ where \eqn{g} is the exponential density.
+#' This function then estimates \eqn{\lambda  :=  log(2) / m} and
+#' approximates the standard error of the sample
+#' \eqn{(2 \sqrt{n} g(m; \lambda = log(2) / m))^{-1}} where \eqn{g}
+#' is the exponential density.
 #'
 #' @param m Sample median.
 #' @param n Sample size.
