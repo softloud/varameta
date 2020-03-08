@@ -18,7 +18,7 @@ Imports:
     nlme,
     assertthat,
     dplyr,
-    neet,
+    neet (>= 0.0.0.9000),
     purrr,
     tibble
 Suggests: 
@@ -27,3 +27,5 @@ Suggests:
     rmarkdown
 RoxygenNote: 7.0.2
 VignetteBuilder: knitr
+Remotes:  
+    softloud/neet
