@@ -19,8 +19,6 @@ See \code{\link{estimator_eqn_ref}} for details and references for equation
 }
 \seealso{
 Other mean_estimator: 
-\code{\link{wan_mean_C1}()},
-\code{\link{wan_mean_C2}()},
-\code{\link{wan_mean_C3}()}
+\code{\link{wan_c3}}
 }
 \concept{mean_estimator}

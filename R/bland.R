@@ -10,13 +10,13 @@
 #' @param n Sample size.
 #'
 #' @family one_neet Inputs and outputs neet tested.
+#' @family meansd_estimator Approximate an estimator for the mean from quartiles.
 #'
 #' @name bland
 NULL
 #> NULL
 
 #' @rdname bland
-#' @family mean_estimator Approximate an estimator for the mean from quartiles.
 #' @export
 
 bland_mean <- function(a, q_1, m, q_3, b) {
@@ -30,7 +30,6 @@ bland_mean <- function(a, q_1, m, q_3, b) {
 }
 
 #' @rdname bland
-#' @family mean_estimator Approximate an estimator for the sd from quartiles.
 #' @export
 
 bland_se <- function(a, q_1, m, q_3, b, n) {
