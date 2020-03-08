@@ -6,16 +6,19 @@ library(varameta)
 
 # test numbers
 
-big_negative_number <- runif(3, -100, -1.1)
-small_negative_number <- runif(3, -0.9, -0.1)
+big_negative_number <- runif(3,-100,-1.1)
+small_negative_number <- runif(3,-0.9,-0.1)
 big_positive_number <- runif(3, 1.1, 100) %>% round()
 small_positive_number <- runif(3, 0.1, 0.9)
 
 # generate testing sample for different sample sizes
 ts <-
-  c(sample(seq(5, 15), 1), # some estimators are case-wise defined
-    sample(seq(16, 70), 1),
-    sample(seq(70, 100), 1)) %>%
+  c(
+    sample(seq(5, 15), 1) %>% as.numeric(),
+    # some estimators are case-wise defined
+    sample(seq(16, 70), 1) %>% as.numeric(),
+    sample(seq(70, 100), 1) %>% as.numeric()
+  ) %>%
   purrr::map(runif) %>% # sample some uninteresting data
   {
     # calculate summary statistics
@@ -28,7 +31,7 @@ ts <-
       mean = purrr::map_dbl(., mean),
       median = purrr::map_dbl(., median),
       sd = purrr::map_dbl(., sd),
-      n = purrr::map_int(., length)
+      n = purrr::map_dbl(., length)
     )
   } %>% # calculate estimators and worked examples
   dplyr::mutate(
@@ -122,19 +125,28 @@ ts <-
       wan_mean_C2
     ),
     wan_mean_C2_wkd = (min + 2 * first_q + 2 * median + 2 * third_q + max) / 8,
-    wan_se_C2 = purrr::pmap_dbl(list(
-      a = min,
-      q_1 = first_q,
-      m = median,
-      q_3 = third_q,
-      b = max,
-      n = n
+    wan_se_C2 = purrr::pmap_dbl(
+      list(
+        a = min,
+        q_1 = first_q,
+        m = median,
+        q_3 = third_q,
+        b = max,
+        n = n
+      ),
+      wan_se_C2
     ),
-    wan_se_C2),
-    wan_se_C2_wkd = ((max - min) / (4 * qnorm((n - 0.375) / (n + 0.25))) +
-                       (third_q - first_q) / (4 * qnorm((0.75 * n - 0.125) / (n + 0.25)))) / sqrt(n),
-    wan_mean_C3 = purrr::pmap_dbl(list(q_1 = first_q, m = median, q_3 = third_q),
-                           wan_mean_C3),
+    wan_se_C2_wkd = ((max - min) / (4 * qnorm((
+      n - 0.375
+    ) / (
+      n + 0.25
+    ))) +
+      (third_q - first_q) / (4 * qnorm((0.75 * n - 0.125) / (n + 0.25)
+      ))) / sqrt(n),
+    wan_mean_C3 = purrr::pmap_dbl(list(
+      q_1 = first_q, m = median, q_3 = third_q
+    ),
+    wan_mean_C3),
     wan_mean_C3_wkd = (first_q + median + third_q) / 3,
     wan_se_C3 = purrr::pmap_dbl(list(
       q_1 = first_q,
@@ -144,7 +156,8 @@ ts <-
     ),
     wan_se_C3),
     wan_se_C3_wkd = ((third_q - first_q) /
-      (2 * qnorm((0.75 * n - 0.125) / (n + 0.25)))) / sqrt(n)
+                       (2 * qnorm((0.75 * n - 0.125) / (n + 0.25)
+                       ))) / sqrt(n)
   )
 
 
@@ -208,15 +221,29 @@ test_that("g_norm", {
   expect_true(varameta:::g_norm(100, 50, 2) > 0)
   expect_is(varameta:::g_norm(100, 50, 2), "numeric")
   expect_is(varameta:::g_norm(30, 5, 2), "numeric")
-  expect_equal(varameta:::g_norm(1, 50, 3), 1 / (2 * dnorm(50, 50, 3/(2*qnorm(0.75)))))
+  expect_equal(varameta:::g_norm(1, 50, 3), 1 / (2 * dnorm(50, 50, 3 / (2 *
+                                                                          qnorm(
+                                                                            0.75
+                                                                          )))))
 })
 
 test_that("g_lnorm", {
   # test numeric values
   expect_is(varameta:::g_lnorm(50, 5, 2, "iqr"), "numeric")
-  expect_is(varameta:::g_lnorm(big_positive_number[[1]], small_positive_number[[1]], big_positive_number[[2]]), "numeric")
+  expect_is(
+    varameta:::g_lnorm(
+      big_positive_number[[1]],
+      small_positive_number[[1]],
+      big_positive_number[[2]]
+    ),
+    "numeric"
+  )
   expect_equal(varameta:::g_lnorm(10, 4, 0.3),
-            1 / (2 * sqrt(10) * dlnorm(4, log(4), 1 / qnorm(3/4) * log((0.3 * exp(-log(4)) + sqrt(0.3^2 * exp(-2 * log(4)) + 4))/2))))
+               1 / (2 * sqrt(10) * dlnorm(4, log(4), 1 / qnorm(3 / 4) * log((0.3 * exp(-log(4)) + sqrt(0.3 ^
+                                                                                                         2 * exp(-2 * log(
+                                                                                                           4
+                                                                                                         )) + 4)) / 2
+               ))))
   expect_true(varameta:::g_lnorm(50, 5, 2, "iqr") > 0)
 })
 
@@ -225,13 +252,30 @@ test_that("g_exp", {
   expect_is(varameta:::g_exp(50, 3), "numeric")
   expect_is(varameta:::g_exp(abs(big_positive_number[[1]]), abs(big_positive_number[[2]])), 'numeric')
   expect_equal(varameta:::g_exp(5, 10), 1 / (2 * sqrt(5) * dexp(10, rate = log(2) / 10)))
-  expect_equal(varameta:::g_exp(big_positive_number[[1]], big_positive_number[[2]]), 1 / (2 * sqrt(big_positive_number[[1]]) * dexp(big_positive_number[[2]], rate = log(2) / big_positive_number[[2]])))
+  expect_equal(
+    varameta:::g_exp(big_positive_number[[1]], big_positive_number[[2]]),
+    1 / (
+      2 * sqrt(big_positive_number[[1]]) * dexp(big_positive_number[[2]], rate = log(2) / big_positive_number[[2]])
+    )
+  )
 
 })
 
 test_that("g_cauchy", {
   expect_is(varameta:::g_cauchy(50, 5, 2), "numeric")
   expect_equal(varameta:::g_cauchy(50, 6, 2), 1 / (2 * sqrt(50) * dcauchy(5, 5, 2 / 2)))
-  expect_equal(varameta:::g_cauchy(big_positive_number[[1]], big_positive_number[[2]], big_positive_number[[3]]), 1 / (2 * sqrt(big_positive_number[[1]]) * dcauchy(big_positive_number[[2]], big_positive_number[[2]], big_positive_number[[3]] / 2)))
+  expect_equal(
+    varameta:::g_cauchy(
+      big_positive_number[[1]],
+      big_positive_number[[2]],
+      big_positive_number[[3]]
+    ),
+    1 / (
+      2 * sqrt(big_positive_number[[1]]) * dcauchy(
+        big_positive_number[[2]],
+        big_positive_number[[2]],
+        big_positive_number[[3]] / 2
+      )
+    )
+  )
 })
-

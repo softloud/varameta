@@ -25,6 +25,7 @@ Estimate the Sample Mean from the Sample Median, Range, and Size
 \seealso{
 Other one_neet Inputs and outputs neet tested.: 
 \code{\link{bland}},
+\code{\link{effect_se}()},
 \code{\link{g_}},
 \code{\link{wan_c1}},
 \code{\link{wan_c2}}

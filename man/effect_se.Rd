@@ -22,3 +22,12 @@ a sample sd, sample interquartile range, or sample range.}
 Estimate the standard error of the effect, depending on how that effect is
 reported (median or mean).
 }
+\seealso{
+Other one_neet Inputs and outputs neet tested.: 
+\code{\link{bland}},
+\code{\link{g_}},
+\code{\link{hozo}},
+\code{\link{wan_c1}},
+\code{\link{wan_c2}}
+}
+\concept{one_neet Inputs and outputs neet tested.}

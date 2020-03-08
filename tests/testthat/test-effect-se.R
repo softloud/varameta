@@ -12,7 +12,7 @@ library(varameta)
 
 big <- runif(1, 20, 100)
 small <- runif(1, 0.1, 0.9)
-n <- sample(seq(5, 100), 1)
+n <- sample(seq(5, 100), 1) %>% as.numeric()
 
 
 # test inputs and defaults ------------------------------------------------

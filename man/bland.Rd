@@ -28,6 +28,7 @@ Method provided by Bland [todo: citation].
 }
 \seealso{
 Other one_neet Inputs and outputs neet tested.: 
+\code{\link{effect_se}()},
 \code{\link{g_}},
 \code{\link{hozo}},
 \code{\link{wan_c1}},

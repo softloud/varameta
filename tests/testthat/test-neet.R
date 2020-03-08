@@ -17,7 +17,7 @@ test_that("effect_se", {
     effect_se(
       centre = mean(a_sample),
       spread = sd(a_sample),
-      n = length(a_sample),
+      n = as.numeric(length(a_sample)),
       centre_type = "mean",
       spread_type = "sd"
     ), "numeric"
@@ -27,7 +27,7 @@ test_that("effect_se", {
     effect_se(
       centre = mean(a_sample),
       spread = var(a_sample),
-      n = length(a_sample),
+      n = as.numeric(length(a_sample)),
       centre_type = "mean",
       spread_type = "var"
     ), "numeric"
@@ -37,7 +37,7 @@ test_that("effect_se", {
     effect_se(
       centre = median(a_sample),
       spread = IQR(a_sample),
-      n = length(a_sample),
+      n = as.numeric(length(a_sample)),
       centre_type = "median",
       spread_type = "iqr"
     ), "numeric"
@@ -47,7 +47,7 @@ test_that("effect_se", {
     effect_se(
       centre = median(a_sample),
       spread = diff(range(a_sample)),
-      n = length(a_sample),
+      n = as.numeric(length(a_sample)),
       centre_type = "median",
       spread_type = "range"
     ), "numeric"
@@ -73,7 +73,7 @@ test_that("other estimators", {
     median(a_sample),
     quantile(a_sample, 0.75),
     max(a_sample),
-    length(a_sample)
+    n = as.numeric(length(a_sample))
   ), "numeric")
 
   expect_neet(hozo_mean(min(a_sample),
@@ -84,7 +84,7 @@ test_that("other estimators", {
     min(a_sample),
     median(a_sample),
     max(a_sample),
-    length(a_sample)
+    n = as.numeric(length(a_sample))
   ), "numeric")
 
   expect_neet(wan_mean_C1(min(a_sample),
@@ -93,7 +93,8 @@ test_that("other estimators", {
 
   expect_neet(wan_se_C1(min(a_sample),
                         max(a_sample),
-                        length(a_sample)), "numeric")
+                        n = as.numeric(length(a_sample))
+  ), "numeric")
 
   expect_neet(wan_mean_C2(
     min(a_sample),
@@ -109,7 +110,7 @@ test_that("other estimators", {
     median(a_sample),
     quantile(a_sample, 0.75),
     max(a_sample),
-    length(a_sample)
+    n = as.numeric(length(a_sample))
   ), "numeric")
 
   expect_neet(wan_mean_C3(
@@ -122,7 +123,7 @@ test_that("other estimators", {
     quantile(a_sample, 0.25),
     median(a_sample),
     quantile(a_sample, 0.75),
-    length(a_sample)
+    n = as.numeric(length(a_sample))
   ), "numeric")
 
 })

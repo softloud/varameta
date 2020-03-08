@@ -36,6 +36,7 @@ This function then estimates \eqn{\lambda  :=  log(2) / m} and approximates the 
 \seealso{
 Other one_neet Inputs and outputs neet tested.: 
 \code{\link{bland}},
+\code{\link{effect_se}()},
 \code{\link{hozo}},
 \code{\link{wan_c1}},
 \code{\link{wan_c2}}

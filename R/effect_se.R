@@ -10,6 +10,8 @@
 #' @param centre_type Specify if the center is "mean" or "median".
 #' @param spread_type Specify if the spread is reported as "sd", "var", "iqr", or "range".
 #'
+#' @family one_neet Inputs and outputs neet tested.
+#'
 #' @export
 
 effect_se <- function(centre,
@@ -17,9 +19,15 @@ effect_se <- function(centre,
                       n,
                       centre_type = "mean",
                       spread_type = "sd") {
-  assertthat::assert_that(
-    centre > 0,
-    msg = "this function currently requires a positive measure of centre")
+  # check inputs
+  neet::assert_neet(centre, "numeric")
+  neet::assert_neet(spread, "numeric")
+  neet::assert_neet(n, "numeric")
+  neet::assert_neet(centre_type, "character")
+  neet::assert_neet(spread_type, "character")
+
+  assertthat::assert_that(centre > 0,
+                          msg = "this function currently requires a positive measure of centre")
 
 
   if (centre_type == "mean") {
@@ -31,9 +39,9 @@ effect_se <- function(centre,
       return(spread)
   } else if (centre_type == "median") {
     return(g_lnorm(
-      median = centre,
-      spread = spread,
       n = n,
+      m = centre,
+      spread = spread,
       spread_type = spread_type
     ))
   }
