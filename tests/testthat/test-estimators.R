@@ -35,10 +35,10 @@ ts <-
     )
   } %>% # calculate estimators and worked examples
   dplyr::mutate(
-    # effect_se_iqr = purrr::pmap_dbl(list(centre = median, spread = iqr, n = n),
-    #                          .f = varameta::effect_se,
-    #                          centre_type = "median",
-    #                          spread_type = "iqr"),
+    effect_se_iqr = purrr::pmap_dbl(list(centre = median, spread = iqr, n = n),
+                             .f = varameta::effect_se,
+                             centre_type = "median",
+                             spread_type = "iqr"),
     hozo_mean = purrr::pmap_dbl(list(
       a = min,
       m = median,

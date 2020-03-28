@@ -1,17 +1,5 @@
 [0] Config.pm:302> INFO - This is Biber 2.9
 [0] Config.pm:305> INFO - Logfile is 'meta-med-ms.blg'
-[33] biber:313> INFO - === Sat Jan  4, 2020, 08:09:55
-[57] Biber.pm:371> INFO - Reading 'meta-med-ms.bcf'
-[113] Biber.pm:857> INFO - Found 15 citekeys in bib section 0
-[126] Biber.pm:3981> INFO - Processing section 0
-[137] Biber.pm:4154> INFO - Looking for bibtex format file 'references.bib' for section 0
-[139] bibtex.pm:1468> INFO - LaTeX decoding ...
-[158] bibtex.pm:1294> INFO - Found BibTeX data source 'references.bib'
-[204] Utils.pm:169> WARN - Range field 'pages' in entry 'blandEstimatingMeanStandard2014' is malformed, falling back to literal
-[258] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[258] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[258] Biber.pm:3809> INFO - Sorting list 'ynt/global//global/global' of type 'entry' with template 'ynt' and locale 'en-US'
-[258] Biber.pm:3815> INFO - No sort tailoring available for locale 'en-US'
-[272] bbl.pm:617> INFO - Writing 'meta-med-ms.bbl' with encoding 'UTF-8'
-[278] bbl.pm:720> INFO - Output to meta-med-ms.bbl
-[278] Biber.pm:110> INFO - WARNINGS: 1
+[30] biber:313> INFO - === Mon Mar 23, 2020, 13:57:53
+[46] Utils.pm:185> ERROR - meta-med-ms.bcf is malformed, last biblatex run probably failed. Deleted meta-med-ms.bbl
+[47] Biber.pm:114> INFO - ERRORS: 1
