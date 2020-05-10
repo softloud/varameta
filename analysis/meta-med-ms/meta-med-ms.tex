@@ -72,7 +72,7 @@ Those initially who published the summary measures, may have chosen to report me
 
 In the presence of underlying skewed distributions, both Disadvantages 1 and 2 may cause a real threat to the validity of any inference following conversion from
 
-\dothislater{Ask to Hien & Luke about this.}
+%\dothislater{Ask to Hien & Luke about this.}
 % provide defintion quantiles measures to moment-based measures.
 
 The method that we propose can be easily adapted to both single-study and meta-analysis contexts.  In the case of meta-analyses, meta-regression may also be conducted when some of the studies report means and standard deviations and others report medians and interquartile ranges.  This can be done by introducing a moderator factor variable to explain the differences between an effect based on means and an effect based on medians.
@@ -95,29 +95,29 @@ $n$, the sample size.  $\iqr$ denotes the interquantile range and this may be re
 As an example of how studies collated in meta-analyses report these summary statistics differently, consider the dataset presented in Table \ref{tab: pinheiro}, taken from a systematic review of d-dimer in pre-eclampsia~\cite{pinheiroDdimerPreeclampsiaSystematic2012}. Ideally, one would want to perform a meta-analysis using the effects from all studies. However, estimator variance is only reported for three of the seven studies presented with the remaining studies reporting medians and ranges.
 
 % Why is this table out of alignment?
-\begin{table}[!htbp] \centering
-    \resizebox{0.4\textwidth}{!}{\begin{minipage}
-\begin{tabular}{@{\extracolsep{5pt}} ccccccccc}
-\\[-1.8ex]\hline
-\hline \\[-1.8ex]
-& & \multicolumn{3}{c}{Control group} & \multicolumn{3}{c}{Treatment group} & \\ \cline{3-5} \cline{6-8}
-study & year & location & scale & $n_c$ & location & scale & $n_t$ &
-\bf{reported} \\
-\hline \\[-1.8ex]
-Dusse &2003 & 1146.6 & 311.2 & 28 & 1263.8 & 411.9 & 43 & $\bm{\overline x, s}$  \\
-Schjtlein &1997 & 1390.0 & 559.0 & 97 & 1545.0 & 849.5 & 200 & $\bm{\overline x, s}$  \\
-Terao &1991 & 221.52 & 179.9 & 80 & 347.87 & 460.5 & 13 & $\bm{\overline x, s}$  \\
-Catarino &2008 & 538.2 & (391.2, 822.8) & 42 & 448.5  & (313.0, 1091.3) & 44 & $\bm{m, (q_1, q_3)}$ \\
-Bellart &1998 & 545.0 & 225.0 & 65 & 2090.0 & 1800.0 & 12 & $\bm{m, \iqr}$ \\
-Heilmann &2007 & 1149.0 & 456.0 & 33 & 1623.6 & 932.9 & 111 & $\bm{m, \iqr}$ \\
-He & 1997 & 183.0 & (110.0, 340.0) & 24 & 315.0 & (145.0, 1150.0) & 30 & $\bm{m, (a, b)}$\\
-\hline \\[-1.8ex]
-\end{tabular}
-\caption{Data from a meta-analysis of d-dimer levels in pre-eclampsia presented by \cite{pinheiroDdimerPreeclampsiaSystematic2012}, measures of location and scale are varied: there are means and standard deviations; medians and interquartile ranges; quartiles; and medians and ranges. The types of estimates reported are listed in the final column denoted `reported'.}
-  \label{tab: pinheiro}
-\end{minipage}
-\end{table}
-
+% \begin{table}[!htbp] \centering
+%     \resizebox{0.4\textwidth}{!}{\begin{minipage}
+% \begin{tabular}{@{\extracolsep{5pt}} ccccccccc}
+% \\[-1.8ex]\hline
+% \hline \\[-1.8ex]
+% & & \multicolumn{3}{c}{Control group} & \multicolumn{3}{c}{Treatment group} & \\ \cline{3-5} \cline{6-8}
+% study & year & location & scale & $n_c$ & location & scale & $n_t$ &
+% \bf{reported} \\
+% \hline \\[-1.8ex]
+% Dusse &2003 & 1146.6 & 311.2 & 28 & 1263.8 & 411.9 & 43 & $\bm{\overline x, s}$  \\
+% Schjtlein &1997 & 1390.0 & 559.0 & 97 & 1545.0 & 849.5 & 200 & $\bm{\overline x, s}$  \\
+% Terao &1991 & 221.52 & 179.9 & 80 & 347.87 & 460.5 & 13 & $\bm{\overline x, s}$  \\
+% Catarino &2008 & 538.2 & (391.2, 822.8) & 42 & 448.5  & (313.0, 1091.3) & 44 & $\bm{m, (q_1, q_3)}$ \\
+% Bellart &1998 & 545.0 & 225.0 & 65 & 2090.0 & 1800.0 & 12 & $\bm{m, \iqr}$ \\
+% Heilmann &2007 & 1149.0 & 456.0 & 33 & 1623.6 & 932.9 & 111 & $\bm{m, \iqr}$ \\
+% He & 1997 & 183.0 & (110.0, 340.0) & 24 & 315.0 & (145.0, 1150.0) & 30 & $\bm{m, (a, b)}$\\
+% \hline \\[-1.8ex]
+% \end{tabular}
+% \caption{Data from a meta-analysis of d-dimer levels in pre-eclampsia presented by \cite{pinheiroDdimerPreeclampsiaSystematic2012}, measures of location and scale are varied: there are means and standard deviations; medians and interquartile ranges; quartiles; and medians and ranges. The types of estimates reported are listed in the final column denoted `reported'.}
+%   \label{tab: pinheiro}
+% \end{minipage}
+% \end{table}
+% %
 Three studies (first authors Dusse, Schjtlein, and Terao) detailed in the table provide the sample mean, $\overline x$, and standard deviation, $s$. Two studies (Bellart and Heilmann) provide the sample median, $m$, and interquartile range, $\iqr$. One study (Catrino) provides the sample median, as well as the first and third quartiles, $q_1$ and $q_3$. Finally, one more study (He) provides the sample median and the minimum $a$ and maximum $b$ observed values. All studies provide the sample size $n$ and their respective estimates of location and scale for both the control and the pre-eclamptic groups.
 
 In order to perform a meta-analysis via conventional methods, we require, at minimum, the studies' effect estimates, associated variances, and sample sizes. While full access to the raw data of each study would enable researchers to calculate the necessary sample variance for each study, there are many practical reasons, such as the time it would take to gather the data, that reduce the practicality of this approach, a point that is well made by others~\cite[e.g., p. 57]{blandEstimatingMeanStandard2014}.   Since only three studies presented in Table \ref{tab: pinheiro} report sample variance, Pinheiro \emph{et al.}'s meta-analysis was restricted to these three datasets~\cite{pinheiroDdimerPreeclampsiaSystematic2012}. This paper provides a method that allows meta-analyses to be performed over studies reporting a variety of summary statistics, such as those outlined in Table \ref{tab: pinheiro}.
@@ -342,7 +342,7 @@ Simulating meta-analysis data
 Figure \ref{fig:sims} presents results of
 
 \begin{figure}
-   \includegraphics[width=\textwidth]{placeholder-coverage-plot.png}
+   \includegraphics[width=\textwidth]{coverage.png}
    \caption{Simulation results.}
    %\label{fig:sims}
 \end{figure}

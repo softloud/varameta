@@ -8,33 +8,33 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-```{r packages}
+```{r packages, message=FALSE}
 # packages
 
 library(simeta)
-library(actuar)
 library(tidyverse)
 
 ```
-## meta-analysis pinheiro
 
-```{r}
-# find data
-
-
-# meta-analyse
-
-# output forestplot
-
-
-```
-
-
+## example meta-analysis of medians
 
 ## simulation
 
 ```{r}
-demo_sim <- metasims(progress = FALSE)
+sim_results <- 
+  metasims(
+    progress = TRUE
+    )
+
+```
+
+## coverage probability plot
+
+```{r}
+sim_results %>% 
+  coverage_plot()
+
+ggsave(here::here("analysis/meta-med-ms/coverage.png"))
 
 ```
 
@@ -44,59 +44,11 @@ demo_sim <- metasims(progress = FALSE)
 ```{r}
 
 # make a table of 
-demo_sim %>% 
+sim_results %>% 
   pluck("arguments") %>% 
   kableExtra::kable()
 
 ```
 
-Better to put this in the caption of the coverage plot.
-
-## plots of distributions
-
-```{r}
-distributions <- demo_sim %>% 
-  pluck("distributions") 
-
-
-```
-
-```{r}
-
-tibble(x = c(0,1)) %>% 
-ggplot(aes(x = x)) +
-  stat_function(
-    fun = dnorm, 
-    args = list(mean = 0.5, sd = 0.2))
-
-
-
-```
-
-```{r}
-distributions %>% {
-  map2(.$dist, .$par,
-       .f = function(d, p) {
-         density_fn(0.5, d, p, "d")
-       })
-}
-
-
-```
-
-```{r}
-
-
-```
-
-
-
-## coverage plot
-
-## patchwork all
-```{r }
-
-
-
-```
+## 
 

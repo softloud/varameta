@@ -1,0 +1,185 @@
+---
+title: "estimator status"
+author: "Charles T. Gray"
+date: "04/05/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r}
+library(ggraph)
+library(tidygraph)
+library(tidyverse)
+library(hrbrthemes)
+
+```
+
+```{r}
+nodes_other_estimators <- tribble(
+  ~object, ~type,
+  "mean_est", "output",
+  "mean_se_est", "output",
+  "median", "input",
+  "n", "input",
+  "wan_mean_C1", "function",
+  "min", "input",
+  "max", "input",
+  "wan_se_C1", "function",
+  "q1", "input",
+  "q3", "input",
+  "wan_mean_C2", "function",
+  "wan_se_C2", "function",
+  "wan_mean_C3", "function",
+  "wan_se_C3", "function",
+  "hozo_mean", "function",
+  "hozo_se", "function",
+  "bland_mean", "function",
+  "bland_se", "function"
+) %>% 
+  mutate(
+    type = fct_relevel(type, "input", "function", "output")
+  )
+
+edges_other_estimators <- tribble(
+  ~from, ~to,
+  "min", "wan_mean_C1",
+  "max", "wan_mean_C1",
+  "median", "wan_mean_C1",
+  "min", "wan_se_C1",
+  "max", "wan_se_C1",
+  "n", "wan_se_C1",
+  "min", "wan_mean_C2",
+  "q1", "wan_mean_C2",
+  "median", "wan_mean_C2",
+  "q3", "wan_mean_C2",
+  "max", "wan_mean_C2",
+  "min", "wan_se_C2",
+  "q1", "wan_se_C2",
+  "median", "wan_se_C2",
+  "q3", "wan_se_C2",
+  "max", "wan_se_C2",
+  "n", "wan_se_C2",
+  "wan_mean_C1", "mean_est",
+  "wan_se_C1", "mean_se_est",
+  "wan_mean_C2", "mean_est",
+  "wan_se_C2", "mean_se_est",
+  "q1", "wan_mean_C3",
+  "median", "wan_mean_C3",
+  "q3", "wan_mean_C3",
+  "q1", "wan_se_C3",
+  "median", "wan_se_C3",
+  "q3", "wan_se_C3",
+  "n", "wan_se_C3",
+  "wan_mean_C3", "mean_est",
+  "wan_se_C3", "mean_se_est",
+  "min", "hozo_mean",
+  "median", "hozo_mean",
+  "max", "hozo_mean",
+  "hozo_mean", "mean_est",
+  "hozo_se", "mean_se_est",
+  "min", "hozo_se",
+  "median", "hozo_se",
+  "max", "hozo_se",
+  "n", "hozo_se",
+  "min", "bland_mean",
+  "q1", "bland_mean",
+  "median", "bland_mean",
+  "q3", "bland_mean",
+  "max", "bland_mean",
+  "min", "bland_se",
+  "q1", "bland_se",
+  "median", "bland_se",
+  "q3", "bland_se",
+  "max", "bland_se",
+  "n", "bland_se",
+  "bland_mean", "mean_est",
+  "bland_se", "mean_se_est"
+)
+
+neets <- tribble(
+  ~fn, ~one_neet, ~all_neets, ~and_the_rest,
+  "effect_se", FALSE, FALSE, FALSE,
+  "wan_mean_C1", FALSE, FALSE, FALSE
+)
+
+
+```
+
+
+```{r}
+tbl_graph(nodes_other_estimators, edges_other_estimators) %>% 
+  ggraph() +
+  geom_edge_link(arrow = arrow(), colour = "lightgrey") + 
+  geom_node_text(
+    size = 3,
+    aes(label = object, colour = type)
+  ) + 
+  scale_colour_ipsum() +
+  coord_flip() +
+  scale_y_reverse() +
+  theme_graph() +
+  theme(legend.position = "bottom")
+
+```
+
+# variance of the sample median
+
+```{r}
+nodes_medvar <- 
+  tribble(
+    ~object,~type,
+    "effect_se", "fn",
+    "g_lnorm", "fn",
+    "g_cauchy", "fn",
+    "g_norm", "fn",
+    "g_exp", "fn",
+    "iqr", "input",
+    "range", "input",
+    "median", "input",
+    "n", "input",
+    "median_se", "output"
+  )
+
+edges_medvar <- 
+  tibble(
+    from = c("n", "iqr", "range", "median") %>% rep(times = 4),
+    to = c("effect_se", "g_lnorm", "g_cauchy", "g_norm") %>% rep(each = 4)
+  ) %>% 
+  bind_rows(
+    tibble(
+    from = c("n", "median"),
+    to = rep("g_exp", times = 2)
+    )
+  ) %>% 
+  bind_rows(
+    tibble(
+    from = c("effect_se", "g_lnorm", "g_cauchy", "g_norm", "g_exp"),
+    to = rep("median_se")
+    )
+  )
+
+
+```
+
+
+```{r}
+tbl_graph(nodes_medvar, edges_medvar) %>% 
+  ggraph() +
+  geom_edge_link(arrow = arrow(), colour = "lightgrey") + 
+  geom_node_text(
+    size = 3,
+    aes(label = object, colour = type)
+  ) + 
+  scale_colour_ipsum() +
+  coord_flip() +
+  scale_y_reverse() +
+  theme_graph() +
+  theme(legend.position = "bottom")
+
+
+```
+

@@ -1,3 +1,19 @@
 \BOOKMARK [1][-]{section.1}{Medians pose a problem in meta-analyses}{}% 1
 \BOOKMARK [2][-]{subsection.1.1}{What's the problem?}{section.1}% 2
 \BOOKMARK [2][-]{subsection.1.2}{Why propose a new method?}{section.1}% 3
+\BOOKMARK [1][-]{section.2}{A motivating example}{}% 4
+\BOOKMARK [1][-]{section.3}{Existing solutions to this problem}{}% 5
+\BOOKMARK [1][-]{section.4}{Estimating the variance of the sample median}{}% 6
+\BOOKMARK [2][-]{subsection.4.1}{Approximating the variance of the median from limited information}{section.4}% 7
+\BOOKMARK [3][-]{subsubsection.4.1.1}{Using the normal distribution}{subsection.4.1}% 8
+\BOOKMARK [3][-]{subsubsection.4.1.2}{Using the log-normal distribution}{subsection.4.1}% 9
+\BOOKMARK [3][-]{subsubsection.4.1.3}{Using the exponential distribution}{subsection.4.1}% 10
+\BOOKMARK [3][-]{subsubsection.4.1.4}{Using the Cauchy distribution}{subsection.4.1}% 11
+\BOOKMARK [2][-]{subsection.4.2}{Comparison between four choices of g}{section.4}% 12
+\BOOKMARK [1][-]{section.5}{Performance of estimator in coverage probability simulations}{}% 13
+\BOOKMARK [2][-]{subsection.5.1}{Coverage probability simulation}{section.5}% 14
+\BOOKMARK [2][-]{subsection.5.2}{Simulating meta-analysis data}{section.5}% 15
+\BOOKMARK [2][-]{subsection.5.3}{simulation results}{section.5}% 16
+\BOOKMARK [1][-]{section.6}{Meta-analysis of medians}{}% 17
+\BOOKMARK [2][-]{subsection.6.1}{Revisiting the motivating example}{section.6}% 18
+\BOOKMARK [2][-]{subsection.6.2}{Components of research for computational science}{section.6}% 19
