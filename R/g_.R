@@ -30,7 +30,7 @@ NULL
 
 g_exp <- function(n, m) {
   neet::assert_neet(m, "numeric")
-  neet::assert_neet(n, "numeric")
+  neet::assert_neet(n, "numint")
 
   # Estimate parameters.
   lambda <- log(2) / m
@@ -44,7 +44,7 @@ g_exp <- function(n, m) {
 #' @export
 
 g_norm <- function(n, m, spread, spread_type = "iqr") {
-  neet::assert_neet(n, "numeric")
+  neet::assert_neet(n, "numint")
   neet::assert_neet(m, "numeric")
   neet::assert_neet(spread, "numeric")
   neet::assert_neet(spread_type, "character")
@@ -75,7 +75,7 @@ g_norm <- function(n, m, spread, spread_type = "iqr") {
 #' @export
 
 g_lnorm <- function(n, m, spread, spread_type = "iqr") {
-  neet::assert_neet(n, "numeric")
+  neet::assert_neet(n, "numint")
   neet::assert_neet(m, "numeric")
   neet::assert_neet(spread, "numeric")
   neet::assert_neet(spread_type, "character")
@@ -110,7 +110,7 @@ g_lnorm <- function(n, m, spread, spread_type = "iqr") {
 #' @export
 
 g_cauchy <- function(n, m, spread, spread_type = "iqr") {
-  neet::assert_neet(n, "numeric")
+  neet::assert_neet(n, "numint")
   neet::assert_neet(m, "numeric")
   neet::assert_neet(spread, "numeric")
   neet::assert_neet(spread_type, "character")

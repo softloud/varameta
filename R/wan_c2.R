@@ -36,7 +36,7 @@ wan_se_C2 <- function(a, q_1, m, q_3, b, n) {
   neet::assert_neet(m, "numeric")
   neet::assert_neet(q_3, "numeric")
   neet::assert_neet(b, "numeric")
-  neet::assert_neet(n, "numeric")
+  neet::assert_neet(n, "numint")
 
     ((b - a) / (4 * qnorm(
     (n - 0.375) / (n + 0.25)

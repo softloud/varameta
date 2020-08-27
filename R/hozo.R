@@ -32,7 +32,7 @@ hozo_se <- function(a, m, b, n) {
   neet::assert_neet(a, "numeric")
   neet::assert_neet(m, "numeric")
   neet::assert_neet(b, "numeric")
-  neet::assert_neet(n, "numeric")
+  neet::assert_neet(n, "numint")
 
   s <- if (n <= 15) {
     1 / sqrt(12) * sqrt((b - a) ^ 2 +

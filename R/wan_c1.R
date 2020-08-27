@@ -29,7 +29,7 @@ wan_mean_C1 <- function(a, m, b) {
 wan_se_C1 <- function(a, b, n) {
   neet::assert_neet(a, "numeric")
   neet::assert_neet(b, "numeric")
-  neet::assert_neet(n, "numeric")
+  neet::assert_neet(n, "numint")
 
     (b - a) / (2 * qnorm((n - 0.375) / (n + 0.25))) / sqrt(n)
 }

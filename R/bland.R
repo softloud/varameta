@@ -38,7 +38,7 @@ bland_se <- function(a, q_1, m, q_3, b, n) {
   neet::assert_neet(m, "numeric")
   neet::assert_neet(q_3, "numeric")
   neet::assert_neet(b, "numeric")
-  neet::assert_neet(n, "numeric")
+  neet::assert_neet(n, "numint")
 
   sqrt(
     (1 / 16 * (a ^ 2 + 2 * q_1 ^ 2 + 2 * m ^ 2 + 2 * q_3 ^ 2 + b ^ 2) +

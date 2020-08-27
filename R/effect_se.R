@@ -8,7 +8,8 @@
 #' a sample sd, sample interquartile range, or sample range.
 #' @param n The sample size.
 #' @param centre_type Specify if the center is "mean" or "median".
-#' @param spread_type Specify if the spread is reported as "sd", "var", "iqr", or "range".
+#' @param spread_type Specify if the spread is reported as
+#' "sd", "var", "iqr", or "range".
 #'
 #' @family one_neet Inputs and outputs neet tested.
 #'
@@ -22,12 +23,13 @@ effect_se <- function(centre,
   # check inputs
   neet::assert_neet(centre, "numeric")
   neet::assert_neet(spread, "numeric")
-  neet::assert_neet(n, "numeric")
+  neet::assert_neet(n, "numint")
   neet::assert_neet(centre_type, "character")
   neet::assert_neet(spread_type, "character")
 
-  assertthat::assert_that(centre > 0,
-                          msg = "this function currently requires a positive measure of centre")
+  assertthat::assert_that(
+    centre > 0,
+    msg = "this function currently requires a positive measure of centre")
 
 
   if (centre_type == "mean") {
