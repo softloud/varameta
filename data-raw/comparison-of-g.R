@@ -54,23 +54,67 @@ plotdat <-
   # ugh ugh why is this not fucking working?
   pivot_longer(c(exp, norm, lnorm, cauchy),
                names_to = "g",
-               values_to = "ratio")
+               values_to = "ratio") %>%
+  mutate(distribution = pmap_chr(
+    list(dist, par),
+    .f = function(d, p) {
+      # paste parameters together
+      par <- paste(round(as.numeric(p), 2), collapse = ", ")
+      # make label
+      sprintf("%s(%s)",
+              dist_name(d),
+              par)
+    }
+  )) %>%
+  # for shape by Distribution (given a Family)
+  group_by(dist, g) %>%
+  mutate(distcat = 1:n())
 
+
+distribution_levels <-
+  plotdat %>%
+  ungroup %>%
+  select(distribution, distcat) %>%
+  distinct() %>%
+  group_split(distcat) %>%
+  map(1) %>%
+  map(paste, collapse = ", ")
 
 g_plot <- function (plotdat) {
   plotdat %>%
-    ggplot(aes(x = g, y = ratio, colour = dist)) +
-    geom_jitter(alpha = 0.6, size = 4) +
-    hrbrthemes::scale_color_ipsum("True density") +
-    labs(title = "Precision of different subsitutions of density",
+    mutate(Family = map_chr(dist, dist_name),
+           g = map_chr(g, dist_name),
+           Distribution = map_chr(distcat, .f = function(i) {
+             distribution_levels %>% pluck(i)
+           })) %>%
+    ggplot(aes(
+      x = g,
+      y = ratio,
+      shape = Distribution,
+      colour = Family
+    )) +
+    geom_jitter(
+      alpha = 0.6,
+      size = 4,
+      height = 0,
+      width = 0.35
+    ) +
+    hrbrthemes::scale_color_ipsum() +
+    labs(title = "Precision of approximated variance of the sample median",
          x = TeX("$g$"),
-         y = TeX("$\\rho$"))
+         y = TeX("$\\rho$")#,
+         #caption = TeX("In this horizontally jittered plot, a small amount of horizontal random displacement is applied to the points, so that points with the same value of $\\rho$ are easily discerned.")
+         ) +
+    theme(legend.position = "bottom",
+          legend.direction = "vertical",
+          legend.key.width = unit(0.1, "cm"))
 }
-
-plotdat %>%
-  g_plot()
 
 
 plotdat %>%
   dplyr::filter(g != "exp") %>%
   g_plot()
+
+ggsave("../measureofcodeproof/figures/variance-subs.png")
+
+# dev ---------------------------------------------------------------------

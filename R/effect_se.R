@@ -21,11 +21,11 @@ effect_se <- function(centre,
                       centre_type = "mean",
                       spread_type = "sd") {
   # check inputs
-  neet::assert_neet(centre, "numeric")
-  neet::assert_neet(spread, "numeric")
-  neet::assert_neet(n, "numint")
-  neet::assert_neet(centre_type, "character")
-  neet::assert_neet(spread_type, "character")
+  # neet::assert_neet(centre, "numeric")
+  # neet::assert_neet(spread, "numeric")
+  # neet::assert_neet(n, "numint")
+  # neet::assert_neet(centre_type, "character")
+  # neet::assert_neet(spread_type, "character")
 
   assertthat::assert_that(
     centre > 0,
