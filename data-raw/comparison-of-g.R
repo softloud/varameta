@@ -57,14 +57,7 @@ plotdat <-
                values_to = "ratio") %>%
   mutate(distribution = pmap_chr(
     list(dist, par),
-    .f = function(d, p) {
-      # paste parameters together
-      par <- paste(round(as.numeric(p), 2), collapse = ", ")
-      # make label
-      sprintf("%s(%s)",
-              dist_name(d),
-              par)
-    }
+    .f = dist_label,
   )) %>%
   # for shape by Distribution (given a Family)
   group_by(dist, g) %>%

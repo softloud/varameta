@@ -1,0 +1,270 @@
+---
+title: "pinheiro"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{pinheiro}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+# packages used in this vignette
+library(varameta) # variance estimator for the sample median
+library(metafor) # for meta-analysing
+library(kableExtra) # for pretty tables
+library(tidyverse) # datasci toolkit
+library(metaviz) # suggested by W. Kyle Hamilton
+library(simeta) # must move the dataset
+
+```
+
+`varameta::` contains an example [meta-analysis dataset](https://www.sciencedirect.com/science/article/pii/S0009898112004007) [citation] that contains studies that report both means and medians.
+
+```{r}
+pinheiro_data %>% 
+  kable() %>% 
+  kable_styling()
+
+```
+
+# calculate the standard error of means and medians
+
+```{r}
+
+rma_dat <-
+  pinheiro_data %>%
+  mutate(
+    logratio_effect = log(m_t / m_c),
+    m_t_se = pmap_dbl(
+      list(
+        centre = m_t,
+        spread = s_t_d,
+        n = n_t,
+        centre_type = centre,
+        spread_type = spread
+      ),
+      effect_se
+    ),
+    m_c_se = pmap_dbl(
+      list(
+        centre = m_c,
+        spread = s_c_d,
+        n = n_c,
+        centre_type = centre,
+        spread_type = spread
+      ),
+      effect_se
+    ),
+    logratio_se = if_else(
+      centre == "median",
+      # variance of log-ratio of medians
+      m_t_se/m_t^2 + m_c_se/m_c^2,
+      # variance of log-ratio of means
+      1/n_t*(s_t_d/m_t)^2 + 1/n_c*(s_c_d/m_c)^2
+    ),
+    study_label = str_c(study, year, sep = " ")
+  ) 
+
+# now we have the log-ratio of effects
+# and estimates of the variance of the log-ratio
+rma_dat %>% 
+  select(study_label, year, logratio_effect, logratio_se)
+
+
+
+```
+
+Now that we have calculated the desired effect, $\log(M_1/M_2)$ where $M$ might denote mean or median for a given study, and the numbers denote the arms of the study, we can meta-analyse with `metafor::`.
+
+# mean difference
+
+
+```{r}
+pinheiro_data %>%
+  filter(centre == "mean") %>%
+  mutate(study_label = str_c(study, year, sep = " ")) %>% 
+  escalc(
+    measure = "MD",
+    m1i = m_t,
+    n1i  = n_t,
+    sd1i = s_t_d,
+    m2i = m_c,
+    n2i  = n_c,
+    sd2i = s_c_d,
+    slab = study_label,
+    data = .
+  ) %>% 
+  rma(yi = yi, vi = vi, data = .) %>% {
+    forest(., refline = .$beta)
+  }
+
+ggsave("pinheiro-means.png")
+
+```
+
+# median difference
+
+
+```{r}
+
+median_md_dat <- 
+  pinheiro_data %>%
+  filter(centre == "median") %>%
+  mutate(m_t_se = pmap_dbl(
+    list(
+      centre = m_t,
+      spread = s_t_d,
+      n = n_t,
+      centre_type = centre,
+      spread_type = spread
+    ),
+    effect_se
+  ),
+  m_c_se = pmap_dbl(
+    list(
+      centre = m_c,
+      spread = s_c_d,
+      n = n_c,
+      centre_type = centre,
+      spread_type = spread
+    ),
+    effect_se
+  ),
+  study_label = str_c(study, year, sep = " "),
+         # calculate mean difference
+         md = m_t - m_c,
+         # calculate variance of mean difference
+         md_v = m_t_se^2 + m_c_se^2)  
+
+rma(yi = md, sei = sqrt(md_v), data = median_md_dat, slab = study_label) %>% {
+  forest(., refline = .$beta)  
+}
+
+ggsave("pinheiro-medians.png")
+
+```
+
+# experimenting
+
+```{r}
+pinheiro_rma_means <- 
+  rma(
+    yi = logratio_effect,
+    sei = logratio_se,
+    data = rma_dat %>% filter(centre == "mean"),
+    test = "knha",
+    slab = study
+  )
+
+pinheiro_rma_medians <- 
+  rma(
+    yi = logratio_effect,
+    sei = logratio_se,
+    data = rma_dat %>% filter(centre == "median"),
+    test = "knha",
+    slab = study
+  )
+
+
+
+```
+
+
+```{r}
+
+# copying this code wholesale from 
+# https://rpubs.com/mcmurdie/ggforest
+# suggested by Matt Grainger
+ggforest = function(x, centre = "medians"){
+  require("ggplot2")
+  # Function to convert REM results in `rma`-format into a data.frame
+  rma2df = function(x){
+    rbind(
+      data.frame(Study = "RE Model", LogFC = x$b, CILB=x$ci.lb, CIUB=x$ci.ub,
+                 p = x$pval,
+                 stringsAsFactors = FALSE),
+      data.frame(Study = x$slab, LogFC = x$yi, 
+                 CILB=x$yi - 2*sqrt(x$vi),
+                 CIUB=x$yi + 2*sqrt(x$vi), 
+                 p = x$pval,
+                 stringsAsFactors = FALSE)
+    )
+  }
+  remresdf = rma2df(x)
+  remresdf <- transform(remresdf, interval = CIUB - CILB)
+  remresdf <- transform(remresdf, RelConf = 1/interval)
+  p = ggplot(remresdf, 
+             aes(LogFC, Study, xmax=CIUB, xmin=CILB)) + 
+    #coord_cartesian(xlim=c(-2, 2)) +
+    #scale_alpha_discrete(range = c(0.2, 1)) +
+    geom_vline(xintercept = 0.0, linetype=2, alpha=0.75) +
+    geom_errorbarh(alpha=0.5, color="black") + 
+    geom_point(aes(size = RelConf)) +
+    geom_point(data = subset(remresdf, Study=="RE Model"), size=7) +
+    scale_size(range = c(2, 5), guide=FALSE) +
+    theme_bw() + 
+    theme(text = element_text(size=16)) +
+    labs(x = sprintf("log-ratio of %s", centre))
+  return(p)
+}
+```
+
+
+
+```{r fig.width=6}
+
+# Matt's suggestion
+pinheiro_rma_means %>% 
+  ggforest(centre = "means", transf = exp)
+
+pinheiro_rma_medians %>% 
+  ggforest(centre = "medians")
+
+
+# Kyle's suggestion
+pinheiro_rma_means %>% 
+  viz_forest()
+
+pinheiro_rma_medians %>% 
+  viz_forest()
+
+# from November 2017!
+pinheiro_rma_means %>% 
+  prettyforest::ggforest()
+
+pinheiro_rma_medians %>% 
+  prettyforest::ggforest()
+
+
+```
+
+```{r}
+
+forest(pinheiro_rma_means, 
+       refline = ex, 
+       transf = exp, 
+       digits = 4)
+
+
+
+
+```
+
+
+
+```{r}
+
+
+
+```
+
+
+
+
