@@ -25,7 +25,9 @@ Suggests:
     testthat (>= 2.1.0),
     knitr,
     rmarkdown
-RoxygenNote: 7.0.2
+RoxygenNote: 7.1.1
 VignetteBuilder: knitr
-Remotes:  
+Remotes: 
     softloud/neet
+Depends: 
+    R (>= 2.10)

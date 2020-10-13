@@ -16,7 +16,8 @@ a sample sd, sample interquartile range, or sample range.}
 
 \item{centre_type}{Specify if the center is "mean" or "median".}
 
-\item{spread_type}{Specify if the spread is reported as "sd", "var", "iqr", or "range".}
+\item{spread_type}{Specify if the spread is reported as
+"sd", "var", "iqr", or "range".}
 }
 \description{
 Estimate the standard error of the effect, depending on how that effect is

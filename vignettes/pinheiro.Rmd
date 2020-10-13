@@ -21,14 +21,15 @@ library(metafor) # for meta-analysing
 library(kableExtra) # for pretty tables
 library(tidyverse) # datasci toolkit
 library(metaviz) # suggested by W. Kyle Hamilton
-library(simeta) # must move the dataset
+# library(simeta) # must move the dataset
+conflicted::conflict_prefer("filter", "dplyr")
 
 ```
 
 `varameta::` contains an example [meta-analysis dataset](https://www.sciencedirect.com/science/article/pii/S0009898112004007) [citation] that contains studies that report both means and medians.
 
 ```{r}
-pinheiro_data %>% 
+pinheiro_dat %>% 
   kable() %>% 
   kable_styling()
 
@@ -39,7 +40,7 @@ pinheiro_data %>%
 ```{r}
 
 rma_dat <-
-  pinheiro_data %>%
+  pinheiro_dat %>%
   mutate(
     logratio_effect = log(m_t / m_c),
     m_t_se = pmap_dbl(
@@ -87,7 +88,9 @@ Now that we have calculated the desired effect, $\log(M_1/M_2)$ where $M$ might 
 
 
 ```{r}
-pinheiro_data %>%
+png("pinheiro-means.png")
+
+pinheiro_dat %>%
   filter(centre == "mean") %>%
   mutate(study_label = str_c(study, year, sep = " ")) %>% 
   escalc(
@@ -105,8 +108,7 @@ pinheiro_data %>%
     forest(., refline = .$beta)
   }
 
-ggsave("pinheiro-means.png")
-
+dev.off()
 ```
 
 # median difference
@@ -115,7 +117,7 @@ ggsave("pinheiro-means.png")
 ```{r}
 
 median_md_dat <- 
-  pinheiro_data %>%
+  pinheiro_dat %>%
   filter(centre == "median") %>%
   mutate(m_t_se = pmap_dbl(
     list(
@@ -141,19 +143,22 @@ median_md_dat <-
          # calculate mean difference
          md = m_t - m_c,
          # calculate variance of mean difference
-         md_v = m_t_se^2 + m_c_se^2)  
+
+           md_v = m_t_se^2 + m_c_se^2)  
+
+png("pinheiro-medians.png")
 
 rma(yi = md, sei = sqrt(md_v), data = median_md_dat, slab = study_label) %>% {
   forest(., refline = .$beta)  
 }
 
-ggsave("pinheiro-medians.png")
+dev.off()
 
 ```
 
 # experimenting
 
-```{r}
+```{r eval=FALSE}
 pinheiro_rma_means <- 
   rma(
     yi = logratio_effect,
@@ -177,7 +182,7 @@ pinheiro_rma_medians <-
 ```
 
 
-```{r}
+```{r eval=FALSE}
 
 # copying this code wholesale from 
 # https://rpubs.com/mcmurdie/ggforest
@@ -218,7 +223,7 @@ ggforest = function(x, centre = "medians"){
 
 
 
-```{r fig.width=6}
+```{r fig.width=6, eval=FALSE}
 
 # Matt's suggestion
 pinheiro_rma_means %>% 
@@ -245,7 +250,7 @@ pinheiro_rma_medians %>%
 
 ```
 
-```{r}
+```{r eval=FALSE}
 
 forest(pinheiro_rma_means, 
        refline = ex, 
