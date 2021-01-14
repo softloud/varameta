@@ -19,7 +19,9 @@ knitr::opts_chunk$set(
 
 # varameta
 
-The goal of `varameta` is to provide a solution to meta-analysing medians. Existing solutions either convert medians to means, or omit the studies that report medians. `varameta` provides all existing methods, including a new esitmator for the variance of the sample median, enabling meta-analysis of medians. 
+The goal of `varameta` is to provide a solution to meta-analysing medians. 
+
+Existing solutions either convert medians to means, or omit the studies that report medians. `varameta` provides all existing methods, including a new esitmator for the variance of the sample median, enabling meta-analysis of medians. 
 
 This package has some [secondary objectives](#secondary-objectives), however, for the creator. As my first foray into reproducible packaged analyses, version control with git, and package development, much that is pedestrian in `varameta` was dazzlingly fascinating in its novelty.  
 
